@@ -1,0 +1,23 @@
+var searchData=
+[
+  ['afterwardnodes_1036',['afterwardNodes',['../class_gameplay_1_1_science_tree_1_1_science_tree_node.html#a8e06e1dd8489b2375d254943cdfd4aa3',1,'Gameplay::ScienceTree::ScienceTreeNode']]],
+  ['aiplayer_1037',['aiPlayer',['../class_player_1_1_player_a_i.html#a985a1ce9787e687a04505985bb36190c',1,'Player::PlayerAI']]],
+  ['airesttime_1038',['aiRestTime',['../class_player_1_1_player_a_i.html#a7f855f3136404883461b50a9fe3a45d9',1,'Player::PlayerAI']]],
+  ['ansbutton_1039',['ansButton',['../class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_show_u_i.html#a2c570236f69b1ef1fc9ec85f519eaf32',1,'UI::ChineseSports::Main::QuizUI::QuizShowUI']]],
+  ['ansresultfalse_1040',['ansResultFalse',['../class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_show_u_i.html#a4d3fae07e5ee24d76de85e72544fbb06',1,'UI::ChineseSports::Main::QuizUI::QuizShowUI']]],
+  ['ansresulttrue_1041',['ansResultTrue',['../class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_show_u_i.html#aad5362b68a72091d4393970a266ee684',1,'UI::ChineseSports::Main::QuizUI::QuizShowUI']]],
+  ['aplayer_1042',['aPlayer',['../class_u_i_1_1_chinese_sports_1_1_battle_1_1_h_p_line_u_i.html#aca2cd23a6f1c2af1cda18704a5461389',1,'UI::ChineseSports::Battle::HPLineUI']]],
+  ['aplayerflag_1043',['aPlayerFlag',['../class_u_i_1_1_chinese_sports_1_1_battle_1_1_h_p_line_u_i.html#a643840185f7448e88e5855d544046122',1,'UI::ChineseSports::Battle::HPLineUI']]],
+  ['aplayerhpui_1044',['aPlayerHpUi',['../class_u_i_1_1_chinese_sports_1_1_battle_1_1_h_p_line_u_i.html#a4fd495a31931f7221853797b562526df',1,'UI::ChineseSports::Battle::HPLineUI']]],
+  ['aplayerindicator_1045',['aPlayerIndicator',['../class_u_i_1_1_chinese_sports_1_1_battle_1_1_h_p_line_u_i.html#a4b2c9fa9f455f7cad4b64579b62e85ac',1,'UI::ChineseSports::Battle::HPLineUI']]],
+  ['args_1046',['Args',['../class_gameplay_1_1_event_system_1_1_global_event_args.html#a68c6eb33a67afff6a876ececdee72811',1,'Gameplay::EventSystem::GlobalEventArgs']]],
+  ['aside_1047',['aSide',['../class_game_manager_1_1_game_manager.html#aada7567448f07270090ffcfd300c0209',1,'GameManager.GameManager.aSide()'],['../class_gameplay_1_1_event_system_1_1_global_event_manager.html#a338261782b9f49aab6521f2167622bf2',1,'Gameplay.EventSystem.GlobalEventManager.aSide()']]],
+  ['attackbuff_1048',['attackBuff',['../class_units_1_1_buff.html#aec2c3e5597558ebe9756b96f69509068',1,'Units::Buff']]],
+  ['attackcolddowntimebuff_1049',['attackColdDownTimeBuff',['../class_units_1_1_buff.html#a5fcfbf54781375935e77d709e4f657ba',1,'Units::Buff']]],
+  ['attackedeffect_1050',['attackedEffect',['../class_units_1_1_neutral_units.html#a43ea5322a23d7b786c3a34b45e21cc7a',1,'Units::NeutralUnits']]],
+  ['attackrangebuff_1051',['attackRangeBuff',['../class_units_1_1_buff.html#a36483f7def238082c263fb902646e63c',1,'Units::Buff']]],
+  ['audiosource_1052',['audioSource',['../class_game_manager_1_1_game_manager.html#add3ab11fc43fd4f90b26254ef93d527b',1,'GameManager.GameManager.audioSource()'],['../class_sounds_manager_1_1_b_g_m_manager.html#a7f4fa42a73656497f1408f5bef3bff50',1,'SoundsManager.BGMManager.audioSource()']]],
+  ['autosavetime_1053',['autoSaveTime',['../class_saver_1_1_x_m_l_saver.html#a7733a708c723fc2c9577ce9e6c37628d',1,'Saver::XMLSaver']]],
+  ['availableunits_1054',['availableUnits',['../class_player_1_1_player.html#aab9cee3f7daa140d64191d06b4887014',1,'Player::Player']]],
+  ['awakegameobject_1055',['awakeGameObject',['../class_u_i_1_1_tutorial_1_1_tutorial_clip_u_i.html#a6282845daef7cd4733b54f491e8d1409',1,'UI::Tutorial::TutorialClipUI']]]
+];

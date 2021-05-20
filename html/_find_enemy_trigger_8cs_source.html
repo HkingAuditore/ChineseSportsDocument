@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>古代运动图鉴: SimpleRTS/Simplified_RTS/Assets/Scripts/Units/FindEnemyTrigger.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Icon_Small.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">古代运动图鉴
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('_find_enemy_trigger_8cs_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">FindEnemyTrigger.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_find_enemy_trigger_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> System.Collections.Generic;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> System.Linq;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_units.html">Units</a>.<a class="code" href="namespace_units_1_1_melee.html">Melee</a>;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_units.html">Units</a>.<a class="code" href="namespace_units_1_1_ranged_attack.html">RangedAttack</a>;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">using</span> UnityEngine;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_units.html">Units</a></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_units_1_1_find_enemy_trigger.html">   12</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_units_1_1_find_enemy_trigger.html">FindEnemyTrigger</a> : MonoBehaviour</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    {</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_units_1_1_find_enemy_trigger.html#ab38b81ecf7011f1e13c50b6009b99a4d">   17</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code" href="class_units_1_1_find_enemy_trigger.html#ab38b81ecf7011f1e13c50b6009b99a4d">isRangeUnit</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keyword">private</span> <a class="code" href="class_units_1_1_unit.html">Unit</a> _baseUnit;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keyword">private</span> LayerMask _enemyLayerMask;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keyword">private</span> List&lt;Unit&gt; _enemyList = <span class="keyword">new</span> List&lt;Unit&gt;();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="comment">//private string _enemyLayer;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">string</span> _thisRoadTag;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> Start()</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            var parent = transform.parent;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="class_units_1_1_find_enemy_trigger.html#ab38b81ecf7011f1e13c50b6009b99a4d">isRangeUnit</a>)</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                _baseUnit                             = parent.GetComponent&lt;<a class="code" href="class_units_1_1_ranged_attack_1_1_ranged_attack_unit.html">RangedAttackUnit</a>&gt;();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                GetComponent&lt;SphereCollider&gt;().radius = ((<a class="code" href="class_units_1_1_ranged_attack_1_1_ranged_attack_unit.html">RangedAttackUnit</a>) _baseUnit).<a class="code" href="class_units_1_1_ranged_attack_1_1_ranged_attack_unit.html#a08d5e6f827fcd65641a184d7faab6097">AttackRange</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            }</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                _baseUnit                             = parent.GetComponent&lt;<a class="code" href="class_units_1_1_melee_1_1_melee_unit.html">MeleeUnit</a>&gt;();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                GetComponent&lt;SphereCollider&gt;().radius = ((<a class="code" href="class_units_1_1_melee_1_1_melee_unit.html">MeleeUnit</a>) _baseUnit).<a class="code" href="class_units_1_1_melee_1_1_melee_unit.html#a95f37fb4d91511985438a280acb83d58">findEnemyRadius</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            _thisRoadTag = parent.tag;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            _enemyLayerMask =</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                1 &lt;&lt; LayerMask.NameToLayer(LayerMask.LayerToName(parent.gameObject.layer) == <span class="stringliteral">&quot;ASide&quot;</span> ? <span class="stringliteral">&quot;BSide&quot;</span> : <span class="stringliteral">&quot;ASide&quot;</span>);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> OnTriggerEnter(Collider other)</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <span class="keywordflow">if</span> (!other.isTrigger &amp;&amp; !other.gameObject.CompareTag(<span class="stringliteral">&quot;Untagged&quot;</span>) &amp;&amp;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                ((1 &lt;&lt; other.gameObject.layer) &amp; _enemyLayerMask.value) != 0)</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                <span class="comment">// Debug.Log( _baseUnit.gameObject.name + &quot; New Enemy In Layer!&quot;);</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                Component unitComponent;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                <span class="keywordflow">if</span> (other.gameObject.TryGetComponent(typeof(Unit), out unitComponent))</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                    <span class="comment">// Debug.Log( _baseUnit.gameObject.name + &quot; New Enemy In Layer!&quot;);</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                    <span class="keywordflow">if</span> ((other.gameObject.CompareTag(_thisRoadTag)           ||</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                         other.gameObject.GetComponent&lt;Unit&gt;().IsAtEnemyDoor ||</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                         other.gameObject.CompareTag(<span class="stringliteral">&quot;Door&quot;</span>)) &amp;&amp; other.gameObject.GetComponent&lt;Unit&gt;().HP &gt; 0)</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                    {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                        _enemyList.Add(other.gameObject.GetComponent&lt;Unit&gt;());</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                        Debug.Log(_baseUnit.<a class="code" href="class_units_1_1_unit.html#a8430d0dc73a42b2ed47ab576c137fbc7">sidePlayer</a>.gameObject.name + <span class="stringliteral">&quot;::&quot;</span>                                                             + _baseUnit.gameObject.name + <span class="stringliteral">&quot; New Enemy In!:: &quot;</span> +</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                                  <span class="stringliteral">&quot;[&quot;</span>                                  + other.gameObject.GetComponent&lt;Unit&gt;().<a class="code" href="class_units_1_1_unit.html#a8430d0dc73a42b2ed47ab576c137fbc7">sidePlayer</a>.gameObject.name + <span class="stringliteral">&quot;]&quot;</span>                       + other.gameObject.GetComponent&lt;Unit&gt;().gameObject.name);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                    }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> OnTriggerExit(Collider other)</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <span class="keywordflow">if</span> (!other.isTrigger)</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                Component unitComponent;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                <span class="keywordflow">if</span> (other.gameObject.TryGetComponent(typeof(Unit), out unitComponent))</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                    <span class="keywordflow">if</span> (_enemyList.Contains((Unit) unitComponent))</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                    {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                        Debug.Log(<span class="stringliteral">&quot;Enemy Out!&quot;</span>);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                        _enemyList.Remove((Unit) unitComponent);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                    }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="class_units_1_1_find_enemy_trigger.html#a4a0e147e676f2a4fc514f130276efbb6">   86</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="class_units_1_1_unit.html">Unit</a> <a class="code" href="class_units_1_1_find_enemy_trigger.html#a4a0e147e676f2a4fc514f130276efbb6">GetEnemyInList</a>()</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        {</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <span class="keywordflow">if</span> (_enemyList.Count == 0)</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            <span class="keywordflow">try</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            {</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                _enemyList = (from unit in _enemyList</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                              where unit != <span class="keyword">null</span> &amp;&amp; unit.HP &gt; 0</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                              orderby Vector3.Distance(_baseUnit.transform.position, unit.transform.position)</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                              select unit).ToList();</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                <span class="keywordflow">return</span> _enemyList.First();</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            }</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            <span class="keywordflow">catch</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            {</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            }</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        }</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    }</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;}</div>
+<div class="ttc" id="aclass_units_1_1_find_enemy_trigger_html"><div class="ttname"><a href="class_units_1_1_find_enemy_trigger.html">Units.FindEnemyTrigger</a></div><div class="ttdoc">寻敌触发器</div><div class="ttdef"><b>Definition:</b> <a href="_find_enemy_trigger_8cs_source.html#l00012">FindEnemyTrigger.cs:13</a></div></div>
+<div class="ttc" id="aclass_units_1_1_find_enemy_trigger_html_a4a0e147e676f2a4fc514f130276efbb6"><div class="ttname"><a href="class_units_1_1_find_enemy_trigger.html#a4a0e147e676f2a4fc514f130276efbb6">Units.FindEnemyTrigger.GetEnemyInList</a></div><div class="ttdeci">Unit GetEnemyInList()</div><div class="ttdoc">获取敌人列表</div><div class="ttdef"><b>Definition:</b> <a href="_find_enemy_trigger_8cs_source.html#l00086">FindEnemyTrigger.cs:86</a></div></div>
+<div class="ttc" id="aclass_units_1_1_find_enemy_trigger_html_ab38b81ecf7011f1e13c50b6009b99a4d"><div class="ttname"><a href="class_units_1_1_find_enemy_trigger.html#ab38b81ecf7011f1e13c50b6009b99a4d">Units.FindEnemyTrigger.isRangeUnit</a></div><div class="ttdeci">bool isRangeUnit</div><div class="ttdoc">是否为远程单位</div><div class="ttdef"><b>Definition:</b> <a href="_find_enemy_trigger_8cs_source.html#l00017">FindEnemyTrigger.cs:17</a></div></div>
+<div class="ttc" id="aclass_units_1_1_melee_1_1_melee_unit_html"><div class="ttname"><a href="class_units_1_1_melee_1_1_melee_unit.html">Units.Melee.MeleeUnit</a></div><div class="ttdoc">近战单位</div><div class="ttdef"><b>Definition:</b> <a href="_melee_unit_8cs_source.html#l00009">MeleeUnit.cs:10</a></div></div>
+<div class="ttc" id="aclass_units_1_1_melee_1_1_melee_unit_html_a95f37fb4d91511985438a280acb83d58"><div class="ttname"><a href="class_units_1_1_melee_1_1_melee_unit.html#a95f37fb4d91511985438a280acb83d58">Units.Melee.MeleeUnit.findEnemyRadius</a></div><div class="ttdeci">float findEnemyRadius</div><div class="ttdoc">寻敌范围</div><div class="ttdef"><b>Definition:</b> <a href="_melee_unit_8cs_source.html#l00035">MeleeUnit.cs:35</a></div></div>
+<div class="ttc" id="aclass_units_1_1_ranged_attack_1_1_ranged_attack_unit_html"><div class="ttname"><a href="class_units_1_1_ranged_attack_1_1_ranged_attack_unit.html">Units.RangedAttack.RangedAttackUnit</a></div><div class="ttdoc">远程攻击单位</div><div class="ttdef"><b>Definition:</b> <a href="_ranged_attack_unit_8cs_source.html#l00009">RangedAttackUnit.cs:10</a></div></div>
+<div class="ttc" id="aclass_units_1_1_ranged_attack_1_1_ranged_attack_unit_html_a08d5e6f827fcd65641a184d7faab6097"><div class="ttname"><a href="class_units_1_1_ranged_attack_1_1_ranged_attack_unit.html#a08d5e6f827fcd65641a184d7faab6097">Units.RangedAttack.RangedAttackUnit.AttackRange</a></div><div class="ttdeci">float AttackRange</div><div class="ttdoc">攻击范围</div><div class="ttdef"><b>Definition:</b> <a href="_ranged_attack_unit_8cs_source.html#l00137">RangedAttackUnit.cs:138</a></div></div>
+<div class="ttc" id="aclass_units_1_1_unit_html"><div class="ttname"><a href="class_units_1_1_unit.html">Units.Unit</a></div><div class="ttdoc">单位</div><div class="ttdef"><b>Definition:</b> <a href="_unit_8cs_source.html#l00122">Unit.cs:123</a></div></div>
+<div class="ttc" id="aclass_units_1_1_unit_html_a8430d0dc73a42b2ed47ab576c137fbc7"><div class="ttname"><a href="class_units_1_1_unit.html#a8430d0dc73a42b2ed47ab576c137fbc7">Units.Unit.sidePlayer</a></div><div class="ttdeci">Player.Player sidePlayer</div><div class="ttdoc">所属玩家</div><div class="ttdef"><b>Definition:</b> <a href="_unit_8cs_source.html#l00160">Unit.cs:160</a></div></div>
+<div class="ttc" id="anamespace_units_1_1_melee_html"><div class="ttname"><a href="namespace_units_1_1_melee.html">Units.Melee</a></div><div class="ttdef"><b>Definition:</b> <a href="_melee_unit_8cs_source.html#l00004">MeleeUnit.cs:5</a></div></div>
+<div class="ttc" id="anamespace_units_1_1_ranged_attack_html"><div class="ttname"><a href="namespace_units_1_1_ranged_attack.html">Units.RangedAttack</a></div><div class="ttdef"><b>Definition:</b> <a href="_bullet_8cs_source.html#l00004">Bullet.cs:5</a></div></div>
+<div class="ttc" id="anamespace_units_html"><div class="ttname"><a href="namespace_units.html">Units</a></div><div class="ttdef"><b>Definition:</b> <a href="_buff_8cs_source.html#l00004">Buff.cs:5</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_a5079711ee210cb3f5000c30d3746d06.html">SimpleRTS</a></li><li class="navelem"><a class="el" href="dir_ec7b684f6ba09c3c3a1f78fc68be2b45.html">Simplified_RTS</a></li><li class="navelem"><a class="el" href="dir_fc9fc45e4060f68dac2ba8008ad7420a.html">Assets</a></li><li class="navelem"><a class="el" href="dir_9c83f749c47014e6bfe3d69c7ba163ff.html">Scripts</a></li><li class="navelem"><a class="el" href="dir_c00f259fa01133e5b2dbe561e69e292e.html">Units</a></li><li class="navelem"><a class="el" href="_find_enemy_trigger_8cs.html">FindEnemyTrigger.cs</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

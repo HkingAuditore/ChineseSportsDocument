@@ -1,0 +1,214 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>古代运动图鉴: SimpleRTS/Simplified_RTS/Assets/Scripts/Saver/DataTransfer.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Icon_Small.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">古代运动图鉴
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('_data_transfer_8cs_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">DataTransfer.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_data_transfer_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> System;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> System.Collections.Generic;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_game_manager.html">GameManager</a>;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_saver.html">Saver</a>.<a class="code" href="namespace_saver_1_1_quiz.html">Quiz</a>;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_u_i.html">UI</a>.<a class="code" href="namespace_u_i_1_1_tutorial.html">Tutorial</a>;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_units.html">Units</a>;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">using</span> UnityEngine;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">using</span> UnityEngine.SceneManagement;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="namespace_saver.html">   10</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_saver.html">Saver</a></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_saver_1_1_data_transfer.html">   15</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_saver_1_1_data_transfer.html">DataTransfer</a> : MonoBehaviour</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    {</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_saver_1_1_data_transfer.html#ac13311a2d616bdd605f5aea7d5ef8f17">   20</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="class_u_i_1_1_tutorial_1_1_tutorial_manager.html">TutorialManager</a> <a class="code" href="class_saver_1_1_data_transfer.html#ac13311a2d616bdd605f5aea7d5ef8f17">tutorialManager</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_saver_1_1_data_transfer.html#a9d24a239c0f710a8f114a68445bbb27d">   25</a></span>&#160;        <span class="keyword">public</span> List&lt;bool&gt; <a class="code" href="class_saver_1_1_data_transfer.html#a9d24a239c0f710a8f114a68445bbb27d">itemRevealedList</a> = <span class="keyword">new</span> List&lt;bool&gt;();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_saver_1_1_data_transfer.html#a3b482758bf45be2cc5561f758a1d1e2f">   28</a></span>&#160;        <span class="keyword">public</span> List&lt;UnitDict&gt; <a class="code" href="class_saver_1_1_data_transfer.html#a3b482758bf45be2cc5561f758a1d1e2f">unitList</a> = <span class="keyword">new</span> List&lt;UnitDict&gt;();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_saver_1_1_data_transfer.html#ac31ea128a9211ee5054b3c65fe1c0c5c">   33</a></span>&#160;        <span class="keyword">public</span> List&lt;bool&gt; <a class="code" href="class_saver_1_1_data_transfer.html#ac31ea128a9211ee5054b3c65fe1c0c5c">characterRevealedList</a> = <span class="keyword">new</span> List&lt;bool&gt;();</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        </div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="class_saver_1_1_data_transfer.html#afad7e4bea460da50bbf60b30b83490c2">   38</a></span>&#160;        <span class="keyword">public</span> List&lt;bool&gt; <a class="code" href="class_saver_1_1_data_transfer.html#afad7e4bea460da50bbf60b30b83490c2">characterUnlockedList</a> = <span class="keyword">new</span> List&lt;bool&gt;();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="class_saver_1_1_data_transfer.html#ae953dadfcc94148748d9209ccdf58b7d">   43</a></span>&#160;        <span class="keyword">public</span> List&lt;bool&gt; <a class="code" href="class_saver_1_1_data_transfer.html#ae953dadfcc94148748d9209ccdf58b7d">levelRevealedList</a> = <span class="keyword">new</span> List&lt;bool&gt;();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        </div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="class_saver_1_1_data_transfer.html#a50b3e33bb41aadbdc907463b1438384b">   48</a></span>&#160;        <span class="keyword">public</span> List&lt;<a class="code" href="class_saver_1_1_quiz_1_1_quiz.html">Quiz</a>.Quiz&gt; <a class="code" href="class_saver_1_1_data_transfer.html#a50b3e33bb41aadbdc907463b1438384b">quizList</a> = <span class="keyword">new</span> List&lt;<a class="code" href="class_saver_1_1_quiz_1_1_quiz.html">Quiz</a>.Quiz&gt;();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="class_saver_1_1_data_transfer.html#a112ac5f622205cec9eda7d87c4b005e3">   53</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="class_saver_1_1_x_m_l_saver.html">XMLSaver</a> <a class="code" href="class_saver_1_1_data_transfer.html#a112ac5f622205cec9eda7d87c4b005e3">xmlSaver</a>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="class_saver_1_1_data_transfer.html#a2102859cfe53288bd503c2650294357e">   58</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="class_saver_1_1_x_m_l_reader.html">XMLReader</a> <a class="code" href="class_saver_1_1_data_transfer.html#a2102859cfe53288bd503c2650294357e">xmlReader</a>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="class_saver_1_1_data_transfer.html#afde19357de0081fcd1cd2e9d0e7fb785">   63</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code" href="class_saver_1_1_data_transfer.html#afde19357de0081fcd1cd2e9d0e7fb785">nextLoadingSceneName</a>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">bool</span> _isSoundsActive = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="class_saver_1_1_data_transfer.html#a1799857a85084ca9d006affc941d9d36">   67</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <a class="code" href="class_saver_1_1_data_transfer.html">DataTransfer</a> <a class="code" href="class_saver_1_1_data_transfer.html#a1799857a85084ca9d006affc941d9d36">GetDataTransfer</a> { <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="class_saver_1_1_data_transfer.html#a82f116124f17cbb13a338f5d1a2715ea">   69</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code" href="class_saver_1_1_data_transfer.html#a82f116124f17cbb13a338f5d1a2715ea">isSoundsActive</a></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <span class="keyword">get</span> =&gt; _isSoundsActive;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <span class="keyword">set</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                _isSoundsActive = value;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                <span class="keywordflow">if</span> (_isSoundsActive)</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                    <a class="code" href="namespace_game_manager.html">GameManager</a>.<a class="code" href="class_game_manager_1_1_game_manager.html">GameManager</a>.<a class="code" href="class_game_manager_1_1_game_manager.html#acafc4a2ac0e6171a1f8436b529b58306">GetManager</a>.<a class="code" href="class_game_manager_1_1_game_manager.html#add3ab11fc43fd4f90b26254ef93d527b">audioSource</a>.Play();</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                    <a class="code" href="namespace_game_manager.html">GameManager</a>.<a class="code" href="class_game_manager_1_1_game_manager.html">GameManager</a>.<a class="code" href="class_game_manager_1_1_game_manager.html#acafc4a2ac0e6171a1f8436b529b58306">GetManager</a>.<a class="code" href="class_game_manager_1_1_game_manager.html#add3ab11fc43fd4f90b26254ef93d527b">audioSource</a>.Stop();</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> Awake()</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <a class="code" href="class_saver_1_1_data_transfer.html#a1799857a85084ca9d006affc941d9d36">GetDataTransfer</a> = <span class="keyword">this</span>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            DontDestroyOnLoad(gameObject);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> Start()</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            <a class="code" href="class_saver_1_1_data_transfer.html#a2102859cfe53288bd503c2650294357e">xmlReader</a>.LoadSaver(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            this.<a class="code" href="class_saver_1_1_data_transfer.html#a50b3e33bb41aadbdc907463b1438384b">quizList</a> = QuizReader.ReadQuizList();</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        }</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="class_saver_1_1_data_transfer.html#a7dfee1eea2bfe71edbb142428e87029b">   99</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_saver_1_1_data_transfer.html#a7dfee1eea2bfe71edbb142428e87029b">LoadSceneInLoadingScene</a>(<span class="keywordtype">string</span> sceneName)</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        {</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            <a class="code" href="class_saver_1_1_data_transfer.html#afde19357de0081fcd1cd2e9d0e7fb785">nextLoadingSceneName</a> = sceneName;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            SceneManager.LoadSceneAsync(<span class="stringliteral">&quot;Loading&quot;</span>);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        }</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="class_saver_1_1_data_transfer.html#ab183daae70a031c6ce9a7e728365f7ca">  105</a></span>&#160;        <span class="keyword">public</span> List&lt;UnitDict&gt; <a class="code" href="class_saver_1_1_data_transfer.html#ab183daae70a031c6ce9a7e728365f7ca">GetAvailableUnits</a>()</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        {</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            List&lt;UnitDict&gt; playerUnits = <span class="keyword">new</span> List&lt;UnitDict&gt;();</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="class_saver_1_1_data_transfer.html#a3b482758bf45be2cc5561f758a1d1e2f">unitList</a>.Count; i++)</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            {</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="class_saver_1_1_data_transfer.html#afad7e4bea460da50bbf60b30b83490c2">characterUnlockedList</a>[i] &amp;&amp; !<a class="code" href="class_saver_1_1_data_transfer.html#a3b482758bf45be2cc5561f758a1d1e2f">unitList</a>[i].IsEnemy)</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                {</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                    playerUnits.Add(<a class="code" href="class_saver_1_1_data_transfer.html#a3b482758bf45be2cc5561f758a1d1e2f">unitList</a>[i]);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                    Debug.Log(<a class="code" href="class_saver_1_1_data_transfer.html#a3b482758bf45be2cc5561f758a1d1e2f">unitList</a>[i]);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                }</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            }</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            <span class="keywordflow">return</span> playerUnits;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        }</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    }</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;}</div>
+<div class="ttc" id="aclass_game_manager_1_1_game_manager_html"><div class="ttname"><a href="class_game_manager_1_1_game_manager.html">GameManager.GameManager</a></div><div class="ttdoc">关卡全局管理控制器</div><div class="ttdef"><b>Definition:</b> <a href="_game_manager_8cs_source.html#l00014">GameManager.cs:15</a></div></div>
+<div class="ttc" id="aclass_game_manager_1_1_game_manager_html_acafc4a2ac0e6171a1f8436b529b58306"><div class="ttname"><a href="class_game_manager_1_1_game_manager.html#acafc4a2ac0e6171a1f8436b529b58306">GameManager.GameManager.GetManager</a></div><div class="ttdeci">static GameManager GetManager</div><div class="ttdef"><b>Definition:</b> <a href="_game_manager_8cs_source.html#l00077">GameManager.cs:77</a></div></div>
+<div class="ttc" id="aclass_game_manager_1_1_game_manager_html_add3ab11fc43fd4f90b26254ef93d527b"><div class="ttname"><a href="class_game_manager_1_1_game_manager.html#add3ab11fc43fd4f90b26254ef93d527b">GameManager.GameManager.audioSource</a></div><div class="ttdeci">AudioSource audioSource</div><div class="ttdoc">BGM音源</div><div class="ttdef"><b>Definition:</b> <a href="_game_manager_8cs_source.html#l00074">GameManager.cs:74</a></div></div>
+<div class="ttc" id="aclass_saver_1_1_data_transfer_html"><div class="ttname"><a href="class_saver_1_1_data_transfer.html">Saver.DataTransfer</a></div><div class="ttdoc">数据传输</div><div class="ttdef"><b>Definition:</b> <a href="_data_transfer_8cs_source.html#l00015">DataTransfer.cs:16</a></div></div>
+<div class="ttc" id="aclass_saver_1_1_data_transfer_html_a112ac5f622205cec9eda7d87c4b005e3"><div class="ttname"><a href="class_saver_1_1_data_transfer.html#a112ac5f622205cec9eda7d87c4b005e3">Saver.DataTransfer.xmlSaver</a></div><div class="ttdeci">XMLSaver xmlSaver</div><div class="ttdoc">存档器</div><div class="ttdef"><b>Definition:</b> <a href="_data_transfer_8cs_source.html#l00053">DataTransfer.cs:53</a></div></div>
+<div class="ttc" id="aclass_saver_1_1_data_transfer_html_a1799857a85084ca9d006affc941d9d36"><div class="ttname"><a href="class_saver_1_1_data_transfer.html#a1799857a85084ca9d006affc941d9d36">Saver.DataTransfer.GetDataTransfer</a></div><div class="ttdeci">static DataTransfer GetDataTransfer</div><div class="ttdef"><b>Definition:</b> <a href="_data_transfer_8cs_source.html#l00067">DataTransfer.cs:67</a></div></div>
+<div class="ttc" id="aclass_saver_1_1_data_transfer_html_a2102859cfe53288bd503c2650294357e"><div class="ttname"><a href="class_saver_1_1_data_transfer.html#a2102859cfe53288bd503c2650294357e">Saver.DataTransfer.xmlReader</a></div><div class="ttdeci">XMLReader xmlReader</div><div class="ttdoc">读档器</div><div class="ttdef"><b>Definition:</b> <a href="_data_transfer_8cs_source.html#l00058">DataTransfer.cs:58</a></div></div>
+<div class="ttc" id="aclass_saver_1_1_data_transfer_html_a3b482758bf45be2cc5561f758a1d1e2f"><div class="ttname"><a href="class_saver_1_1_data_transfer.html#a3b482758bf45be2cc5561f758a1d1e2f">Saver.DataTransfer.unitList</a></div><div class="ttdeci">List&lt; UnitDict &gt; unitList</div><div class="ttdef"><b>Definition:</b> <a href="_data_transfer_8cs_source.html#l00028">DataTransfer.cs:28</a></div></div>
+<div class="ttc" id="aclass_saver_1_1_data_transfer_html_a50b3e33bb41aadbdc907463b1438384b"><div class="ttname"><a href="class_saver_1_1_data_transfer.html#a50b3e33bb41aadbdc907463b1438384b">Saver.DataTransfer.quizList</a></div><div class="ttdeci">List&lt; Quiz.Quiz &gt; quizList</div><div class="ttdoc">题目表</div><div class="ttdef"><b>Definition:</b> <a href="_data_transfer_8cs_source.html#l00048">DataTransfer.cs:48</a></div></div>
+<div class="ttc" id="aclass_saver_1_1_data_transfer_html_a7dfee1eea2bfe71edbb142428e87029b"><div class="ttname"><a href="class_saver_1_1_data_transfer.html#a7dfee1eea2bfe71edbb142428e87029b">Saver.DataTransfer.LoadSceneInLoadingScene</a></div><div class="ttdeci">void LoadSceneInLoadingScene(string sceneName)</div><div class="ttdoc">使用进度条加载</div><div class="ttdef"><b>Definition:</b> <a href="_data_transfer_8cs_source.html#l00099">DataTransfer.cs:99</a></div></div>
+<div class="ttc" id="aclass_saver_1_1_data_transfer_html_a82f116124f17cbb13a338f5d1a2715ea"><div class="ttname"><a href="class_saver_1_1_data_transfer.html#a82f116124f17cbb13a338f5d1a2715ea">Saver.DataTransfer.isSoundsActive</a></div><div class="ttdeci">bool isSoundsActive</div><div class="ttdef"><b>Definition:</b> <a href="_data_transfer_8cs_source.html#l00069">DataTransfer.cs:70</a></div></div>
+<div class="ttc" id="aclass_saver_1_1_data_transfer_html_a9d24a239c0f710a8f114a68445bbb27d"><div class="ttname"><a href="class_saver_1_1_data_transfer.html#a9d24a239c0f710a8f114a68445bbb27d">Saver.DataTransfer.itemRevealedList</a></div><div class="ttdeci">List&lt; bool &gt; itemRevealedList</div><div class="ttdoc">物品解锁表</div><div class="ttdef"><b>Definition:</b> <a href="_data_transfer_8cs_source.html#l00025">DataTransfer.cs:25</a></div></div>
+<div class="ttc" id="aclass_saver_1_1_data_transfer_html_ab183daae70a031c6ce9a7e728365f7ca"><div class="ttname"><a href="class_saver_1_1_data_transfer.html#ab183daae70a031c6ce9a7e728365f7ca">Saver.DataTransfer.GetAvailableUnits</a></div><div class="ttdeci">List&lt; UnitDict &gt; GetAvailableUnits()</div><div class="ttdef"><b>Definition:</b> <a href="_data_transfer_8cs_source.html#l00105">DataTransfer.cs:105</a></div></div>
+<div class="ttc" id="aclass_saver_1_1_data_transfer_html_ac13311a2d616bdd605f5aea7d5ef8f17"><div class="ttname"><a href="class_saver_1_1_data_transfer.html#ac13311a2d616bdd605f5aea7d5ef8f17">Saver.DataTransfer.tutorialManager</a></div><div class="ttdeci">TutorialManager tutorialManager</div><div class="ttdoc">教程管理</div><div class="ttdef"><b>Definition:</b> <a href="_data_transfer_8cs_source.html#l00020">DataTransfer.cs:20</a></div></div>
+<div class="ttc" id="aclass_saver_1_1_data_transfer_html_ac31ea128a9211ee5054b3c65fe1c0c5c"><div class="ttname"><a href="class_saver_1_1_data_transfer.html#ac31ea128a9211ee5054b3c65fe1c0c5c">Saver.DataTransfer.characterRevealedList</a></div><div class="ttdeci">List&lt; bool &gt; characterRevealedList</div><div class="ttdoc">角色解锁表</div><div class="ttdef"><b>Definition:</b> <a href="_data_transfer_8cs_source.html#l00033">DataTransfer.cs:33</a></div></div>
+<div class="ttc" id="aclass_saver_1_1_data_transfer_html_ae953dadfcc94148748d9209ccdf58b7d"><div class="ttname"><a href="class_saver_1_1_data_transfer.html#ae953dadfcc94148748d9209ccdf58b7d">Saver.DataTransfer.levelRevealedList</a></div><div class="ttdeci">List&lt; bool &gt; levelRevealedList</div><div class="ttdoc">关卡解锁表</div><div class="ttdef"><b>Definition:</b> <a href="_data_transfer_8cs_source.html#l00043">DataTransfer.cs:43</a></div></div>
+<div class="ttc" id="aclass_saver_1_1_data_transfer_html_afad7e4bea460da50bbf60b30b83490c2"><div class="ttname"><a href="class_saver_1_1_data_transfer.html#afad7e4bea460da50bbf60b30b83490c2">Saver.DataTransfer.characterUnlockedList</a></div><div class="ttdeci">List&lt; bool &gt; characterUnlockedList</div><div class="ttdoc">角色答题解锁表</div><div class="ttdef"><b>Definition:</b> <a href="_data_transfer_8cs_source.html#l00038">DataTransfer.cs:38</a></div></div>
+<div class="ttc" id="aclass_saver_1_1_data_transfer_html_afde19357de0081fcd1cd2e9d0e7fb785"><div class="ttname"><a href="class_saver_1_1_data_transfer.html#afde19357de0081fcd1cd2e9d0e7fb785">Saver.DataTransfer.nextLoadingSceneName</a></div><div class="ttdeci">string nextLoadingSceneName</div><div class="ttdoc">下一加载场景</div><div class="ttdef"><b>Definition:</b> <a href="_data_transfer_8cs_source.html#l00063">DataTransfer.cs:63</a></div></div>
+<div class="ttc" id="aclass_saver_1_1_quiz_1_1_quiz_html"><div class="ttname"><a href="class_saver_1_1_quiz_1_1_quiz.html">Saver.Quiz.Quiz</a></div><div class="ttdef"><b>Definition:</b> <a href="_quiz_8cs_source.html#l00007">Quiz.cs:8</a></div></div>
+<div class="ttc" id="aclass_saver_1_1_x_m_l_reader_html"><div class="ttname"><a href="class_saver_1_1_x_m_l_reader.html">Saver.XMLReader</a></div><div class="ttdoc">读档器</div><div class="ttdef"><b>Definition:</b> <a href="_x_m_l_reader_8cs_source.html#l00014">XMLReader.cs:15</a></div></div>
+<div class="ttc" id="aclass_saver_1_1_x_m_l_saver_html"><div class="ttname"><a href="class_saver_1_1_x_m_l_saver.html">Saver.XMLSaver</a></div><div class="ttdef"><b>Definition:</b> <a href="_x_m_l_saver_8cs_source.html#l00021">XMLSaver.cs:22</a></div></div>
+<div class="ttc" id="aclass_u_i_1_1_tutorial_1_1_tutorial_manager_html"><div class="ttname"><a href="class_u_i_1_1_tutorial_1_1_tutorial_manager.html">UI.Tutorial.TutorialManager</a></div><div class="ttdef"><b>Definition:</b> <a href="_tutorial_manager_8cs_source.html#l00008">TutorialManager.cs:9</a></div></div>
+<div class="ttc" id="anamespace_game_manager_html"><div class="ttname"><a href="namespace_game_manager.html">GameManager</a></div><div class="ttdef"><b>Definition:</b> <a href="_game_manager_8cs_source.html#l00009">GameManager.cs:10</a></div></div>
+<div class="ttc" id="anamespace_saver_1_1_quiz_html"><div class="ttname"><a href="namespace_saver_1_1_quiz.html">Saver.Quiz</a></div><div class="ttdef"><b>Definition:</b> <a href="_quiz_8cs_source.html#l00004">Quiz.cs:5</a></div></div>
+<div class="ttc" id="anamespace_saver_html"><div class="ttname"><a href="namespace_saver.html">Saver</a></div><div class="ttdef"><b>Definition:</b> <a href="_data_transfer_8cs_source.html#l00010">DataTransfer.cs:11</a></div></div>
+<div class="ttc" id="anamespace_u_i_1_1_tutorial_html"><div class="ttname"><a href="namespace_u_i_1_1_tutorial.html">UI.Tutorial</a></div><div class="ttdef"><b>Definition:</b> <a href="_tutorial_clip_u_i_8cs_source.html#l00007">TutorialClipUI.cs:8</a></div></div>
+<div class="ttc" id="anamespace_u_i_html"><div class="ttname"><a href="namespace_u_i.html">UI</a></div><div class="ttdef"><b>Definition:</b> <a href="_battle_item_u_i_8cs_source.html#l00004">BattleItemUI.cs:5</a></div></div>
+<div class="ttc" id="anamespace_units_html"><div class="ttname"><a href="namespace_units.html">Units</a></div><div class="ttdef"><b>Definition:</b> <a href="_buff_8cs_source.html#l00004">Buff.cs:5</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_a5079711ee210cb3f5000c30d3746d06.html">SimpleRTS</a></li><li class="navelem"><a class="el" href="dir_ec7b684f6ba09c3c3a1f78fc68be2b45.html">Simplified_RTS</a></li><li class="navelem"><a class="el" href="dir_fc9fc45e4060f68dac2ba8008ad7420a.html">Assets</a></li><li class="navelem"><a class="el" href="dir_9c83f749c47014e6bfe3d69c7ba163ff.html">Scripts</a></li><li class="navelem"><a class="el" href="dir_18422f4cda63d8f96b8f7b48be62c667.html">Saver</a></li><li class="navelem"><a class="el" href="_data_transfer_8cs.html">DataTransfer.cs</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

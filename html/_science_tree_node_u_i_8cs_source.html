@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>古代运动图鉴: SimpleRTS/Simplified_RTS/Assets/Scripts/UI/ScienceTree/ScienceTreeNodeUI.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Icon_Small.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">古代运动图鉴
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('_science_tree_node_u_i_8cs_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">ScienceTreeNodeUI.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_science_tree_node_u_i_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_gameplay.html">Gameplay</a>.<a class="code" href="namespace_gameplay_1_1_science_tree.html">ScienceTree</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> UnityEngine;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> UnityEngine.UI;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="namespace_u_i_1_1_science_tree.html">    5</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_u_i_1_1_science_tree.html">UI.ScienceTree</a></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="class_u_i_1_1_science_tree_1_1_science_tree_node_u_i.html">    7</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_u_i_1_1_science_tree_1_1_science_tree_node_u_i.html">ScienceTreeNodeUI</a> : MonoBehaviour</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    {</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_u_i_1_1_science_tree_1_1_science_tree_node_u_i.html#af61c24a24f92bf0eb62e285477ec781e">    9</a></span>&#160;        <span class="keyword">public</span> Button          <a class="code" href="class_u_i_1_1_science_tree_1_1_science_tree_node_u_i.html#af61c24a24f92bf0eb62e285477ec781e">nodeButton</a>;</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_u_i_1_1_science_tree_1_1_science_tree_node_u_i.html#a336403241c72e5ea39ada2bba67b5a68">   10</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="class_u_i_1_1_science_tree_1_1_science_tree_u_i.html">ScienceTreeUI</a>   <a class="code" href="class_u_i_1_1_science_tree_1_1_science_tree_node_u_i.html#a336403241c72e5ea39ada2bba67b5a68">scienceTreeUI</a>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_u_i_1_1_science_tree_1_1_science_tree_node_u_i.html#a7c0e5f152d9a7304afb4932ef35d4978">   11</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="class_gameplay_1_1_science_tree_1_1_science_tree_node.html">ScienceTreeNode</a> <a class="code" href="class_u_i_1_1_science_tree_1_1_science_tree_node_u_i.html#a7c0e5f152d9a7304afb4932ef35d4978">scienceTreeNode</a>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_u_i_1_1_science_tree_1_1_science_tree_node_u_i.html#a0264ebfca31e5741e606f42fd6983b5d">   13</a></span>&#160;        <span class="keyword">public</span> ColorBlock <a class="code" href="class_u_i_1_1_science_tree_1_1_science_tree_node_u_i.html#a0264ebfca31e5741e606f42fd6983b5d">selectedColor</a> = ColorBlock.defaultColorBlock;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> Start()</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            <a class="code" href="class_u_i_1_1_science_tree_1_1_science_tree_node_u_i.html#a7c5df7ab53b3697de043830984a570bc">CheckActivatable</a>();</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        }</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_u_i_1_1_science_tree_1_1_science_tree_node_u_i.html#a7c5df7ab53b3697de043830984a570bc">   20</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_u_i_1_1_science_tree_1_1_science_tree_node_u_i.html#a7c5df7ab53b3697de043830984a570bc">CheckActivatable</a>()</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            <a class="code" href="class_u_i_1_1_science_tree_1_1_science_tree_node_u_i.html#af61c24a24f92bf0eb62e285477ec781e">nodeButton</a>.interactable = <a class="code" href="class_u_i_1_1_science_tree_1_1_science_tree_node_u_i.html#a7c0e5f152d9a7304afb4932ef35d4978">scienceTreeNode</a>.<a class="code" href="class_gameplay_1_1_science_tree_1_1_science_tree_node.html#ae2fd35a63291789f2e086cd1f6e3ab8f">IsActivatable</a>();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            Debug.Log(<span class="stringliteral">&quot;node name [&quot;</span> + gameObject.name + <span class="stringliteral">&quot;] is &quot;</span> + <a class="code" href="class_u_i_1_1_science_tree_1_1_science_tree_node_u_i.html#a7c0e5f152d9a7304afb4932ef35d4978">scienceTreeNode</a>.<a class="code" href="class_gameplay_1_1_science_tree_1_1_science_tree_node.html#ae2fd35a63291789f2e086cd1f6e3ab8f">IsActivatable</a>());</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        }</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_u_i_1_1_science_tree_1_1_science_tree_node_u_i.html#adec2aaeae637f93c3fc8494512f182be">   26</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_u_i_1_1_science_tree_1_1_science_tree_node_u_i.html#adec2aaeae637f93c3fc8494512f182be">OnClick</a>()</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="class_u_i_1_1_science_tree_1_1_science_tree_node_u_i.html#a7c0e5f152d9a7304afb4932ef35d4978">scienceTreeNode</a>.<a class="code" href="class_gameplay_1_1_science_tree_1_1_science_tree_node.html#ae2fd35a63291789f2e086cd1f6e3ab8f">IsActivatable</a>())</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="class_u_i_1_1_science_tree_1_1_science_tree_node_u_i.html#a7c0e5f152d9a7304afb4932ef35d4978">scienceTreeNode</a>.<a class="code" href="class_gameplay_1_1_science_tree_1_1_science_tree_node.html#a4b97d44856afbeed4dbb0f737ee7c5e5">Activate</a>())</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                    Debug.Log(<span class="stringliteral">&quot;Acitivate node [&quot;</span> + gameObject.name + <span class="stringliteral">&quot;]&quot;</span>);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                    <a class="code" href="class_u_i_1_1_science_tree_1_1_science_tree_node_u_i.html#af61c24a24f92bf0eb62e285477ec781e">nodeButton</a>.colors       = <a class="code" href="class_u_i_1_1_science_tree_1_1_science_tree_node_u_i.html#a0264ebfca31e5741e606f42fd6983b5d">selectedColor</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                    <a class="code" href="class_u_i_1_1_science_tree_1_1_science_tree_node_u_i.html#af61c24a24f92bf0eb62e285477ec781e">nodeButton</a>.interactable = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                    <span class="keywordflow">foreach</span> (var afterwardNode <span class="keywordflow">in</span> <a class="code" href="class_u_i_1_1_science_tree_1_1_science_tree_node_u_i.html#a7c0e5f152d9a7304afb4932ef35d4978">scienceTreeNode</a>.<a class="code" href="class_gameplay_1_1_science_tree_1_1_science_tree_node.html#a8e06e1dd8489b2375d254943cdfd4aa3">afterwardNodes</a>)</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                        <a class="code" href="class_u_i_1_1_science_tree_1_1_science_tree_node_u_i.html#a336403241c72e5ea39ada2bba67b5a68">scienceTreeUI</a>.<a class="code" href="class_u_i_1_1_science_tree_1_1_science_tree_u_i.html#aedcbd7951e5e5b358aca61e69deb7a9b">FindNodeUI</a>(afterwardNode).<a class="code" href="class_u_i_1_1_science_tree_1_1_science_tree_node_u_i.html#a7c5df7ab53b3697de043830984a570bc">CheckActivatable</a>();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                }</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        }</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
+<div class="ttc" id="aclass_gameplay_1_1_science_tree_1_1_science_tree_node_html"><div class="ttname"><a href="class_gameplay_1_1_science_tree_1_1_science_tree_node.html">Gameplay.ScienceTree.ScienceTreeNode</a></div><div class="ttdoc">科技树节点</div><div class="ttdef"><b>Definition:</b> <a href="_science_tree_node_8cs_source.html#l00010">ScienceTreeNode.cs:11</a></div></div>
+<div class="ttc" id="aclass_gameplay_1_1_science_tree_1_1_science_tree_node_html_a4b97d44856afbeed4dbb0f737ee7c5e5"><div class="ttname"><a href="class_gameplay_1_1_science_tree_1_1_science_tree_node.html#a4b97d44856afbeed4dbb0f737ee7c5e5">Gameplay.ScienceTree.ScienceTreeNode.Activate</a></div><div class="ttdeci">bool Activate()</div><div class="ttdoc">激活</div><div class="ttdef"><b>Definition:</b> <a href="_science_tree_node_8cs_source.html#l00073">ScienceTreeNode.cs:73</a></div></div>
+<div class="ttc" id="aclass_gameplay_1_1_science_tree_1_1_science_tree_node_html_a8e06e1dd8489b2375d254943cdfd4aa3"><div class="ttname"><a href="class_gameplay_1_1_science_tree_1_1_science_tree_node.html#a8e06e1dd8489b2375d254943cdfd4aa3">Gameplay.ScienceTree.ScienceTreeNode.afterwardNodes</a></div><div class="ttdeci">List&lt; ScienceTreeNode &gt; afterwardNodes</div><div class="ttdoc">后续节点</div><div class="ttdef"><b>Definition:</b> <a href="_science_tree_node_8cs_source.html#l00020">ScienceTreeNode.cs:20</a></div></div>
+<div class="ttc" id="aclass_gameplay_1_1_science_tree_1_1_science_tree_node_html_ae2fd35a63291789f2e086cd1f6e3ab8f"><div class="ttname"><a href="class_gameplay_1_1_science_tree_1_1_science_tree_node.html#ae2fd35a63291789f2e086cd1f6e3ab8f">Gameplay.ScienceTree.ScienceTreeNode.IsActivatable</a></div><div class="ttdeci">bool IsActivatable()</div><div class="ttdoc">该节点是否可被激活</div><div class="ttdef"><b>Definition:</b> <a href="_science_tree_node_8cs_source.html#l00064">ScienceTreeNode.cs:64</a></div></div>
+<div class="ttc" id="aclass_u_i_1_1_science_tree_1_1_science_tree_node_u_i_html"><div class="ttname"><a href="class_u_i_1_1_science_tree_1_1_science_tree_node_u_i.html">UI.ScienceTree.ScienceTreeNodeUI</a></div><div class="ttdef"><b>Definition:</b> <a href="_science_tree_node_u_i_8cs_source.html#l00007">ScienceTreeNodeUI.cs:8</a></div></div>
+<div class="ttc" id="aclass_u_i_1_1_science_tree_1_1_science_tree_node_u_i_html_a0264ebfca31e5741e606f42fd6983b5d"><div class="ttname"><a href="class_u_i_1_1_science_tree_1_1_science_tree_node_u_i.html#a0264ebfca31e5741e606f42fd6983b5d">UI.ScienceTree.ScienceTreeNodeUI.selectedColor</a></div><div class="ttdeci">ColorBlock selectedColor</div><div class="ttdef"><b>Definition:</b> <a href="_science_tree_node_u_i_8cs_source.html#l00013">ScienceTreeNodeUI.cs:13</a></div></div>
+<div class="ttc" id="aclass_u_i_1_1_science_tree_1_1_science_tree_node_u_i_html_a336403241c72e5ea39ada2bba67b5a68"><div class="ttname"><a href="class_u_i_1_1_science_tree_1_1_science_tree_node_u_i.html#a336403241c72e5ea39ada2bba67b5a68">UI.ScienceTree.ScienceTreeNodeUI.scienceTreeUI</a></div><div class="ttdeci">ScienceTreeUI scienceTreeUI</div><div class="ttdef"><b>Definition:</b> <a href="_science_tree_node_u_i_8cs_source.html#l00010">ScienceTreeNodeUI.cs:10</a></div></div>
+<div class="ttc" id="aclass_u_i_1_1_science_tree_1_1_science_tree_node_u_i_html_a7c0e5f152d9a7304afb4932ef35d4978"><div class="ttname"><a href="class_u_i_1_1_science_tree_1_1_science_tree_node_u_i.html#a7c0e5f152d9a7304afb4932ef35d4978">UI.ScienceTree.ScienceTreeNodeUI.scienceTreeNode</a></div><div class="ttdeci">ScienceTreeNode scienceTreeNode</div><div class="ttdef"><b>Definition:</b> <a href="_science_tree_node_u_i_8cs_source.html#l00011">ScienceTreeNodeUI.cs:11</a></div></div>
+<div class="ttc" id="aclass_u_i_1_1_science_tree_1_1_science_tree_node_u_i_html_a7c5df7ab53b3697de043830984a570bc"><div class="ttname"><a href="class_u_i_1_1_science_tree_1_1_science_tree_node_u_i.html#a7c5df7ab53b3697de043830984a570bc">UI.ScienceTree.ScienceTreeNodeUI.CheckActivatable</a></div><div class="ttdeci">void CheckActivatable()</div><div class="ttdef"><b>Definition:</b> <a href="_science_tree_node_u_i_8cs_source.html#l00020">ScienceTreeNodeUI.cs:20</a></div></div>
+<div class="ttc" id="aclass_u_i_1_1_science_tree_1_1_science_tree_node_u_i_html_adec2aaeae637f93c3fc8494512f182be"><div class="ttname"><a href="class_u_i_1_1_science_tree_1_1_science_tree_node_u_i.html#adec2aaeae637f93c3fc8494512f182be">UI.ScienceTree.ScienceTreeNodeUI.OnClick</a></div><div class="ttdeci">void OnClick()</div><div class="ttdef"><b>Definition:</b> <a href="_science_tree_node_u_i_8cs_source.html#l00026">ScienceTreeNodeUI.cs:26</a></div></div>
+<div class="ttc" id="aclass_u_i_1_1_science_tree_1_1_science_tree_node_u_i_html_af61c24a24f92bf0eb62e285477ec781e"><div class="ttname"><a href="class_u_i_1_1_science_tree_1_1_science_tree_node_u_i.html#af61c24a24f92bf0eb62e285477ec781e">UI.ScienceTree.ScienceTreeNodeUI.nodeButton</a></div><div class="ttdeci">Button nodeButton</div><div class="ttdef"><b>Definition:</b> <a href="_science_tree_node_u_i_8cs_source.html#l00009">ScienceTreeNodeUI.cs:9</a></div></div>
+<div class="ttc" id="aclass_u_i_1_1_science_tree_1_1_science_tree_u_i_html"><div class="ttname"><a href="class_u_i_1_1_science_tree_1_1_science_tree_u_i.html">UI.ScienceTree.ScienceTreeUI</a></div><div class="ttdef"><b>Definition:</b> <a href="_science_tree_u_i_8cs_source.html#l00006">ScienceTreeUI.cs:7</a></div></div>
+<div class="ttc" id="aclass_u_i_1_1_science_tree_1_1_science_tree_u_i_html_aedcbd7951e5e5b358aca61e69deb7a9b"><div class="ttname"><a href="class_u_i_1_1_science_tree_1_1_science_tree_u_i.html#aedcbd7951e5e5b358aca61e69deb7a9b">UI.ScienceTree.ScienceTreeUI.FindNodeUI</a></div><div class="ttdeci">ScienceTreeNodeUI FindNodeUI(ScienceTreeNode node)</div><div class="ttdef"><b>Definition:</b> <a href="_science_tree_u_i_8cs_source.html#l00011">ScienceTreeUI.cs:11</a></div></div>
+<div class="ttc" id="anamespace_gameplay_1_1_science_tree_html"><div class="ttname"><a href="namespace_gameplay_1_1_science_tree.html">Gameplay.ScienceTree</a></div><div class="ttdef"><b>Definition:</b> <a href="_science_tree_basic_8cs_source.html#l00004">ScienceTreeBasic.cs:5</a></div></div>
+<div class="ttc" id="anamespace_gameplay_html"><div class="ttname"><a href="namespace_gameplay.html">Gameplay</a></div><div class="ttdef"><b>Definition:</b> <a href="_global_event_args_8cs_source.html#l00001">GlobalEventArgs.cs:2</a></div></div>
+<div class="ttc" id="anamespace_u_i_1_1_science_tree_html"><div class="ttname"><a href="namespace_u_i_1_1_science_tree.html">UI.ScienceTree</a></div><div class="ttdef"><b>Definition:</b> <a href="_science_tree_node_u_i_8cs_source.html#l00005">ScienceTreeNodeUI.cs:6</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_a5079711ee210cb3f5000c30d3746d06.html">SimpleRTS</a></li><li class="navelem"><a class="el" href="dir_ec7b684f6ba09c3c3a1f78fc68be2b45.html">Simplified_RTS</a></li><li class="navelem"><a class="el" href="dir_fc9fc45e4060f68dac2ba8008ad7420a.html">Assets</a></li><li class="navelem"><a class="el" href="dir_9c83f749c47014e6bfe3d69c7ba163ff.html">Scripts</a></li><li class="navelem"><a class="el" href="dir_b2e1844b6c2b1bf40f1cbb7462c24dc2.html">UI</a></li><li class="navelem"><a class="el" href="dir_6502d7f223ef8e431d5134210abc68bd.html">ScienceTree</a></li><li class="navelem"><a class="el" href="_science_tree_node_u_i_8cs.html">ScienceTreeNodeUI.cs</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

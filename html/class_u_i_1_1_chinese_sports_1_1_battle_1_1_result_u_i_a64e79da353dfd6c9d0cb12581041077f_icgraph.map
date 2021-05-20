@@ -1,0 +1,6 @@
+<map id="UI.ChineseSports.Battle.ResultUI.ShowButton" name="UI.ChineseSports.Battle.ResultUI.ShowButton">
+<area shape="rect" id="node1" title=" " alt="" coords="467,39,632,80"/>
+<area shape="rect" id="node2" href="$class_u_i_1_1_chinese_sports_1_1_battle_1_1_result_u_i.html#aee0048338efe9f7d4867ec3a61e7aae4" title=" " alt="" coords="253,39,419,80"/>
+<area shape="rect" id="node3" href="$class_game_manager_1_1_game_manager.html#ab3ed016f68bbe079df19a661cb292db3" title="我方失败" alt="" coords="5,5,205,47"/>
+<area shape="rect" id="node4" href="$class_game_manager_1_1_game_manager.html#a64e64a516bea6f6aecaca4c3148b4e43" title="我方胜利" alt="" coords="5,71,205,112"/>
+</map>

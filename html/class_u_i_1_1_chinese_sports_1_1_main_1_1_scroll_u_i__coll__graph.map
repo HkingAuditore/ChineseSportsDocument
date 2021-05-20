@@ -1,0 +1,8 @@
+<map id="UI.ChineseSports.Main.ScrollUI" name="UI.ChineseSports.Main.ScrollUI">
+<area shape="rect" id="node1" title=" " alt="" coords="64,855,268,1079"/>
+<area shape="rect" id="node2" title=" " alt="" coords="139,5,250,83"/>
+<area shape="rect" id="node3" href="$class_u_i_1_1_fill_bar_u_i.html" title=" " alt="" coords="23,496,216,632"/>
+<area shape="rect" id="node5" href="$class_video_1_1_video_player_manager.html" title="视频播放管理" alt="" coords="174,656,353,792"/>
+<area shape="rect" id="node6" href="$class_u_i_1_1_chinese_sports_1_1_battle_1_1_result_u_i.html" title=" " alt="" coords="257,145,454,472"/>
+<area shape="rect" id="node4" title=" " alt="" coords="404,5,451,83"/>
+</map>

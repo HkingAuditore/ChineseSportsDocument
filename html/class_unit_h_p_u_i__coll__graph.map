@@ -1,0 +1,10 @@
+<map id="UnitHPUI" name="UnitHPUI">
+<area shape="rect" id="node1" title=" " alt="" coords="144,1769,219,1846"/>
+<area shape="rect" id="node2" title=" " alt="" coords="267,5,378,83"/>
+<area shape="rect" id="node3" href="$class_units_1_1_unit.html" title="单位" alt="" coords="171,1079,392,1611"/>
+<area shape="rect" id="node4" href="$class_player_1_1_player.html" title="玩家" alt="" coords="491,132,757,1016"/>
+<area shape="rect" id="node6" href="$class_units_1_1_unit.html" title="单位" alt="" coords="425,1079,647,1611"/>
+<area shape="rect" id="node5" href="$class_units_1_1_farmer.html" title="农民" alt="" coords="469,1673,670,1941"/>
+<area shape="rect" id="node8" href="$class_units_1_1_door.html" title="基地门" alt="" coords="739,1761,896,1853"/>
+<area shape="rect" id="node7" href="$interface_units_1_1_i_military_unit.html" title="攻击性单位接口" alt="" coords="229,455,416,693"/>
+</map>

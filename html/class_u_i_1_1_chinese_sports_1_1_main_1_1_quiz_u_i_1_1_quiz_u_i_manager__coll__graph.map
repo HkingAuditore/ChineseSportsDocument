@@ -1,0 +1,9 @@
+<map id="UI.ChineseSports.Main.QuizUI.QuizUIManager" name="UI.ChineseSports.Main.QuizUI.QuizUIManager">
+<area shape="rect" id="node1" title=" " alt="" coords="66,587,278,869"/>
+<area shape="rect" id="node6" href="$class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_show_u_i.html" title=" " alt="" coords="178,932,379,1141"/>
+<area shape="rect" id="node2" title=" " alt="" coords="26,5,137,83"/>
+<area shape="rect" id="node3" href="$class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_finish_u_i.html" title=" " alt="" coords="93,417,280,524"/>
+<area shape="rect" id="node4" href="$class_u_i_1_1_chinese_sports_1_1_main_1_1_character_view_u_i.html" title=" " alt="" coords="145,145,359,355"/>
+<area shape="rect" id="node5" title=" " alt="" coords="307,5,354,83"/>
+<area shape="rect" id="node7" href="$class_saver_1_1_quiz_1_1_quiz.html" title=" " alt="" coords="435,660,583,796"/>
+</map>

@@ -1,0 +1,10 @@
+<map id="FarmerPollution" name="FarmerPollution">
+<area shape="rect" id="node1" title=" " alt="" coords="601,1607,748,1714"/>
+<area shape="rect" id="node2" href="$class_units_1_1_farmer.html" title="农民" alt="" coords="574,888,775,1156"/>
+<area shape="rect" id="node3" href="$class_units_1_1_unit.html" title="单位" alt="" coords="239,307,460,839"/>
+<area shape="rect" id="node6" href="$class_units_1_1_farmer.html" title="农民" alt="" coords="45,888,246,1156"/>
+<area shape="rect" id="node7" href="$class_units_1_1_door.html" title="基地门" alt="" coords="271,976,428,1068"/>
+<area shape="rect" id="node4" title=" " alt="" coords="37,86,147,163"/>
+<area shape="rect" id="node5" href="$class_player_1_1_player.html" title="玩家" alt="" coords="92,1219,359,2103"/>
+<area shape="rect" id="node8" href="$interface_units_1_1_i_military_unit.html" title="攻击性单位接口" alt="" coords="256,5,443,244"/>
+</map>

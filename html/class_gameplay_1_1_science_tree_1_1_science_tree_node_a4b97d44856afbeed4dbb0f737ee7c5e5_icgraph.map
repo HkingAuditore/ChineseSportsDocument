@@ -1,0 +1,4 @@
+<map id="Gameplay.ScienceTree.ScienceTreeNode.Activate" name="Gameplay.ScienceTree.ScienceTreeNode.Activate">
+<area shape="rect" id="node1" title="激活" alt="" coords="240,5,448,47"/>
+<area shape="rect" id="node2" href="$class_u_i_1_1_science_tree_1_1_science_tree_node_u_i.html#adec2aaeae637f93c3fc8494512f182be" title=" " alt="" coords="5,5,192,47"/>
+</map>

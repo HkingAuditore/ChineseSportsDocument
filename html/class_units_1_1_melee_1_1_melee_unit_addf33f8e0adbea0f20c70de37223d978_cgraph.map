@@ -1,0 +1,4 @@
+<map id="Units.Melee.MeleeUnit.Attack" name="Units.Melee.MeleeUnit.Attack">
+<area shape="rect" id="node1" title="攻击" alt="" coords="5,5,200,32"/>
+<area shape="rect" id="node2" href="$class_units_1_1_unit.html#a42800b6151ca67913291bf4d10fdf7ae" title="被攻击" alt="" coords="248,5,399,32"/>
+</map>

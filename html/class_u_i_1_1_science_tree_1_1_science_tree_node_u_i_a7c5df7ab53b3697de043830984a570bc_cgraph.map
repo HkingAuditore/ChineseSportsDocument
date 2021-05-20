@@ -1,0 +1,4 @@
+<map id="UI.ScienceTree.ScienceTreeNodeUI.CheckActivatable" name="UI.ScienceTree.ScienceTreeNodeUI.CheckActivatable">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,192,47"/>
+<area shape="rect" id="node2" href="$class_gameplay_1_1_science_tree_1_1_science_tree_node.html#ae2fd35a63291789f2e086cd1f6e3ab8f" title="该节点是否可被激活" alt="" coords="240,5,448,47"/>
+</map>

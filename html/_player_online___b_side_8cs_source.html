@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>古代运动图鉴: SimpleRTS/Simplified_RTS/Assets/Scripts/Player/PlayerOnline_BSide.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Icon_Small.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">古代运动图鉴
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('_player_online___b_side_8cs_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">PlayerOnline_BSide.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_player_online___b_side_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> System;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_network.html">Network</a>;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> Photon.Pun;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> UnityEngine;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_player.html">Player</a></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_player_1_1_player_online___b_side.html">    8</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_player_1_1_player_online___b_side.html">PlayerOnline_BSide</a> : <a class="code" href="namespace_player.html">Player</a></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    {</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_player_1_1_player_online___b_side.html#a18033d23e3127fa28e517b576c677076">   13</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="class_network_1_1_network_player_manager.html">NetworkPlayerManager</a> <a class="code" href="class_player_1_1_player_online___b_side.html#a18033d23e3127fa28e517b576c677076">networkPlayerManager</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="keyword">private</span> Type _playerType;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_player_1_1_player_online___b_side.html#a8119d05a744d8c87421aa950c83d0160">   20</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="class_player_1_1_player_online___b_side.html#a8119d05a744d8c87421aa950c83d0160">PlayerID</a> { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_player_1_1_player_online___b_side.html#aca086a3391c220c2b0f07015218d9e19">   22</a></span>&#160;        <span class="keyword">public</span> Photon.Realtime.Player <a class="code" href="class_player_1_1_player_online___b_side.html#aca086a3391c220c2b0f07015218d9e19">PlayerPhoton</a> { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> Awake()</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            _playerType = GetType();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            <span class="keywordflow">if</span> (PhotonNetwork.IsConnected &amp;&amp; PhotonNetwork.InRoom)</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                <span class="keywordflow">foreach</span> (var player <span class="keywordflow">in</span> PhotonNetwork.CurrentRoom.Players)</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                    <span class="keywordflow">if</span> (!player.Value.IsLocal)</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                    {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                        <a class="code" href="class_player_1_1_player_online___b_side.html#a8119d05a744d8c87421aa950c83d0160">PlayerID</a>     = player.Key;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                        <a class="code" href="class_player_1_1_player_online___b_side.html#aca086a3391c220c2b0f07015218d9e19">PlayerPhoton</a> = player.Value;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                    }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        }</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_player_1_1_player_online___b_side.html#afa4870049ee6f87dfc1406de6d1c653d">   37</a></span>&#160;        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_player_1_1_player_online___b_side.html#afa4870049ee6f87dfc1406de6d1c653d">Start</a>()</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            base.Start();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            <a class="code" href="class_player_1_1_player_online___b_side.html#ae29ee33e5b79846e643ae005ad8d290d">UpdateRemotePlayerProperties</a>();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_player_1_1_player_online___b_side.html#ae29ee33e5b79846e643ae005ad8d290d">   46</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_player_1_1_player_online___b_side.html#ae29ee33e5b79846e643ae005ad8d290d">UpdateRemotePlayerProperties</a>()</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="keywordflow">if</span> (PhotonNetwork.IsConnected &amp;&amp; PhotonNetwork.InRoom)</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                Debug.Log(<span class="stringliteral">&quot;Receive Properties!&quot;</span>);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                <span class="comment">// 同步数据</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                <span class="comment">// if (PlayerPhoton.CustomProperties.ContainsKey(&quot;HP&quot;))</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                <span class="comment">//     this.HP = (int) PlayerPhoton.CustomProperties[&quot;HP&quot;];</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="class_player_1_1_player_online___b_side.html#aca086a3391c220c2b0f07015218d9e19">PlayerPhoton</a>.CustomProperties.ContainsKey(<span class="stringliteral">&quot;Wood&quot;</span>))</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                    <a class="code" href="class_player_1_1_player.html#a2622b6d971885095e60743f299a8768d">Wood</a> = (int) <a class="code" href="class_player_1_1_player_online___b_side.html#aca086a3391c220c2b0f07015218d9e19">PlayerPhoton</a>.CustomProperties[<span class="stringliteral">&quot;Wood&quot;</span>];</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                if (<a class="code" href="class_player_1_1_player_online___b_side.html#aca086a3391c220c2b0f07015218d9e19">PlayerPhoton</a>.CustomProperties.ContainsKey(<span class="stringliteral">&quot;Gold&quot;</span>))</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                    <a class="code" href="class_player_1_1_player.html#a4c62a3c99ece17b174de5ce65cdea55c">Gold</a> = (<span class="keywordtype">int</span>) <a class="code" href="class_player_1_1_player_online___b_side.html#aca086a3391c220c2b0f07015218d9e19">PlayerPhoton</a>.CustomProperties[<span class="stringliteral">&quot;Gold&quot;</span>];</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="class_player_1_1_player_online___b_side.html#aca086a3391c220c2b0f07015218d9e19">PlayerPhoton</a>.CustomProperties.ContainsKey(<span class="stringliteral">&quot;Food&quot;</span>))</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                    <a class="code" href="class_player_1_1_player.html#aa30e0fbd6f30ab0a6d56306a3a45e97a">Food</a> = (<span class="keywordtype">int</span>) <a class="code" href="class_player_1_1_player_online___b_side.html#aca086a3391c220c2b0f07015218d9e19">PlayerPhoton</a>.CustomProperties[<span class="stringliteral">&quot;Food&quot;</span>];</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                <span class="comment">// if (PlayerPhoton.CustomProperties.ContainsKey(&quot;FarmerCount&quot;))</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                <span class="comment">//     this.FarmerCount = (int) PlayerPhoton.CustomProperties[&quot;FarmerCount&quot;];</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                <span class="comment">// if (PlayerPhoton.CustomProperties.ContainsKey(&quot;MaxFarmerNumber&quot;))</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                <span class="comment">//     this.MaxFarmerNumber = (int) PlayerPhoton.CustomProperties[&quot;MaxFarmerNumber&quot;];</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                <span class="comment">// if (PlayerPhoton.CustomProperties.ContainsKey(&quot;RoadFarmers&quot;))</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                <span class="comment">//     this.RoadFarmers = (int[]) PlayerPhoton.CustomProperties[&quot;RoadFarmers&quot;];</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                <span class="comment">// if (PlayerPhoton.CustomProperties.ContainsKey(&quot;RoadWorkingFarmers&quot;))</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                <span class="comment">//     this.RoadWorkingFarmers = (int[]) PlayerPhoton.CustomProperties[&quot;RoadWorkingFarmers&quot;];</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                <span class="comment">// if (PlayerPhoton.CustomProperties.ContainsKey(&quot;DispatchableFarmer&quot;))</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                <span class="comment">//     this.DispatchableFarmer = (int) PlayerPhoton.CustomProperties[&quot;DispatchableFarmer&quot;];</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="class_player_1_1_player_online___b_side.html#a289daab9ecbd4a7ba92da2bc7a33369e">   81</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_player_1_1_player_online___b_side.html#a289daab9ecbd4a7ba92da2bc7a33369e">UpdateSingleRemotePlayerProperty</a>(<span class="keywordtype">string</span> propertyName, <span class="keywordtype">object</span> value)</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            _playerType.GetProperty(propertyName)?.SetValue(<span class="keyword">this</span>, value);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        }</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="preprocessor">        #region 控制</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="preprocessor">        #endregion</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    }</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}</div>
+<div class="ttc" id="aclass_network_1_1_network_player_manager_html"><div class="ttname"><a href="class_network_1_1_network_player_manager.html">Network.NetworkPlayerManager</a></div><div class="ttdoc">网络玩家管理</div><div class="ttdef"><b>Definition:</b> <a href="_network_player_manager_8cs_source.html#l00012">NetworkPlayerManager.cs:13</a></div></div>
+<div class="ttc" id="aclass_player_1_1_player_html_a2622b6d971885095e60743f299a8768d"><div class="ttname"><a href="class_player_1_1_player.html#a2622b6d971885095e60743f299a8768d">Player.Player.Wood</a></div><div class="ttdeci">int Wood</div><div class="ttdoc">木材</div><div class="ttdef"><b>Definition:</b> <a href="_player_8cs_source.html#l00183">Player.cs:184</a></div></div>
+<div class="ttc" id="aclass_player_1_1_player_html_a4c62a3c99ece17b174de5ce65cdea55c"><div class="ttname"><a href="class_player_1_1_player.html#a4c62a3c99ece17b174de5ce65cdea55c">Player.Player.Gold</a></div><div class="ttdeci">int Gold</div><div class="ttdoc">黄金</div><div class="ttdef"><b>Definition:</b> <a href="_player_8cs_source.html#l00202">Player.cs:203</a></div></div>
+<div class="ttc" id="aclass_player_1_1_player_html_aa30e0fbd6f30ab0a6d56306a3a45e97a"><div class="ttname"><a href="class_player_1_1_player.html#aa30e0fbd6f30ab0a6d56306a3a45e97a">Player.Player.Food</a></div><div class="ttdeci">int Food</div><div class="ttdoc">食物</div><div class="ttdef"><b>Definition:</b> <a href="_player_8cs_source.html#l00164">Player.cs:165</a></div></div>
+<div class="ttc" id="aclass_player_1_1_player_online___b_side_html"><div class="ttname"><a href="class_player_1_1_player_online___b_side.html">Player.PlayerOnline_BSide</a></div><div class="ttdef"><b>Definition:</b> <a href="_player_online___b_side_8cs_source.html#l00008">PlayerOnline_BSide.cs:9</a></div></div>
+<div class="ttc" id="aclass_player_1_1_player_online___b_side_html_a18033d23e3127fa28e517b576c677076"><div class="ttname"><a href="class_player_1_1_player_online___b_side.html#a18033d23e3127fa28e517b576c677076">Player.PlayerOnline_BSide.networkPlayerManager</a></div><div class="ttdeci">NetworkPlayerManager networkPlayerManager</div><div class="ttdoc">网络玩家管理</div><div class="ttdef"><b>Definition:</b> <a href="_player_online___b_side_8cs_source.html#l00013">PlayerOnline_BSide.cs:13</a></div></div>
+<div class="ttc" id="aclass_player_1_1_player_online___b_side_html_a289daab9ecbd4a7ba92da2bc7a33369e"><div class="ttname"><a href="class_player_1_1_player_online___b_side.html#a289daab9ecbd4a7ba92da2bc7a33369e">Player.PlayerOnline_BSide.UpdateSingleRemotePlayerProperty</a></div><div class="ttdeci">void UpdateSingleRemotePlayerProperty(string propertyName, object value)</div><div class="ttdoc">更新远程玩家</div><div class="ttdef"><b>Definition:</b> <a href="_player_online___b_side_8cs_source.html#l00081">PlayerOnline_BSide.cs:81</a></div></div>
+<div class="ttc" id="aclass_player_1_1_player_online___b_side_html_a8119d05a744d8c87421aa950c83d0160"><div class="ttname"><a href="class_player_1_1_player_online___b_side.html#a8119d05a744d8c87421aa950c83d0160">Player.PlayerOnline_BSide.PlayerID</a></div><div class="ttdeci">int PlayerID</div><div class="ttdoc">玩家用户名</div><div class="ttdef"><b>Definition:</b> <a href="_player_online___b_side_8cs_source.html#l00020">PlayerOnline_BSide.cs:20</a></div></div>
+<div class="ttc" id="aclass_player_1_1_player_online___b_side_html_aca086a3391c220c2b0f07015218d9e19"><div class="ttname"><a href="class_player_1_1_player_online___b_side.html#aca086a3391c220c2b0f07015218d9e19">Player.PlayerOnline_BSide.PlayerPhoton</a></div><div class="ttdeci">Photon.Realtime.Player PlayerPhoton</div><div class="ttdef"><b>Definition:</b> <a href="_player_online___b_side_8cs_source.html#l00022">PlayerOnline_BSide.cs:22</a></div></div>
+<div class="ttc" id="aclass_player_1_1_player_online___b_side_html_ae29ee33e5b79846e643ae005ad8d290d"><div class="ttname"><a href="class_player_1_1_player_online___b_side.html#ae29ee33e5b79846e643ae005ad8d290d">Player.PlayerOnline_BSide.UpdateRemotePlayerProperties</a></div><div class="ttdeci">void UpdateRemotePlayerProperties()</div><div class="ttdoc">更新远程玩家信息</div><div class="ttdef"><b>Definition:</b> <a href="_player_online___b_side_8cs_source.html#l00046">PlayerOnline_BSide.cs:46</a></div></div>
+<div class="ttc" id="aclass_player_1_1_player_online___b_side_html_afa4870049ee6f87dfc1406de6d1c653d"><div class="ttname"><a href="class_player_1_1_player_online___b_side.html#afa4870049ee6f87dfc1406de6d1c653d">Player.PlayerOnline_BSide.Start</a></div><div class="ttdeci">override void Start()</div><div class="ttdef"><b>Definition:</b> <a href="_player_online___b_side_8cs_source.html#l00037">PlayerOnline_BSide.cs:37</a></div></div>
+<div class="ttc" id="anamespace_network_html"><div class="ttname"><a href="namespace_network.html">Network</a></div><div class="ttdef"><b>Definition:</b> <a href="_network_lobby_manager_8cs_source.html#l00009">NetworkLobbyManager.cs:10</a></div></div>
+<div class="ttc" id="anamespace_player_html"><div class="ttname"><a href="namespace_player.html">Player</a></div><div class="ttdef"><b>Definition:</b> <a href="_player_8cs_source.html#l00010">Player.cs:11</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_a5079711ee210cb3f5000c30d3746d06.html">SimpleRTS</a></li><li class="navelem"><a class="el" href="dir_ec7b684f6ba09c3c3a1f78fc68be2b45.html">Simplified_RTS</a></li><li class="navelem"><a class="el" href="dir_fc9fc45e4060f68dac2ba8008ad7420a.html">Assets</a></li><li class="navelem"><a class="el" href="dir_9c83f749c47014e6bfe3d69c7ba163ff.html">Scripts</a></li><li class="navelem"><a class="el" href="dir_57278868c90159c1d8d270ccaf0ca9db.html">Player</a></li><li class="navelem"><a class="el" href="_player_online___b_side_8cs.html">PlayerOnline_BSide.cs</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

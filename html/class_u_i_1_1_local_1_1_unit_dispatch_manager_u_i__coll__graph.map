@@ -1,0 +1,14 @@
+<map id="UI.Local.UnitDispatchManagerUI" name="UI.Local.UnitDispatchManagerUI">
+<area shape="rect" id="node1" title=" " alt="" coords="171,1376,380,1497"/>
+<area shape="rect" id="node3" href="$class_u_i_1_1_local_1_1_unit_dispatch_u_i.html" title=" " alt="" coords="339,1817,540,2011"/>
+<area shape="rect" id="node2" title=" " alt="" coords="508,5,619,83"/>
+<area shape="rect" id="node4" href="$class_player_1_1_player.html" title="玩家" alt="" coords="821,132,1087,1016"/>
+<area shape="rect" id="node6" href="$class_units_1_1_unit.html" title="单位" alt="" coords="1190,1171,1411,1703"/>
+<area shape="rect" id="node9" href="$class_units_1_1_unit.html" title="单位" alt="" coords="726,1171,947,1703"/>
+<area shape="rect" id="node11" href="$class_u_i_1_1_chinese_sports_1_1_battle_1_1_sprite_indicator_u_i.html" title=" " alt="" coords="459,1040,667,1147"/>
+<area shape="rect" id="node12" href="$class_u_i_1_1_chinese_sports_1_1_battle_1_1_shoot_calculator_u_i.html" title=" " alt="" coords="133,484,351,664"/>
+<area shape="rect" id="node5" href="$class_units_1_1_farmer.html" title="农民" alt="" coords="1161,1780,1363,2048"/>
+<area shape="rect" id="node8" href="$class_units_1_1_door.html" title="基地门" alt="" coords="929,1868,1086,1960"/>
+<area shape="rect" id="node7" href="$interface_units_1_1_i_military_unit.html" title="攻击性单位接口" alt="" coords="1137,455,1323,693"/>
+<area shape="rect" id="node10" title=" " alt="" coords="5,1398,52,1475"/>
+</map>

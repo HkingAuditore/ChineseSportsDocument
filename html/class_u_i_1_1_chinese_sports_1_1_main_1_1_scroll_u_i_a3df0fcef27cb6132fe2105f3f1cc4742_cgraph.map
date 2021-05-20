@@ -1,0 +1,4 @@
+<map id="UI.ChineseSports.Main.ScrollUI.LoadBattle" name="UI.ChineseSports.Main.ScrollUI.LoadBattle">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,197,47"/>
+<area shape="rect" id="node2" href="$class_saver_1_1_data_transfer.html#a7dfee1eea2bfe71edbb142428e87029b" title="使用进度条加载" alt="" coords="245,5,445,47"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="Player.PlayerOnline_ASide.SubtractFarmer" name="Player.PlayerOnline_ASide.SubtractFarmer">
+<area shape="rect" id="node1" title="减少农民" alt="" coords="5,5,164,47"/>
+<area shape="rect" id="node2" href="$class_network_1_1_network_player_manager.html#a7375579b5c46afcceed1cbbad40f530b" title="A发送过来，传输给另一个端的B 添加农民" alt="" coords="212,5,423,47"/>
+</map>

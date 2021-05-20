@@ -1,0 +1,257 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>古代运动图鉴: SimpleRTS/Simplified_RTS/Assets/Scripts/UI/ChineseSports/Main/QuizUI/QuizUIManager.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Icon_Small.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">古代运动图鉴
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('_quiz_u_i_manager_8cs_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">QuizUIManager.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_quiz_u_i_manager_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> System;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> System.Collections.Generic;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> System.Linq;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_saver.html">Saver</a>;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_saver.html">Saver</a>.<a class="code" href="namespace_saver_1_1_quiz.html">Quiz</a>;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">using</span> UnityEngine;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">using</span> UnityEngine.UI;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i.html">UI.ChineseSports.Main.QuizUI</a></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager.html">   11</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager.html">QuizUIManager</a> : MonoBehaviour</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    {</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager.html#a846e59f34734cfff32c925f0c8b834d8">   13</a></span>&#160;        <span class="keyword">public</span> GameObject            <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager.html#a846e59f34734cfff32c925f0c8b834d8">quizConfirmPanel</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager.html#a9d3681ce4af930004cecea76b1f84b57">   14</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_show_u_i.html">QuizShowUI</a>            <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager.html#a9d3681ce4af930004cecea76b1f84b57">quizShowUI</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager.html#a373a61334ee2f34f6b974686a2547920">   15</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_finish_u_i.html">QuizFinishUI</a>          <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager.html#a373a61334ee2f34f6b974686a2547920">finishPanel</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager.html#a913f1561e48fa78f94c7862a4a87cfe3">   16</a></span>&#160;        <span class="keyword">public</span> List&lt;QuizTextTypeSet&gt; <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager.html#a913f1561e48fa78f94c7862a4a87cfe3">quizNumberTextList</a> = <span class="keyword">new</span> List&lt;QuizTextTypeSet&gt;();</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager.html#a14834328a4c7b61aca83e64fdc10edb8">   17</a></span>&#160;        <span class="keyword">public</span> List&lt;GameObject&gt;      <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager.html#a14834328a4c7b61aca83e64fdc10edb8">quizPackList</a>       = <span class="keyword">new</span> List&lt;GameObject&gt;();</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager.html#a102cc7242ac73359d162481a7501a5d5">   18</a></span>&#160;        <span class="keyword">public</span> List&lt;ItemUI&gt;          <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager.html#a102cc7242ac73359d162481a7501a5d5">ItemUis</a>            = <span class="keyword">new</span> List&lt;ItemUI&gt;();</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        [SerializeField]<span class="keyword">private</span> List&lt;bool&gt; _ansList = <span class="keyword">new</span> List&lt;bool&gt;();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keyword">private</span> List&lt;Quiz&gt; _allQuizList;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">int</span>        _curQuizIndex = 0;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keyword">private</span> List&lt;Quiz&gt; _curTypeQuizList;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">int</span>        _curUnitIndex;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> Start()</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            _allQuizList = <a class="code" href="class_saver_1_1_data_transfer.html">DataTransfer</a>.<a class="code" href="class_saver_1_1_data_transfer.html#a1799857a85084ca9d006affc941d9d36">GetDataTransfer</a>.<a class="code" href="class_saver_1_1_data_transfer.html#a50b3e33bb41aadbdc907463b1438384b">quizList</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <span class="keywordflow">foreach</span> (var t <span class="keywordflow">in</span> <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager.html#a913f1561e48fa78f94c7862a4a87cfe3">quizNumberTextList</a>)</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                t.QuizNumber.text = (from quiz in _allQuizList</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                                     where quiz.QuizType == t.QuizType</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                                     select quiz).Count().ToString();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager.html#a14834328a4c7b61aca83e64fdc10edb8">quizPackList</a>.Count; i++)</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager.html#a14834328a4c7b61aca83e64fdc10edb8">quizPackList</a>[i].SetActive(<a class="code" href="class_saver_1_1_data_transfer.html">DataTransfer</a>.<a class="code" href="class_saver_1_1_data_transfer.html#a1799857a85084ca9d006affc941d9d36">GetDataTransfer</a>.<a class="code" href="class_saver_1_1_data_transfer.html#ac31ea128a9211ee5054b3c65fe1c0c5c">characterRevealedList</a>[i]);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager.html#a27b6d68d4c890dfc4d4fbe197c14d4d2">   47</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager.html#a27b6d68d4c890dfc4d4fbe197c14d4d2">ShowQuiz</a>(<a class="code" href="class_saver_1_1_quiz_1_1_quiz.html">Quiz</a> quiz)</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager.html#a9d3681ce4af930004cecea76b1f84b57">quizShowUI</a>.<a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_show_u_i.html#a62183770ed66a67fa09ca52a170dd5f2">quiz</a> = quiz;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager.html#a9d3681ce4af930004cecea76b1f84b57">quizShowUI</a>.gameObject.SetActive(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager.html#a9d3681ce4af930004cecea76b1f84b57">quizShowUI</a>.<a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_show_u_i.html#a87d85b76526899c507002ec3f0767804">ShowQuiz</a>();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager.html#a5b5fc14b9c44fed5f3723f2d84180123">   55</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager.html#a5b5fc14b9c44fed5f3723f2d84180123">EnterQuiz</a>()</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            this._ansList = <span class="keyword">new</span> List&lt;bool&gt;();</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            _curQuizIndex = 0;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            SetQuizGroup(<a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager.html#a913f1561e48fa78f94c7862a4a87cfe3">quizNumberTextList</a>[_curUnitIndex].<a class="code" href="namespace_saver_1_1_quiz.html#aea9c053cc03f04ba7794380d9e4e3109">QuizType</a>);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager.html#a846e59f34734cfff32c925f0c8b834d8">quizConfirmPanel</a>.SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> SetQuizGroup(<a class="code" href="namespace_saver_1_1_quiz.html#aea9c053cc03f04ba7794380d9e4e3109">QuizType</a> quizType)</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            _curTypeQuizList = (_allQuizList.Where(quiz =&gt; quiz.QuizType == quizType)).ToList();</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager.html#a27b6d68d4c890dfc4d4fbe197c14d4d2">ShowQuiz</a>(_curTypeQuizList[_curQuizIndex]);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager.html#ad649c2bef3795ea9720e30dc4f955728">   69</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager.html#ad649c2bef3795ea9720e30dc4f955728">Next</a>(<span class="keywordtype">bool</span> result)</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            _curQuizIndex++;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            this._ansList.Add(result);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <span class="keywordflow">if</span> (_curQuizIndex &gt;= _curTypeQuizList.Count)</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                Finish();</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager.html#a27b6d68d4c890dfc4d4fbe197c14d4d2">ShowQuiz</a>(_curTypeQuizList[_curQuizIndex]);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager.html#a9eccbc8b5fba5ffde8a170c09ad76593">   83</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager.html#a9eccbc8b5fba5ffde8a170c09ad76593">EnterQuizConfirm</a>(<span class="keywordtype">int</span> unitIndex)</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            _curUnitIndex = unitIndex;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager.html#a846e59f34734cfff32c925f0c8b834d8">quizConfirmPanel</a>.SetActive(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        </div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager.html#a3038930c4584b37443466b400ecb4a96">   89</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager.html#a3038930c4584b37443466b400ecb4a96">QuitQuizConfirm</a>()</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager.html#a846e59f34734cfff32c925f0c8b834d8">quizConfirmPanel</a>.SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> Finish()</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        {</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            <span class="keywordtype">bool</span> result = _ansList.All(x =&gt; x);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager.html#a9d3681ce4af930004cecea76b1f84b57">quizShowUI</a>.gameObject.SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            <span class="keywordflow">if</span>(result)</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            {</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager.html#a373a61334ee2f34f6b974686a2547920">finishPanel</a>.<a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_finish_u_i.html#a87918d0ff18e7a551a7c4c70e0a3e236">unlockedUnitIndex</a>                                     = _curUnitIndex;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                <a class="code" href="class_saver_1_1_data_transfer.html">DataTransfer</a>.<a class="code" href="class_saver_1_1_data_transfer.html#a1799857a85084ca9d006affc941d9d36">GetDataTransfer</a>.<a class="code" href="class_saver_1_1_data_transfer.html#afad7e4bea460da50bbf60b30b83490c2">characterUnlockedList</a>[_curUnitIndex] = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                <a class="code" href="class_saver_1_1_data_transfer.html">DataTransfer</a>.<a class="code" href="class_saver_1_1_data_transfer.html#a1799857a85084ca9d006affc941d9d36">GetDataTransfer</a>.<a class="code" href="class_saver_1_1_data_transfer.html#a112ac5f622205cec9eda7d87c4b005e3">xmlSaver</a>.<a class="code" href="class_saver_1_1_x_m_l_saver.html#a293075c8032703755a711c16005c517d">SaveData</a>();</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager.html#a102cc7242ac73359d162481a7501a5d5">ItemUis</a>[_curUnitIndex].IsRevealed = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager.html#a373a61334ee2f34f6b974686a2547920">finishPanel</a>.gameObject.SetActive(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            }</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        }</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager.html#aedfd44e6c114755e888b039c649a3950">  109</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager.html#aedfd44e6c114755e888b039c649a3950">Close</a>()</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        {</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager.html#a9d3681ce4af930004cecea76b1f84b57">quizShowUI</a>.gameObject.SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager.html#a373a61334ee2f34f6b974686a2547920">finishPanel</a>.gameObject.SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            _curQuizIndex = 0;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        }</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        </div>
+<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager.html#a24e17d88b467e40950fe722ee8d66219">  116</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager.html#a24e17d88b467e40950fe722ee8d66219">CloseFinishPanel</a>()</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        {</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager.html#a373a61334ee2f34f6b974686a2547920">finishPanel</a>.gameObject.SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            _curQuizIndex = 0;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        }</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        </div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    }</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;}</div>
+<div class="ttc" id="aclass_saver_1_1_data_transfer_html"><div class="ttname"><a href="class_saver_1_1_data_transfer.html">Saver.DataTransfer</a></div><div class="ttdoc">数据传输</div><div class="ttdef"><b>Definition:</b> <a href="_data_transfer_8cs_source.html#l00015">DataTransfer.cs:16</a></div></div>
+<div class="ttc" id="aclass_saver_1_1_data_transfer_html_a112ac5f622205cec9eda7d87c4b005e3"><div class="ttname"><a href="class_saver_1_1_data_transfer.html#a112ac5f622205cec9eda7d87c4b005e3">Saver.DataTransfer.xmlSaver</a></div><div class="ttdeci">XMLSaver xmlSaver</div><div class="ttdoc">存档器</div><div class="ttdef"><b>Definition:</b> <a href="_data_transfer_8cs_source.html#l00053">DataTransfer.cs:53</a></div></div>
+<div class="ttc" id="aclass_saver_1_1_data_transfer_html_a1799857a85084ca9d006affc941d9d36"><div class="ttname"><a href="class_saver_1_1_data_transfer.html#a1799857a85084ca9d006affc941d9d36">Saver.DataTransfer.GetDataTransfer</a></div><div class="ttdeci">static DataTransfer GetDataTransfer</div><div class="ttdef"><b>Definition:</b> <a href="_data_transfer_8cs_source.html#l00067">DataTransfer.cs:67</a></div></div>
+<div class="ttc" id="aclass_saver_1_1_data_transfer_html_a50b3e33bb41aadbdc907463b1438384b"><div class="ttname"><a href="class_saver_1_1_data_transfer.html#a50b3e33bb41aadbdc907463b1438384b">Saver.DataTransfer.quizList</a></div><div class="ttdeci">List&lt; Quiz.Quiz &gt; quizList</div><div class="ttdoc">题目表</div><div class="ttdef"><b>Definition:</b> <a href="_data_transfer_8cs_source.html#l00048">DataTransfer.cs:48</a></div></div>
+<div class="ttc" id="aclass_saver_1_1_data_transfer_html_ac31ea128a9211ee5054b3c65fe1c0c5c"><div class="ttname"><a href="class_saver_1_1_data_transfer.html#ac31ea128a9211ee5054b3c65fe1c0c5c">Saver.DataTransfer.characterRevealedList</a></div><div class="ttdeci">List&lt; bool &gt; characterRevealedList</div><div class="ttdoc">角色解锁表</div><div class="ttdef"><b>Definition:</b> <a href="_data_transfer_8cs_source.html#l00033">DataTransfer.cs:33</a></div></div>
+<div class="ttc" id="aclass_saver_1_1_data_transfer_html_afad7e4bea460da50bbf60b30b83490c2"><div class="ttname"><a href="class_saver_1_1_data_transfer.html#afad7e4bea460da50bbf60b30b83490c2">Saver.DataTransfer.characterUnlockedList</a></div><div class="ttdeci">List&lt; bool &gt; characterUnlockedList</div><div class="ttdoc">角色答题解锁表</div><div class="ttdef"><b>Definition:</b> <a href="_data_transfer_8cs_source.html#l00038">DataTransfer.cs:38</a></div></div>
+<div class="ttc" id="aclass_saver_1_1_quiz_1_1_quiz_html"><div class="ttname"><a href="class_saver_1_1_quiz_1_1_quiz.html">Saver.Quiz.Quiz</a></div><div class="ttdef"><b>Definition:</b> <a href="_quiz_8cs_source.html#l00007">Quiz.cs:8</a></div></div>
+<div class="ttc" id="aclass_saver_1_1_x_m_l_saver_html_a293075c8032703755a711c16005c517d"><div class="ttname"><a href="class_saver_1_1_x_m_l_saver.html#a293075c8032703755a711c16005c517d">Saver.XMLSaver.SaveData</a></div><div class="ttdeci">void SaveData(string fileName)</div><div class="ttdoc">存档</div><div class="ttdef"><b>Definition:</b> <a href="_x_m_l_saver_8cs_source.html#l00102">XMLSaver.cs:102</a></div></div>
+<div class="ttc" id="aclass_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_finish_u_i_html"><div class="ttname"><a href="class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_finish_u_i.html">UI.ChineseSports.Main.QuizUI.QuizFinishUI</a></div><div class="ttdef"><b>Definition:</b> <a href="_quiz_finish_u_i_8cs_source.html#l00007">QuizFinishUI.cs:8</a></div></div>
+<div class="ttc" id="aclass_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_finish_u_i_html_a87918d0ff18e7a551a7c4c70e0a3e236"><div class="ttname"><a href="class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_finish_u_i.html#a87918d0ff18e7a551a7c4c70e0a3e236">UI.ChineseSports.Main.QuizUI.QuizFinishUI.unlockedUnitIndex</a></div><div class="ttdeci">int unlockedUnitIndex</div><div class="ttdef"><b>Definition:</b> <a href="_quiz_finish_u_i_8cs_source.html#l00010">QuizFinishUI.cs:10</a></div></div>
+<div class="ttc" id="aclass_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_show_u_i_html"><div class="ttname"><a href="class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_show_u_i.html">UI.ChineseSports.Main.QuizUI.QuizShowUI</a></div><div class="ttdef"><b>Definition:</b> <a href="_quiz_show_u_i_8cs_source.html#l00010">QuizShowUI.cs:11</a></div></div>
+<div class="ttc" id="aclass_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_show_u_i_html_a62183770ed66a67fa09ca52a170dd5f2"><div class="ttname"><a href="class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_show_u_i.html#a62183770ed66a67fa09ca52a170dd5f2">UI.ChineseSports.Main.QuizUI.QuizShowUI.quiz</a></div><div class="ttdeci">Quiz quiz</div><div class="ttdef"><b>Definition:</b> <a href="_quiz_show_u_i_8cs_source.html#l00013">QuizShowUI.cs:13</a></div></div>
+<div class="ttc" id="aclass_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_show_u_i_html_a87d85b76526899c507002ec3f0767804"><div class="ttname"><a href="class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_show_u_i.html#a87d85b76526899c507002ec3f0767804">UI.ChineseSports.Main.QuizUI.QuizShowUI.ShowQuiz</a></div><div class="ttdeci">void ShowQuiz()</div><div class="ttdef"><b>Definition:</b> <a href="_quiz_show_u_i_8cs_source.html#l00037">QuizShowUI.cs:37</a></div></div>
+<div class="ttc" id="aclass_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager_html"><div class="ttname"><a href="class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager.html">UI.ChineseSports.Main.QuizUI.QuizUIManager</a></div><div class="ttdef"><b>Definition:</b> <a href="_quiz_u_i_manager_8cs_source.html#l00011">QuizUIManager.cs:12</a></div></div>
+<div class="ttc" id="aclass_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager_html_a102cc7242ac73359d162481a7501a5d5"><div class="ttname"><a href="class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager.html#a102cc7242ac73359d162481a7501a5d5">UI.ChineseSports.Main.QuizUI.QuizUIManager.ItemUis</a></div><div class="ttdeci">List&lt; ItemUI &gt; ItemUis</div><div class="ttdef"><b>Definition:</b> <a href="_quiz_u_i_manager_8cs_source.html#l00018">QuizUIManager.cs:18</a></div></div>
+<div class="ttc" id="aclass_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager_html_a14834328a4c7b61aca83e64fdc10edb8"><div class="ttname"><a href="class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager.html#a14834328a4c7b61aca83e64fdc10edb8">UI.ChineseSports.Main.QuizUI.QuizUIManager.quizPackList</a></div><div class="ttdeci">List&lt; GameObject &gt; quizPackList</div><div class="ttdef"><b>Definition:</b> <a href="_quiz_u_i_manager_8cs_source.html#l00017">QuizUIManager.cs:17</a></div></div>
+<div class="ttc" id="aclass_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager_html_a24e17d88b467e40950fe722ee8d66219"><div class="ttname"><a href="class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager.html#a24e17d88b467e40950fe722ee8d66219">UI.ChineseSports.Main.QuizUI.QuizUIManager.CloseFinishPanel</a></div><div class="ttdeci">void CloseFinishPanel()</div><div class="ttdef"><b>Definition:</b> <a href="_quiz_u_i_manager_8cs_source.html#l00116">QuizUIManager.cs:116</a></div></div>
+<div class="ttc" id="aclass_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager_html_a27b6d68d4c890dfc4d4fbe197c14d4d2"><div class="ttname"><a href="class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager.html#a27b6d68d4c890dfc4d4fbe197c14d4d2">UI.ChineseSports.Main.QuizUI.QuizUIManager.ShowQuiz</a></div><div class="ttdeci">void ShowQuiz(Quiz quiz)</div><div class="ttdef"><b>Definition:</b> <a href="_quiz_u_i_manager_8cs_source.html#l00047">QuizUIManager.cs:47</a></div></div>
+<div class="ttc" id="aclass_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager_html_a3038930c4584b37443466b400ecb4a96"><div class="ttname"><a href="class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager.html#a3038930c4584b37443466b400ecb4a96">UI.ChineseSports.Main.QuizUI.QuizUIManager.QuitQuizConfirm</a></div><div class="ttdeci">void QuitQuizConfirm()</div><div class="ttdef"><b>Definition:</b> <a href="_quiz_u_i_manager_8cs_source.html#l00089">QuizUIManager.cs:89</a></div></div>
+<div class="ttc" id="aclass_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager_html_a373a61334ee2f34f6b974686a2547920"><div class="ttname"><a href="class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager.html#a373a61334ee2f34f6b974686a2547920">UI.ChineseSports.Main.QuizUI.QuizUIManager.finishPanel</a></div><div class="ttdeci">QuizFinishUI finishPanel</div><div class="ttdef"><b>Definition:</b> <a href="_quiz_u_i_manager_8cs_source.html#l00015">QuizUIManager.cs:15</a></div></div>
+<div class="ttc" id="aclass_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager_html_a5b5fc14b9c44fed5f3723f2d84180123"><div class="ttname"><a href="class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager.html#a5b5fc14b9c44fed5f3723f2d84180123">UI.ChineseSports.Main.QuizUI.QuizUIManager.EnterQuiz</a></div><div class="ttdeci">void EnterQuiz()</div><div class="ttdef"><b>Definition:</b> <a href="_quiz_u_i_manager_8cs_source.html#l00055">QuizUIManager.cs:55</a></div></div>
+<div class="ttc" id="aclass_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager_html_a846e59f34734cfff32c925f0c8b834d8"><div class="ttname"><a href="class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager.html#a846e59f34734cfff32c925f0c8b834d8">UI.ChineseSports.Main.QuizUI.QuizUIManager.quizConfirmPanel</a></div><div class="ttdeci">GameObject quizConfirmPanel</div><div class="ttdef"><b>Definition:</b> <a href="_quiz_u_i_manager_8cs_source.html#l00013">QuizUIManager.cs:13</a></div></div>
+<div class="ttc" id="aclass_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager_html_a913f1561e48fa78f94c7862a4a87cfe3"><div class="ttname"><a href="class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager.html#a913f1561e48fa78f94c7862a4a87cfe3">UI.ChineseSports.Main.QuizUI.QuizUIManager.quizNumberTextList</a></div><div class="ttdeci">List&lt; QuizTextTypeSet &gt; quizNumberTextList</div><div class="ttdef"><b>Definition:</b> <a href="_quiz_u_i_manager_8cs_source.html#l00016">QuizUIManager.cs:16</a></div></div>
+<div class="ttc" id="aclass_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager_html_a9d3681ce4af930004cecea76b1f84b57"><div class="ttname"><a href="class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager.html#a9d3681ce4af930004cecea76b1f84b57">UI.ChineseSports.Main.QuizUI.QuizUIManager.quizShowUI</a></div><div class="ttdeci">QuizShowUI quizShowUI</div><div class="ttdef"><b>Definition:</b> <a href="_quiz_u_i_manager_8cs_source.html#l00014">QuizUIManager.cs:14</a></div></div>
+<div class="ttc" id="aclass_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager_html_a9eccbc8b5fba5ffde8a170c09ad76593"><div class="ttname"><a href="class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager.html#a9eccbc8b5fba5ffde8a170c09ad76593">UI.ChineseSports.Main.QuizUI.QuizUIManager.EnterQuizConfirm</a></div><div class="ttdeci">void EnterQuizConfirm(int unitIndex)</div><div class="ttdef"><b>Definition:</b> <a href="_quiz_u_i_manager_8cs_source.html#l00083">QuizUIManager.cs:83</a></div></div>
+<div class="ttc" id="aclass_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager_html_ad649c2bef3795ea9720e30dc4f955728"><div class="ttname"><a href="class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager.html#ad649c2bef3795ea9720e30dc4f955728">UI.ChineseSports.Main.QuizUI.QuizUIManager.Next</a></div><div class="ttdeci">void Next(bool result)</div><div class="ttdef"><b>Definition:</b> <a href="_quiz_u_i_manager_8cs_source.html#l00069">QuizUIManager.cs:69</a></div></div>
+<div class="ttc" id="aclass_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager_html_aedfd44e6c114755e888b039c649a3950"><div class="ttname"><a href="class_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_1_1_quiz_u_i_manager.html#aedfd44e6c114755e888b039c649a3950">UI.ChineseSports.Main.QuizUI.QuizUIManager.Close</a></div><div class="ttdeci">void Close()</div><div class="ttdef"><b>Definition:</b> <a href="_quiz_u_i_manager_8cs_source.html#l00109">QuizUIManager.cs:109</a></div></div>
+<div class="ttc" id="anamespace_saver_1_1_quiz_html"><div class="ttname"><a href="namespace_saver_1_1_quiz.html">Saver.Quiz</a></div><div class="ttdef"><b>Definition:</b> <a href="_quiz_8cs_source.html#l00004">Quiz.cs:5</a></div></div>
+<div class="ttc" id="anamespace_saver_1_1_quiz_html_aea9c053cc03f04ba7794380d9e4e3109"><div class="ttname"><a href="namespace_saver_1_1_quiz.html#aea9c053cc03f04ba7794380d9e4e3109">Saver.Quiz.QuizType</a></div><div class="ttdeci">QuizType</div><div class="ttdef"><b>Definition:</b> <a href="_quiz_type_8cs_source.html#l00003">QuizType.cs:4</a></div></div>
+<div class="ttc" id="anamespace_saver_html"><div class="ttname"><a href="namespace_saver.html">Saver</a></div><div class="ttdef"><b>Definition:</b> <a href="_data_transfer_8cs_source.html#l00010">DataTransfer.cs:11</a></div></div>
+<div class="ttc" id="anamespace_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i_html"><div class="ttname"><a href="namespace_u_i_1_1_chinese_sports_1_1_main_1_1_quiz_u_i.html">UI.ChineseSports.Main.QuizUI</a></div><div class="ttdef"><b>Definition:</b> <a href="_quiz_finish_u_i_8cs_source.html#l00005">QuizFinishUI.cs:6</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_a5079711ee210cb3f5000c30d3746d06.html">SimpleRTS</a></li><li class="navelem"><a class="el" href="dir_ec7b684f6ba09c3c3a1f78fc68be2b45.html">Simplified_RTS</a></li><li class="navelem"><a class="el" href="dir_fc9fc45e4060f68dac2ba8008ad7420a.html">Assets</a></li><li class="navelem"><a class="el" href="dir_9c83f749c47014e6bfe3d69c7ba163ff.html">Scripts</a></li><li class="navelem"><a class="el" href="dir_b2e1844b6c2b1bf40f1cbb7462c24dc2.html">UI</a></li><li class="navelem"><a class="el" href="dir_8928665a4f67f4f7310a9dc8123989eb.html">ChineseSports</a></li><li class="navelem"><a class="el" href="dir_c1ed65db1be67000e585f119def3a594.html">Main</a></li><li class="navelem"><a class="el" href="dir_66c0660209cb4bc4b686477dac01f6cb.html">QuizUI</a></li><li class="navelem"><a class="el" href="_quiz_u_i_manager_8cs.html">QuizUIManager.cs</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

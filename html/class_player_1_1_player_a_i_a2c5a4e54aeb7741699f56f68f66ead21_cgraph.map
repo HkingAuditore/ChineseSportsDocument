@@ -1,0 +1,5 @@
+<map id="Player.PlayerAI.DispatchUnits" name="Player.PlayerAI.DispatchUnits">
+<area shape="rect" id="node1" title="派遣单位" alt="" coords="5,23,172,65"/>
+<area shape="rect" id="node2" href="$class_player_1_1_player.html#a5dc06c6cb394474907fbcde1ed4c5e93" title="增减资源" alt="" coords="220,5,423,32"/>
+<area shape="rect" id="node3" href="$class_player_1_1_player.html#a7bafb34edc1a7b368ec8d554d3885e26" title="派遣单位" alt="" coords="244,56,399,83"/>
+</map>

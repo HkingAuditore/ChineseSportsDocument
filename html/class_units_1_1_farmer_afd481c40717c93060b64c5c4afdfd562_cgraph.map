@@ -1,0 +1,9 @@
+<map id="Units.Farmer.Start" name="Units.Farmer.Start">
+<area shape="rect" id="node1" title=" " alt="" coords="5,107,135,133"/>
+<area shape="rect" id="node2" href="$class_units_1_1_farmer.html#a5c14f845ce8068b1c3c3d290ea460064" title="放下资源" alt="" coords="225,31,353,57"/>
+<area shape="rect" id="node5" href="$class_player_1_1_player.html#abf7bb2d28c021a677c9795cad8b00e6a" title="当农民返回" alt="" coords="201,81,376,108"/>
+<area shape="rect" id="node6" href="$class_units_1_1_farmer.html#a610bc2a9982b2e1716bf9968401e7b4c" title="生成工作路径" alt="" coords="183,132,395,159"/>
+<area shape="rect" id="node7" href="$class_units_1_1_farmer.html#a6c1947bd6da83b17f906b9b16bd8aa40" title="到达目的地" alt="" coords="205,183,372,209"/>
+<area shape="rect" id="node3" href="$class_player_1_1_player.html#a5dc06c6cb394474907fbcde1ed4c5e93" title="增减资源" alt="" coords="443,5,645,32"/>
+<area shape="rect" id="node4" href="$class_units_1_1_unit.html#a95ec056c0363f891ce233fa6e4125cd8" title="前往目的地" alt="" coords="489,56,599,83"/>
+</map>

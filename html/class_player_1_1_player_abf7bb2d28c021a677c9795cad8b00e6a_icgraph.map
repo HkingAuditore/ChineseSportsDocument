@@ -1,0 +1,4 @@
+<map id="Player.Player.FarmerBack" name="Player.Player.FarmerBack">
+<area shape="rect" id="node1" title="当农民返回" alt="" coords="183,5,357,32"/>
+<area shape="rect" id="node2" href="$class_units_1_1_farmer.html#afd481c40717c93060b64c5c4afdfd562" title=" " alt="" coords="5,5,135,32"/>
+</map>

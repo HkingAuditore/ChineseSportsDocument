@@ -1,0 +1,4 @@
+<map id="UI.Local.UnitDispatchUI.RemoveClick" name="UI.Local.UnitDispatchUI.RemoveClick">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,168,47"/>
+<area shape="rect" id="node2" href="$class_player_1_1_player.html#a5dc06c6cb394474907fbcde1ed4c5e93" title="增减资源" alt="" coords="216,13,419,39"/>
+</map>

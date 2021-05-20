@@ -1,0 +1,4 @@
+<map id="Units.NeutralUnits.BeAttacked" name="Units.NeutralUnits.BeAttacked">
+<area shape="rect" id="node1" title="被攻击" alt="" coords="5,5,204,32"/>
+<area shape="rect" id="node2" href="$interface_units_1_1_i_military_unit.html#a6865a4b72876df6fbe3fd58c7b16fe42" title="获取单位" alt="" coords="252,5,424,32"/>
+</map>

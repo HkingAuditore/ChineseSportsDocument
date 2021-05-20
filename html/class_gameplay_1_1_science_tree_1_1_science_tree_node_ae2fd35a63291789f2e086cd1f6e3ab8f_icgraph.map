@@ -1,0 +1,6 @@
+<map id="Gameplay.ScienceTree.ScienceTreeNode.IsActivatable" name="Gameplay.ScienceTree.ScienceTreeNode.IsActivatable">
+<area shape="rect" id="node1" title="该节点是否可被激活" alt="" coords="496,64,704,105"/>
+<area shape="rect" id="node2" href="$class_gameplay_1_1_science_tree_1_1_science_tree_node.html#a4b97d44856afbeed4dbb0f737ee7c5e5" title="激活" alt="" coords="240,5,448,47"/>
+<area shape="rect" id="node3" href="$class_u_i_1_1_science_tree_1_1_science_tree_node_u_i.html#adec2aaeae637f93c3fc8494512f182be" title=" " alt="" coords="5,64,192,105"/>
+<area shape="rect" id="node4" href="$class_u_i_1_1_science_tree_1_1_science_tree_node_u_i.html#a7c5df7ab53b3697de043830984a570bc" title=" " alt="" coords="251,123,437,164"/>
+</map>

@@ -1,0 +1,318 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>古代运动图鉴: SimpleRTS/Simplified_RTS/Assets/Scripts/Network/NetworkLobbyManager.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Icon_Small.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">古代运动图鉴
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('_network_lobby_manager_8cs_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">NetworkLobbyManager.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_network_lobby_manager_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> System;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> System.Collections.Generic;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> System.Linq;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> Photon.Pun;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">using</span> Photon.Realtime;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">using</span> UnityEngine;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">using</span> UnityEngine.UI;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="namespace_network.html">    9</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_network.html">Network</a></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_network_1_1_network_lobby_manager.html">   14</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_network_1_1_network_lobby_manager.html">NetworkLobbyManager</a> : MonoBehaviourPunCallbacks</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    {</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_network_1_1_network_lobby_manager.html#a75a5174ad8ad9e0d507920c169a4c544">   19</a></span>&#160;        <span class="keyword">public</span> GameObject <a class="code" href="class_network_1_1_network_lobby_manager.html#a75a5174ad8ad9e0d507920c169a4c544">lobbyUI</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_network_1_1_network_lobby_manager.html#a4d64e023c0a628f1716e3a2c938e8a6c">   24</a></span>&#160;        <span class="keyword">public</span> Transform <a class="code" href="class_network_1_1_network_lobby_manager.html#a4d64e023c0a628f1716e3a2c938e8a6c">lobbyPanelContent</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_network_1_1_network_lobby_manager.html#a5881733d87115a318d695851b6d5b143">   29</a></span>&#160;        <span class="keyword">public</span> GameObject <a class="code" href="class_network_1_1_network_lobby_manager.html#a5881733d87115a318d695851b6d5b143">roomLine</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_network_1_1_network_lobby_manager.html#a663b4742d01ba6b4cdb1a2fc7d41de74">   34</a></span>&#160;        <span class="keyword">public</span> Text <a class="code" href="class_network_1_1_network_lobby_manager.html#a663b4742d01ba6b4cdb1a2fc7d41de74">lobbyPingText</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_network_1_1_network_lobby_manager.html#ac3cbc7e6de02672915fd29c34ac7d1d9">   39</a></span>&#160;        <span class="keyword">public</span> Text <a class="code" href="class_network_1_1_network_lobby_manager.html#ac3cbc7e6de02672915fd29c34ac7d1d9">playerName</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="class_network_1_1_network_lobby_manager.html#a113d34e63ade971239760ab6496e7d12">   44</a></span>&#160;        <span class="keyword">public</span> Text <a class="code" href="class_network_1_1_network_lobby_manager.html#a113d34e63ade971239760ab6496e7d12">pingText</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="class_network_1_1_network_lobby_manager.html#a864d86fa835ece2f4974c2e2d9ca787d">   49</a></span>&#160;        <span class="keyword">public</span> GameObject <a class="code" href="class_network_1_1_network_lobby_manager.html#a864d86fa835ece2f4974c2e2d9ca787d">roomUI</a>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="class_network_1_1_network_lobby_manager.html#a19467072633b6b1ad94aa2de8fe0b16e">   54</a></span>&#160;        <span class="keyword">public</span> GameObject <a class="code" href="class_network_1_1_network_lobby_manager.html#a19467072633b6b1ad94aa2de8fe0b16e">playerA</a>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="class_network_1_1_network_lobby_manager.html#a426310c9c181d7ac7881dfbda7a92678">   59</a></span>&#160;        <span class="keyword">public</span> GameObject <a class="code" href="class_network_1_1_network_lobby_manager.html#a426310c9c181d7ac7881dfbda7a92678">playerB</a>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="class_network_1_1_network_lobby_manager.html#a87926c8190a1b27866feb8168012645e">   64</a></span>&#160;        <span class="keyword">public</span> Text <a class="code" href="class_network_1_1_network_lobby_manager.html#a87926c8190a1b27866feb8168012645e">roomPingText</a>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keyword">private</span> Text _playerANameText;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keyword">private</span> Text _playerBNameText;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> Awake()</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            _playerANameText = <a class="code" href="class_network_1_1_network_lobby_manager.html#a19467072633b6b1ad94aa2de8fe0b16e">playerA</a>.transform.Find(<span class="stringliteral">&quot;PlayerName&quot;</span>).GetComponent&lt;Text&gt;();</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            _playerBNameText = <a class="code" href="class_network_1_1_network_lobby_manager.html#a426310c9c181d7ac7881dfbda7a92678">playerB</a>.transform.Find(<span class="stringliteral">&quot;PlayerName&quot;</span>).GetComponent&lt;Text&gt;();</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            PhotonNetwork.GameVersion            = <span class="stringliteral">&quot;1&quot;</span>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            PhotonNetwork.AutomaticallySyncScene = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            PhotonNetwork.SendRate               = 20;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            PhotonNetwork.SerializationRate      = 5;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            PhotonNetwork.ConnectUsingSettings();</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> Update()</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <span class="keywordflow">if</span> (PhotonNetwork.InRoom)</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                <a class="code" href="class_network_1_1_network_lobby_manager.html#a87926c8190a1b27866feb8168012645e">roomPingText</a>.text = <span class="stringliteral">&quot;PING:&quot;</span> + PhotonNetwork.GetPing();</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                <a class="code" href="class_network_1_1_network_lobby_manager.html#a113d34e63ade971239760ab6496e7d12">pingText</a>.text = <span class="stringliteral">&quot;PING:&quot;</span> + PhotonNetwork.GetPing();</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">        #region 连接</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="class_network_1_1_network_lobby_manager.html#aa57060402001a494558db6abcae9d994">   96</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_network_1_1_network_lobby_manager.html#aa57060402001a494558db6abcae9d994">OnConnectedToMaster</a>()</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            base.OnConnectedToMaster();</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            PhotonNetwork.JoinLobby(<span class="keyword">new</span> TypedLobby(<span class="stringliteral">&quot;TestLobby&quot;</span>, <span class="keywordflow">default</span>));</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            Debug.Log(<span class="stringliteral">&quot;VAR&quot;</span>);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            <span class="comment">// PhotonNetwork.JoinOrCreateRoom(&quot;Room&quot;, new Photon.Realtime.RoomOptions() {MaxPlayers = 2}, default);</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        }</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="preprocessor">        #endregion</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="preprocessor">        #region 大厅</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keyword">private</span> readonly List&lt;RoomInfo&gt; _roomList = <span class="keyword">new</span> List&lt;RoomInfo&gt;();</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="class_network_1_1_network_lobby_manager.html#a867c13e12065fd1efa82b4b23d52a561">  115</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_network_1_1_network_lobby_manager.html#a867c13e12065fd1efa82b4b23d52a561">OnRoomListUpdate</a>(List&lt;RoomInfo&gt; roomList)</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        {</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            base.OnRoomListUpdate(roomList);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            <span class="comment">//Debug.Log(&quot;IN!&quot;);</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            UpdateRoomList(roomList);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        }</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <span class="comment">//更新房间列表</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> UpdateRoomList(List&lt;RoomInfo&gt; roomList)</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        {</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            <span class="keywordflow">foreach</span> (var roomInfo <span class="keywordflow">in</span> roomList)</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            {</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                Debug.Log(roomInfo.Name);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;                <span class="keywordflow">if</span> (roomInfo.RemovedFromList)</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                {</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;                    Destroy(<a class="code" href="class_network_1_1_network_lobby_manager.html#a4d64e023c0a628f1716e3a2c938e8a6c">lobbyPanelContent</a>.transform.Find(roomInfo.Name).gameObject);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;                }</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="class_network_1_1_network_lobby_manager.html#a4d64e023c0a628f1716e3a2c938e8a6c">lobbyPanelContent</a>.transform.Find(roomInfo.Name) != <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                {</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                }</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;                {</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                    _roomList.Add(roomInfo);</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;                    var lineRoom = Instantiate(<a class="code" href="class_network_1_1_network_lobby_manager.html#a5881733d87115a318d695851b6d5b143">roomLine</a>, <a class="code" href="class_network_1_1_network_lobby_manager.html#a4d64e023c0a628f1716e3a2c938e8a6c">lobbyPanelContent</a>);</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;                    <span class="keywordflow">if</span> (lineRoom != <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;                    {</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;                        lineRoom.name = roomInfo.Name;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;                        var roomText = lineRoom.transform.Find(<span class="stringliteral">&quot;Text&quot;</span>).GetComponent&lt;Text&gt;();</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;                        roomText.text = roomInfo.Name;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;                        <span class="comment">// if (PhotonNetwork.CurrentRoom.Name == lineRoom.name)</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;                        <span class="comment">// {</span></div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;                        <span class="comment">//     roomText.color = new Color(1f, 0.34f, 0.44f);</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;                        <span class="comment">// }</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;                    }</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;                }</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;            }</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        }</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160; </div>
+<div class="line"><a name="l00156"></a><span class="lineno"><a class="line" href="class_network_1_1_network_lobby_manager.html#af5f57c2ed398d81b453199d7a1ab98fe">  156</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_network_1_1_network_lobby_manager.html#af5f57c2ed398d81b453199d7a1ab98fe">CreateRoom</a>()</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        {</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            <span class="keywordflow">if</span> (!PhotonNetwork.IsConnected || PhotonNetwork.InRoom)</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            PhotonNetwork.LocalPlayer.NickName = <a class="code" href="class_network_1_1_network_lobby_manager.html#ac3cbc7e6de02672915fd29c34ac7d1d9">playerName</a>.text;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            var now = DateTime.Now.ToString(<span class="stringliteral">&quot;T&quot;</span>);</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            PhotonNetwork.CreateRoom(<span class="stringliteral">&quot;[&quot;</span> + PhotonNetwork.LocalPlayer.NickName + <span class="stringliteral">&quot;]&quot;</span> + now,</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;                                     <span class="keyword">new</span> RoomOptions</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;                                     {MaxPlayers = 2, PublishUserId = true, BroadcastPropsChangeToAll = true},</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;                                     TypedLobby.Default);</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160; </div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            var lineRoom = Instantiate(<a class="code" href="class_network_1_1_network_lobby_manager.html#a5881733d87115a318d695851b6d5b143">roomLine</a>, <a class="code" href="class_network_1_1_network_lobby_manager.html#a4d64e023c0a628f1716e3a2c938e8a6c">lobbyPanelContent</a>);</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160; </div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;            <span class="keywordflow">if</span> (lineRoom != <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;            {</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;                lineRoom.name = <span class="stringliteral">&quot;[&quot;</span> + PhotonNetwork.LocalPlayer.NickName + <span class="stringliteral">&quot;]&quot;</span> + now;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;                var roomText = lineRoom.transform.Find(<span class="stringliteral">&quot;Text&quot;</span>).GetComponent&lt;Text&gt;();</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;                roomText.text = <span class="stringliteral">&quot;[&quot;</span> + PhotonNetwork.LocalPlayer.NickName + <span class="stringliteral">&quot;]&quot;</span> + now;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                <span class="comment">// roomText.color = new Color(1f, 0.34f, 0.44f);</span></div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;            }</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160; </div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            Debug.Log(<span class="stringliteral">&quot;CREATE!&quot;</span>);</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        }</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
+<div class="line"><a name="l00183"></a><span class="lineno"><a class="line" href="class_network_1_1_network_lobby_manager.html#a875908b8eff1672457836c35d9f7690f">  183</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_network_1_1_network_lobby_manager.html#a875908b8eff1672457836c35d9f7690f">OnCreatedRoom</a>()</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        {</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            base.OnCreatedRoom();</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            Debug.Log(<span class="stringliteral">&quot;ROOM CREATED!&quot;</span>);</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        }</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160; </div>
+<div class="line"><a name="l00194"></a><span class="lineno"><a class="line" href="class_network_1_1_network_lobby_manager.html#a82483f5ea0509ecb8a2d6a5097a4baca">  194</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_network_1_1_network_lobby_manager.html#a82483f5ea0509ecb8a2d6a5097a4baca">OnCreateRoomFailed</a>(<span class="keywordtype">short</span> returnCode, <span class="keywordtype">string</span> message)</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        {</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;            base.OnCreateRoomFailed(returnCode, message);</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;            Debug.Log(<span class="stringliteral">&quot;FAILED TO CREATE ROOM!&quot;</span>);</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        }</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160; </div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;<span class="preprocessor">        #endregion</span></div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160; </div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<span class="preprocessor">        #region 房间</span></div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160; </div>
+<div class="line"><a name="l00207"></a><span class="lineno"><a class="line" href="class_network_1_1_network_lobby_manager.html#a95ed4dc9770944811d37ca6a8ac58941">  207</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_network_1_1_network_lobby_manager.html#a95ed4dc9770944811d37ca6a8ac58941">OnJoinedRoom</a>()</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        {</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;            base.OnJoinedRoom();</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;            <a class="code" href="class_network_1_1_network_lobby_manager.html#a75a5174ad8ad9e0d507920c169a4c544">lobbyUI</a>.SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;            <a class="code" href="class_network_1_1_network_lobby_manager.html#a864d86fa835ece2f4974c2e2d9ca787d">roomUI</a>.SetActive(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160; </div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;            <a class="code" href="class_network_1_1_network_lobby_manager.html#a59b9967b78e442dfbb26735999bd3524">ShowPlayerInfo</a>();</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160; </div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;            <span class="comment">// if (PhotonNetwork.CurrentRoom.MaxPlayers == PhotonNetwork.CurrentRoom.PlayerCount)</span></div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;            <span class="comment">// {</span></div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;            <span class="comment">//     SceneManager.LoadScene(sceneBuildIndex: 1);</span></div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;            <span class="comment">// }</span></div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        }</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160; </div>
+<div class="line"><a name="l00225"></a><span class="lineno"><a class="line" href="class_network_1_1_network_lobby_manager.html#a729d2a5514b08ece41097f471dd64e3e">  225</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_network_1_1_network_lobby_manager.html#a729d2a5514b08ece41097f471dd64e3e">OnPlayerEnteredRoom</a>(Photon.Realtime.Player newPlayer)</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        {</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;            base.OnPlayerEnteredRoom(newPlayer);</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;            _playerBNameText.text = newPlayer.NickName;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        }</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160; </div>
+<div class="line"><a name="l00235"></a><span class="lineno"><a class="line" href="class_network_1_1_network_lobby_manager.html#a24d10d09c91d77c21e5c88b4584aea8d">  235</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_network_1_1_network_lobby_manager.html#a24d10d09c91d77c21e5c88b4584aea8d">OnPlayerLeftRoom</a>(Photon.Realtime.Player otherPlayer)</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        {</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;            base.OnPlayerLeftRoom(otherPlayer);</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;            _playerBNameText.text = <span class="stringliteral">&quot;待加入&quot;</span>;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        }</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160; </div>
+<div class="line"><a name="l00244"></a><span class="lineno"><a class="line" href="class_network_1_1_network_lobby_manager.html#a59b9967b78e442dfbb26735999bd3524">  244</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_network_1_1_network_lobby_manager.html#a59b9967b78e442dfbb26735999bd3524">ShowPlayerInfo</a>()</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        {</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;            var playersArray = PhotonNetwork.CurrentRoom.Players.Values.ToArray();</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;            _playerANameText.text = playersArray[0].NickName;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;            <span class="keywordflow">if</span> (PhotonNetwork.CurrentRoom.PlayerCount &gt; 1)</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;                _playerBNameText.text = playersArray[1].NickName;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        }</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160; </div>
+<div class="line"><a name="l00255"></a><span class="lineno"><a class="line" href="class_network_1_1_network_lobby_manager.html#a075841081be80707cac9ca784b6bde49">  255</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_network_1_1_network_lobby_manager.html#a075841081be80707cac9ca784b6bde49">QuitRoom</a>()</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        {</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;            PhotonNetwork.LeaveRoom();</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;            <a class="code" href="class_network_1_1_network_lobby_manager.html#a75a5174ad8ad9e0d507920c169a4c544">lobbyUI</a>.SetActive(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;            <a class="code" href="class_network_1_1_network_lobby_manager.html#a864d86fa835ece2f4974c2e2d9ca787d">roomUI</a>.SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;        }</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160; </div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;<span class="preprocessor">        #endregion</span></div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    }</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;}</div>
+<div class="ttc" id="aclass_network_1_1_network_lobby_manager_html"><div class="ttname"><a href="class_network_1_1_network_lobby_manager.html">Network.NetworkLobbyManager</a></div><div class="ttdoc">网络对战管理</div><div class="ttdef"><b>Definition:</b> <a href="_network_lobby_manager_8cs_source.html#l00014">NetworkLobbyManager.cs:15</a></div></div>
+<div class="ttc" id="aclass_network_1_1_network_lobby_manager_html_a075841081be80707cac9ca784b6bde49"><div class="ttname"><a href="class_network_1_1_network_lobby_manager.html#a075841081be80707cac9ca784b6bde49">Network.NetworkLobbyManager.QuitRoom</a></div><div class="ttdeci">void QuitRoom()</div><div class="ttdoc">离开房间</div><div class="ttdef"><b>Definition:</b> <a href="_network_lobby_manager_8cs_source.html#l00255">NetworkLobbyManager.cs:255</a></div></div>
+<div class="ttc" id="aclass_network_1_1_network_lobby_manager_html_a113d34e63ade971239760ab6496e7d12"><div class="ttname"><a href="class_network_1_1_network_lobby_manager.html#a113d34e63ade971239760ab6496e7d12">Network.NetworkLobbyManager.pingText</a></div><div class="ttdeci">Text pingText</div><div class="ttdoc">玩家延迟</div><div class="ttdef"><b>Definition:</b> <a href="_network_lobby_manager_8cs_source.html#l00044">NetworkLobbyManager.cs:44</a></div></div>
+<div class="ttc" id="aclass_network_1_1_network_lobby_manager_html_a19467072633b6b1ad94aa2de8fe0b16e"><div class="ttname"><a href="class_network_1_1_network_lobby_manager.html#a19467072633b6b1ad94aa2de8fe0b16e">Network.NetworkLobbyManager.playerA</a></div><div class="ttdeci">GameObject playerA</div><div class="ttdoc">玩家A</div><div class="ttdef"><b>Definition:</b> <a href="_network_lobby_manager_8cs_source.html#l00054">NetworkLobbyManager.cs:54</a></div></div>
+<div class="ttc" id="aclass_network_1_1_network_lobby_manager_html_a24d10d09c91d77c21e5c88b4584aea8d"><div class="ttname"><a href="class_network_1_1_network_lobby_manager.html#a24d10d09c91d77c21e5c88b4584aea8d">Network.NetworkLobbyManager.OnPlayerLeftRoom</a></div><div class="ttdeci">override void OnPlayerLeftRoom(Photon.Realtime.Player otherPlayer)</div><div class="ttdoc">其他玩家离开房间</div><div class="ttdef"><b>Definition:</b> <a href="_network_lobby_manager_8cs_source.html#l00235">NetworkLobbyManager.cs:235</a></div></div>
+<div class="ttc" id="aclass_network_1_1_network_lobby_manager_html_a426310c9c181d7ac7881dfbda7a92678"><div class="ttname"><a href="class_network_1_1_network_lobby_manager.html#a426310c9c181d7ac7881dfbda7a92678">Network.NetworkLobbyManager.playerB</a></div><div class="ttdeci">GameObject playerB</div><div class="ttdoc">玩家B</div><div class="ttdef"><b>Definition:</b> <a href="_network_lobby_manager_8cs_source.html#l00059">NetworkLobbyManager.cs:59</a></div></div>
+<div class="ttc" id="aclass_network_1_1_network_lobby_manager_html_a4d64e023c0a628f1716e3a2c938e8a6c"><div class="ttname"><a href="class_network_1_1_network_lobby_manager.html#a4d64e023c0a628f1716e3a2c938e8a6c">Network.NetworkLobbyManager.lobbyPanelContent</a></div><div class="ttdeci">Transform lobbyPanelContent</div><div class="ttdoc">大厅卷动栏目</div><div class="ttdef"><b>Definition:</b> <a href="_network_lobby_manager_8cs_source.html#l00024">NetworkLobbyManager.cs:24</a></div></div>
+<div class="ttc" id="aclass_network_1_1_network_lobby_manager_html_a5881733d87115a318d695851b6d5b143"><div class="ttname"><a href="class_network_1_1_network_lobby_manager.html#a5881733d87115a318d695851b6d5b143">Network.NetworkLobbyManager.roomLine</a></div><div class="ttdeci">GameObject roomLine</div><div class="ttdoc">房间行</div><div class="ttdef"><b>Definition:</b> <a href="_network_lobby_manager_8cs_source.html#l00029">NetworkLobbyManager.cs:29</a></div></div>
+<div class="ttc" id="aclass_network_1_1_network_lobby_manager_html_a59b9967b78e442dfbb26735999bd3524"><div class="ttname"><a href="class_network_1_1_network_lobby_manager.html#a59b9967b78e442dfbb26735999bd3524">Network.NetworkLobbyManager.ShowPlayerInfo</a></div><div class="ttdeci">void ShowPlayerInfo()</div><div class="ttdoc">展示玩家信息</div><div class="ttdef"><b>Definition:</b> <a href="_network_lobby_manager_8cs_source.html#l00244">NetworkLobbyManager.cs:244</a></div></div>
+<div class="ttc" id="aclass_network_1_1_network_lobby_manager_html_a663b4742d01ba6b4cdb1a2fc7d41de74"><div class="ttname"><a href="class_network_1_1_network_lobby_manager.html#a663b4742d01ba6b4cdb1a2fc7d41de74">Network.NetworkLobbyManager.lobbyPingText</a></div><div class="ttdeci">Text lobbyPingText</div><div class="ttdoc">大厅加载延迟Text</div><div class="ttdef"><b>Definition:</b> <a href="_network_lobby_manager_8cs_source.html#l00034">NetworkLobbyManager.cs:34</a></div></div>
+<div class="ttc" id="aclass_network_1_1_network_lobby_manager_html_a729d2a5514b08ece41097f471dd64e3e"><div class="ttname"><a href="class_network_1_1_network_lobby_manager.html#a729d2a5514b08ece41097f471dd64e3e">Network.NetworkLobbyManager.OnPlayerEnteredRoom</a></div><div class="ttdeci">override void OnPlayerEnteredRoom(Photon.Realtime.Player newPlayer)</div><div class="ttdoc">其他玩家进入房间</div><div class="ttdef"><b>Definition:</b> <a href="_network_lobby_manager_8cs_source.html#l00225">NetworkLobbyManager.cs:225</a></div></div>
+<div class="ttc" id="aclass_network_1_1_network_lobby_manager_html_a75a5174ad8ad9e0d507920c169a4c544"><div class="ttname"><a href="class_network_1_1_network_lobby_manager.html#a75a5174ad8ad9e0d507920c169a4c544">Network.NetworkLobbyManager.lobbyUI</a></div><div class="ttdeci">GameObject lobbyUI</div><div class="ttdoc">大厅UI</div><div class="ttdef"><b>Definition:</b> <a href="_network_lobby_manager_8cs_source.html#l00019">NetworkLobbyManager.cs:19</a></div></div>
+<div class="ttc" id="aclass_network_1_1_network_lobby_manager_html_a82483f5ea0509ecb8a2d6a5097a4baca"><div class="ttname"><a href="class_network_1_1_network_lobby_manager.html#a82483f5ea0509ecb8a2d6a5097a4baca">Network.NetworkLobbyManager.OnCreateRoomFailed</a></div><div class="ttdeci">override void OnCreateRoomFailed(short returnCode, string message)</div><div class="ttdoc">创建房间失败</div><div class="ttdef"><b>Definition:</b> <a href="_network_lobby_manager_8cs_source.html#l00194">NetworkLobbyManager.cs:194</a></div></div>
+<div class="ttc" id="aclass_network_1_1_network_lobby_manager_html_a864d86fa835ece2f4974c2e2d9ca787d"><div class="ttname"><a href="class_network_1_1_network_lobby_manager.html#a864d86fa835ece2f4974c2e2d9ca787d">Network.NetworkLobbyManager.roomUI</a></div><div class="ttdeci">GameObject roomUI</div><div class="ttdoc">房间UI</div><div class="ttdef"><b>Definition:</b> <a href="_network_lobby_manager_8cs_source.html#l00049">NetworkLobbyManager.cs:49</a></div></div>
+<div class="ttc" id="aclass_network_1_1_network_lobby_manager_html_a867c13e12065fd1efa82b4b23d52a561"><div class="ttname"><a href="class_network_1_1_network_lobby_manager.html#a867c13e12065fd1efa82b4b23d52a561">Network.NetworkLobbyManager.OnRoomListUpdate</a></div><div class="ttdeci">override void OnRoomListUpdate(List&lt; RoomInfo &gt; roomList)</div><div class="ttdoc">房间列表更新</div><div class="ttdef"><b>Definition:</b> <a href="_network_lobby_manager_8cs_source.html#l00115">NetworkLobbyManager.cs:115</a></div></div>
+<div class="ttc" id="aclass_network_1_1_network_lobby_manager_html_a875908b8eff1672457836c35d9f7690f"><div class="ttname"><a href="class_network_1_1_network_lobby_manager.html#a875908b8eff1672457836c35d9f7690f">Network.NetworkLobbyManager.OnCreatedRoom</a></div><div class="ttdeci">override void OnCreatedRoom()</div><div class="ttdoc">创建房间</div><div class="ttdef"><b>Definition:</b> <a href="_network_lobby_manager_8cs_source.html#l00183">NetworkLobbyManager.cs:183</a></div></div>
+<div class="ttc" id="aclass_network_1_1_network_lobby_manager_html_a87926c8190a1b27866feb8168012645e"><div class="ttname"><a href="class_network_1_1_network_lobby_manager.html#a87926c8190a1b27866feb8168012645e">Network.NetworkLobbyManager.roomPingText</a></div><div class="ttdeci">Text roomPingText</div><div class="ttdoc">房间延迟</div><div class="ttdef"><b>Definition:</b> <a href="_network_lobby_manager_8cs_source.html#l00064">NetworkLobbyManager.cs:64</a></div></div>
+<div class="ttc" id="aclass_network_1_1_network_lobby_manager_html_a95ed4dc9770944811d37ca6a8ac58941"><div class="ttname"><a href="class_network_1_1_network_lobby_manager.html#a95ed4dc9770944811d37ca6a8ac58941">Network.NetworkLobbyManager.OnJoinedRoom</a></div><div class="ttdeci">override void OnJoinedRoom()</div><div class="ttdoc">加入房间</div><div class="ttdef"><b>Definition:</b> <a href="_network_lobby_manager_8cs_source.html#l00207">NetworkLobbyManager.cs:207</a></div></div>
+<div class="ttc" id="aclass_network_1_1_network_lobby_manager_html_aa57060402001a494558db6abcae9d994"><div class="ttname"><a href="class_network_1_1_network_lobby_manager.html#aa57060402001a494558db6abcae9d994">Network.NetworkLobbyManager.OnConnectedToMaster</a></div><div class="ttdeci">override void OnConnectedToMaster()</div><div class="ttdoc">连接至主服务器</div><div class="ttdef"><b>Definition:</b> <a href="_network_lobby_manager_8cs_source.html#l00096">NetworkLobbyManager.cs:96</a></div></div>
+<div class="ttc" id="aclass_network_1_1_network_lobby_manager_html_ac3cbc7e6de02672915fd29c34ac7d1d9"><div class="ttname"><a href="class_network_1_1_network_lobby_manager.html#ac3cbc7e6de02672915fd29c34ac7d1d9">Network.NetworkLobbyManager.playerName</a></div><div class="ttdeci">Text playerName</div><div class="ttdoc">玩家名</div><div class="ttdef"><b>Definition:</b> <a href="_network_lobby_manager_8cs_source.html#l00039">NetworkLobbyManager.cs:39</a></div></div>
+<div class="ttc" id="aclass_network_1_1_network_lobby_manager_html_af5f57c2ed398d81b453199d7a1ab98fe"><div class="ttname"><a href="class_network_1_1_network_lobby_manager.html#af5f57c2ed398d81b453199d7a1ab98fe">Network.NetworkLobbyManager.CreateRoom</a></div><div class="ttdeci">void CreateRoom()</div><div class="ttdoc">创建房间</div><div class="ttdef"><b>Definition:</b> <a href="_network_lobby_manager_8cs_source.html#l00156">NetworkLobbyManager.cs:156</a></div></div>
+<div class="ttc" id="anamespace_network_html"><div class="ttname"><a href="namespace_network.html">Network</a></div><div class="ttdef"><b>Definition:</b> <a href="_network_lobby_manager_8cs_source.html#l00009">NetworkLobbyManager.cs:10</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_a5079711ee210cb3f5000c30d3746d06.html">SimpleRTS</a></li><li class="navelem"><a class="el" href="dir_ec7b684f6ba09c3c3a1f78fc68be2b45.html">Simplified_RTS</a></li><li class="navelem"><a class="el" href="dir_fc9fc45e4060f68dac2ba8008ad7420a.html">Assets</a></li><li class="navelem"><a class="el" href="dir_9c83f749c47014e6bfe3d69c7ba163ff.html">Scripts</a></li><li class="navelem"><a class="el" href="dir_37538701f8017981ba1a5579d75e318a.html">Network</a></li><li class="navelem"><a class="el" href="_network_lobby_manager_8cs.html">NetworkLobbyManager.cs</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,404 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>古代运动图鉴: SimpleRTS/Simplified_RTS/Assets/Scripts/Units/Unit.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Icon_Small.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">古代运动图鉴
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('_unit_8cs_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Unit.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_unit_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> System;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> Pathfinding;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_player.html">Player</a>;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> UnityEngine;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">using</span> UnityEngine.Events;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_units.html">Units</a></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="namespace_units.html#a916a18c8572b926f5bacb64a5af82715">   12</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">enum</span> <a class="code" href="namespace_units.html#a916a18c8572b926f5bacb64a5af82715">Road</a></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <a class="code" href="namespace_units.html#a916a18c8572b926f5bacb64a5af82715aa4ffdcf0dc1f31b9acaf295d75b51d00">Top</a>,</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <a class="code" href="namespace_units.html#a916a18c8572b926f5bacb64a5af82715a55c6b09cbca39ef0cdb728eb112a5049">Mid</a>,</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <a class="code" href="namespace_units.html#a916a18c8572b926f5bacb64a5af82715a1448e86d90e0feb307c2894c24e87767">Bot</a></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    }</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="namespace_units.html#aa6ae92e8a7d84afa54f9018b0f614763">   33</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">enum</span> <a class="code" href="namespace_units.html#aa6ae92e8a7d84afa54f9018b0f614763">UnitType</a></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <a class="code" href="namespace_units.html#aa6ae92e8a7d84afa54f9018b0f614763abcf70104d2838284289b0f44a126474c">LanternBoy</a>,</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <a class="code" href="namespace_units.html#aa6ae92e8a7d84afa54f9018b0f614763a55429fa01b19f7193811ed985797b9b9">Archer</a>,</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <a class="code" href="namespace_units.html#aa6ae92e8a7d84afa54f9018b0f614763a8c844e3084a2699eb2301c3ce2b7fe97">KiteGirl</a>,</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <a class="code" href="namespace_units.html#aa6ae92e8a7d84afa54f9018b0f614763a4521848d8ecf72aedcbcad85b20b50ba">Enemy0</a></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="interface_units_1_1_i_military_unit.html">   59</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">interface </span><a class="code" href="interface_units_1_1_i_military_unit.html">IMilitaryUnit</a></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    {</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="interface_units_1_1_i_military_unit.html#a257c85d654af2ea067a1406e43de452d">   64</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="interface_units_1_1_i_military_unit.html#a257c85d654af2ea067a1406e43de452d">AttackValue</a> { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="interface_units_1_1_i_military_unit.html#a39f5e61371c10f28e9702aced2469e61">   69</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="interface_units_1_1_i_military_unit.html#a39f5e61371c10f28e9702aced2469e61">AttackColdDownTime</a> { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="interface_units_1_1_i_military_unit.html#a856a2d6c9512c812fecf2e7fd0955902">   74</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="interface_units_1_1_i_military_unit.html#a856a2d6c9512c812fecf2e7fd0955902">AttackRange</a> { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="interface_units_1_1_i_military_unit.html#a86e44fbae9870aa511daff9ab8677f0c">   79</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="interface_units_1_1_i_military_unit.html#a86e44fbae9870aa511daff9ab8677f0c">DefenceValue</a> { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="interface_units_1_1_i_military_unit.html#abc4dbf85ad45a1aed97e7715c072874c">   84</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="interface_units_1_1_i_military_unit.html#abc4dbf85ad45a1aed97e7715c072874c">SpeedValue</a> { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="interface_units_1_1_i_military_unit.html#a64dea51c52f11ccc5a1f71b257f4c5e6">   89</a></span>&#160;        Vector3 <a class="code" href="interface_units_1_1_i_military_unit.html#a64dea51c52f11ccc5a1f71b257f4c5e6">OriginalVelocity</a> { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="interface_units_1_1_i_military_unit.html#ac12b7d985c4d91a52840b33f0951ad63">   94</a></span>&#160;        <a class="code" href="namespace_player.html">Player</a>.<a class="code" href="class_player_1_1_player.html">Player</a> <a class="code" href="interface_units_1_1_i_military_unit.html#ac12b7d985c4d91a52840b33f0951ad63">SidePlayer</a> { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="interface_units_1_1_i_military_unit.html#aa5cb8f7532bedbb1a6e68c340c1033f0">   99</a></span>&#160;        UnityEvent&lt;Unit&gt; <a class="code" href="interface_units_1_1_i_military_unit.html#aa5cb8f7532bedbb1a6e68c340c1033f0">AttackEvent</a> { <span class="keyword">get</span>; }</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="interface_units_1_1_i_military_unit.html#ab21f63d6a15746afbd38279db4f79e78">  104</a></span>&#160;        UnityEvent&lt;IMilitaryUnit&gt; <a class="code" href="interface_units_1_1_i_military_unit.html#ab21f63d6a15746afbd38279db4f79e78">UnderAttackedEvent</a> { <span class="keyword">get</span>; }</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="interface_units_1_1_i_military_unit.html#abd2a484419c1b79ea94d826245339622">  110</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="interface_units_1_1_i_military_unit.html#abd2a484419c1b79ea94d826245339622">Attack</a>();</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="interface_units_1_1_i_military_unit.html#a6865a4b72876df6fbe3fd58c7b16fe42">  116</a></span>&#160;        <a class="code" href="class_units_1_1_unit.html">Unit</a> <a class="code" href="interface_units_1_1_i_military_unit.html#a6865a4b72876df6fbe3fd58c7b16fe42">GetUnit</a>();</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    }</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
+<div class="line"><a name="l00122"></a><span class="lineno"><a class="line" href="class_units_1_1_unit.html">  122</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_units_1_1_unit.html">Unit</a> : MonoBehaviour</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    {</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="comment">//基本属性</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        [Header(<span class="stringliteral">&quot;基本属性&quot;</span>)]</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="comment">// 能力属性</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">int</span> _hp;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
+<div class="line"><a name="l00133"></a><span class="lineno"><a class="line" href="class_units_1_1_unit.html#a07de03d8a1527cf2b3148ba545178b3c">  133</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="class_units_1_1_unit.html#a07de03d8a1527cf2b3148ba545178b3c">defence</a>;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
+<div class="line"><a name="l00138"></a><span class="lineno"><a class="line" href="class_units_1_1_unit.html#a2419cf5d09b95de12d26c9dfd6edb3b4">  138</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code" href="class_units_1_1_unit.html#a2419cf5d09b95de12d26c9dfd6edb3b4">isUnmovable</a>;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
+<div class="line"><a name="l00143"></a><span class="lineno"><a class="line" href="class_units_1_1_unit.html#a21aed8b6a593a60a19ee2c02b89c2902">  143</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="class_units_1_1_unit.html#a21aed8b6a593a60a19ee2c02b89c2902">playerOwnMax</a> = 5;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160; </div>
+<div class="line"><a name="l00148"></a><span class="lineno"><a class="line" href="class_units_1_1_unit.html#a7a1bc522166157786e7e988d49c6e79a">  148</a></span>&#160;        <span class="keyword">public</span> Rigidbody <a class="code" href="class_units_1_1_unit.html#a7a1bc522166157786e7e988d49c6e79a">unitRigidbody</a>;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160; </div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        [SerializeField] <span class="keyword">private</span> <span class="keywordtype">float</span> speed = 1;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
+<div class="line"><a name="l00155"></a><span class="lineno"><a class="line" href="class_units_1_1_unit.html#a93f7e4e027ddee5cb07f9db457bf6e4f">  155</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="namespace_units.html#a916a18c8572b926f5bacb64a5af82715">Road</a> <a class="code" href="class_units_1_1_unit.html#a93f7e4e027ddee5cb07f9db457bf6e4f">road</a>;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
+<div class="line"><a name="l00160"></a><span class="lineno"><a class="line" href="class_units_1_1_unit.html#a8430d0dc73a42b2ed47ab576c137fbc7">  160</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="namespace_player.html">Player</a>.<a class="code" href="class_player_1_1_player.html">Player</a> <a class="code" href="class_units_1_1_unit.html#a8430d0dc73a42b2ed47ab576c137fbc7">sidePlayer</a>;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160; </div>
+<div class="line"><a name="l00165"></a><span class="lineno"><a class="line" href="class_units_1_1_unit.html#ab19ce04843e871350019b82375ab2fdf">  165</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="namespace_units.html#aa6ae92e8a7d84afa54f9018b0f614763">UnitType</a> <a class="code" href="class_units_1_1_unit.html#ab19ce04843e871350019b82375ab2fdf">unitType</a>;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160; </div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
+<div class="line"><a name="l00171"></a><span class="lineno"><a class="line" href="class_units_1_1_unit.html#a40b7230b66922e771488ef6fba922d0b">  171</a></span>&#160;        [Header(<span class="stringliteral">&quot;生产成本&quot;</span>)] <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="class_units_1_1_unit.html#a40b7230b66922e771488ef6fba922d0b">costFood</a>;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
+<div class="line"><a name="l00176"></a><span class="lineno"><a class="line" href="class_units_1_1_unit.html#a6c1a18207afb2578135d197555005739">  176</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="class_units_1_1_unit.html#a6c1a18207afb2578135d197555005739">costWood</a>;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160; </div>
+<div class="line"><a name="l00181"></a><span class="lineno"><a class="line" href="class_units_1_1_unit.html#a6ac6a6ddc2d1d852a91d310b9ebd73df">  181</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="class_units_1_1_unit.html#a6ac6a6ddc2d1d852a91d310b9ebd73df">costGold</a>;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160; </div>
+<div class="line"><a name="l00183"></a><span class="lineno"><a class="line" href="class_units_1_1_unit.html#a6a7f5e83b891dd7210ed52395f2815e8">  183</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code" href="class_units_1_1_unit.html#a6a7f5e83b891dd7210ed52395f2815e8">isDieImmediately</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160; </div>
+<div class="line"><a name="l00188"></a><span class="lineno"><a class="line" href="class_units_1_1_unit.html#ae4031b42363d802c6ae80ba120090659">  188</a></span>&#160;        [Header(<span class="stringliteral">&quot;死亡奖励&quot;</span>)] <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="class_units_1_1_unit.html#ae4031b42363d802c6ae80ba120090659">deathReward</a> = 10;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160; </div>
+<div class="line"><a name="l00190"></a><span class="lineno"><a class="line" href="class_units_1_1_unit.html#a0b3cfbf45f67e200a8b69ffa5da74af5">  190</a></span>&#160;        <span class="keyword">private</span> <span class="keyword">protected</span> <a class="code" href="interface_units_1_1_i_military_unit.html">IMilitaryUnit</a> <a class="code" href="class_units_1_1_unit.html#a0b3cfbf45f67e200a8b69ffa5da74af5">_attacker</a>;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        <span class="keyword">private</span>           <a class="code" href="namespace_player.html">Player</a>.<a class="code" href="class_player_1_1_player.html">Player</a> _enemyPlayer;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160; </div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160; </div>
+<div class="line"><a name="l00194"></a><span class="lineno"><a class="line" href="class_units_1_1_unit.html#a0476e18af2e2b75754c60574f7690dff">  194</a></span>&#160;        <span class="keyword">protected</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_units_1_1_unit.html#a0476e18af2e2b75754c60574f7690dff">Awake</a>()</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        {</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;            _enemyPlayer = <a class="code" href="class_units_1_1_unit.html#a8430d0dc73a42b2ed47ab576c137fbc7">sidePlayer</a> == <a class="code" href="namespace_game_manager.html">GameManager</a>.<a class="code" href="class_game_manager_1_1_game_manager.html">GameManager</a>.<a class="code" href="class_game_manager_1_1_game_manager.html#acafc4a2ac0e6171a1f8436b529b58306">GetManager</a>.<a class="code" href="class_game_manager_1_1_game_manager.html#aada7567448f07270090ffcfd300c0209">aSide</a></div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;                ? <a class="code" href="namespace_game_manager.html">GameManager</a>.<a class="code" href="class_game_manager_1_1_game_manager.html">GameManager</a>.<a class="code" href="class_game_manager_1_1_game_manager.html#acafc4a2ac0e6171a1f8436b529b58306">GetManager</a>.<a class="code" href="class_game_manager_1_1_game_manager.html#ab8aa66d0c0b7535bcd3b3a28ce63ecff">bSide</a></div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;                : <a class="code" href="namespace_game_manager.html">GameManager</a>.<a class="code" href="class_game_manager_1_1_game_manager.html">GameManager</a>.<a class="code" href="class_game_manager_1_1_game_manager.html#acafc4a2ac0e6171a1f8436b529b58306">GetManager</a>.<a class="code" href="class_game_manager_1_1_game_manager.html#aada7567448f07270090ffcfd300c0209">aSide</a>;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;            <a class="code" href="class_units_1_1_unit.html#a7a1bc522166157786e7e988d49c6e79a">unitRigidbody</a>      = GetComponent&lt;Rigidbody&gt;();</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;            _destinationSetter = GetComponent&lt;AIDestinationSetter&gt;();</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;            _pathFinder        = GetComponent&lt;AIPath&gt;();</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;            <a class="code" href="class_units_1_1_unit.html#ab90a1d9dc6ba10ded8a08c959cf70e7d">UnitDeathEventHandler</a>.AddListener((p, m) =&gt; { p.ChangeResource(<a class="code" href="namespace_player.html#a61f3646142986499ed36c80a34f38427">GameResourceType</a>.Gold, <a class="code" href="class_units_1_1_unit.html#ae4031b42363d802c6ae80ba120090659">deathReward</a>); });</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        }</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160; </div>
+<div class="line"><a name="l00205"></a><span class="lineno"><a class="line" href="class_units_1_1_unit.html#a9bbed64b4fe366576e0e547e5753f814">  205</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_units_1_1_unit.html#a9bbed64b4fe366576e0e547e5753f814">Start</a>()</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        {</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;            <a class="code" href="class_units_1_1_unit.html#a024252b32cf1a4cdfb42637349c7bc17">StartEventHandler</a>?.Invoke();</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;            <span class="keywordflow">if</span>(!<a class="code" href="class_units_1_1_unit.html#a2419cf5d09b95de12d26c9dfd6edb3b4">isUnmovable</a>)</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;                this._pathFinder.maxSpeed = this.speed;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160; </div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="class_units_1_1_unit.html#a8c5db521bb8a505b1d6a16a7f925f6fa">InitTarget</a> != <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;                <span class="comment">// Debug.Log(&quot;GOTO!&quot;);</span></div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;                <a class="code" href="class_units_1_1_unit.html#a95ec056c0363f891ce233fa6e4125cd8">Goto</a>(<a class="code" href="class_units_1_1_unit.html#a8c5db521bb8a505b1d6a16a7f925f6fa">InitTarget</a>);</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        }</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160; </div>
+<div class="line"><a name="l00216"></a><span class="lineno"><a class="line" href="class_units_1_1_unit.html#a77e6c4758b533726d985402fb293fa67">  216</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_units_1_1_unit.html#a77e6c4758b533726d985402fb293fa67">Update</a>()</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        {</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="class_units_1_1_unit.html#a94b412a6a0252854846756c1d15c6653">HP</a> &gt; 0)</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;            {</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;                _baseTimer += Time.deltaTime;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;                <span class="keywordflow">try</span></div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;                {</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;                    <span class="comment">//TODO 这里会跳出&quot;GetRemainingDistance&quot; can only be called on an active agent that has been placed on a NavMesh.</span></div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;                    <span class="comment">// if (!isUnmovable &amp;&amp; navMeshAgent.remainingDistance &lt; 0.2f &amp;&amp; !_isAtTarget)</span></div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;                    <span class="keywordflow">if</span> (!<a class="code" href="class_units_1_1_unit.html#a2419cf5d09b95de12d26c9dfd6edb3b4">isUnmovable</a> &amp;&amp; !_isAtTarget &amp;&amp; _pathFinder.reachedDestination)</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;                    {</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;                        <a class="code" href="class_units_1_1_unit.html#a085d524e8a2422ca683a0d858abd31dc">navStopEventHandler</a>?.Invoke(gameObject, transform);</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;                        _isAtTarget = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;                    }</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;                }</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;                <span class="keywordflow">catch</span> (Exception e)</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;                {</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;                    <span class="comment">//Console.WriteLine(e);</span></div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;                }</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;            }</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        }</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160; </div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;<span class="preprocessor">        #region 战斗</span></div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160; </div>
+<div class="line"><a name="l00245"></a><span class="lineno"><a class="line" href="class_units_1_1_unit.html#a42800b6151ca67913291bf4d10fdf7ae">  245</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_units_1_1_unit.html#a42800b6151ca67913291bf4d10fdf7ae">BeAttacked</a>(<a class="code" href="interface_units_1_1_i_military_unit.html">IMilitaryUnit</a> attacker)</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        {</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="class_units_1_1_unit.html#ac99f5f0e5e4cde8226e30379e6c71c2e">Death</a>)</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;                <span class="keywordflow">throw</span> <span class="keyword">new</span> Exception(<span class="stringliteral">&quot;WAS DEAD&quot;</span>);</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;            var damage = attacker.<a class="code" href="interface_units_1_1_i_military_unit.html#a257c85d654af2ea067a1406e43de452d">AttackValue</a> - <a class="code" href="class_units_1_1_unit.html#a07de03d8a1527cf2b3148ba545178b3c">defence</a> &gt; 0 ? attacker.<a class="code" href="interface_units_1_1_i_military_unit.html#a257c85d654af2ea067a1406e43de452d">AttackValue</a> - <a class="code" href="class_units_1_1_unit.html#a07de03d8a1527cf2b3148ba545178b3c">defence</a> : 1;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;            <a class="code" href="class_units_1_1_unit.html#a94b412a6a0252854846756c1d15c6653">HP</a>        -= damage;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;            <a class="code" href="class_units_1_1_unit.html#a0b3cfbf45f67e200a8b69ffa5da74af5">_attacker</a> =  attacker;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;            <a class="code" href="class_units_1_1_unit.html#ab263596fed3217ade6ac331a84d0c184">BeAttackedEventHandler</a>?.Invoke(attacker);</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        }</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160; </div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;<span class="preprocessor">        #endregion</span></div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160; </div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;<span class="preprocessor">        #region 属性封装</span></div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160; </div>
+<div class="line"><a name="l00259"></a><span class="lineno"><a class="line" href="class_units_1_1_unit.html#ac99f5f0e5e4cde8226e30379e6c71c2e">  259</a></span>&#160;        <span class="keyword">private</span> <span class="keyword">protected</span> <span class="keywordtype">bool</span> <a class="code" href="class_units_1_1_unit.html#ac99f5f0e5e4cde8226e30379e6c71c2e">Death</a>;</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160; </div>
+<div class="line"><a name="l00264"></a><span class="lineno"><a class="line" href="class_units_1_1_unit.html#a94b412a6a0252854846756c1d15c6653">  264</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="class_units_1_1_unit.html#a94b412a6a0252854846756c1d15c6653">HP</a></div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        {</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;            <span class="keyword">get</span> =&gt; _hp;</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;            <span class="keyword">protected</span> <span class="keyword">set</span></div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;            {</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;                _hp = value &gt;= 0 ? value : 0;</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;                <span class="keywordflow">if</span> (_hp == 0)</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;                {</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;                    <span class="keywordflow">try</span></div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;                    {</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;                        <span class="comment">// Debug.Log(&quot;UnitDeathEventHandler&quot;);</span></div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;                        <span class="comment">// Debug.Log(_attacker.SidePlayer);</span></div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;                        <span class="comment">// Debug.Log(_attacker);</span></div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;                        <a class="code" href="class_units_1_1_unit.html#ab90a1d9dc6ba10ded8a08c959cf70e7d">UnitDeathEventHandler</a>?.Invoke(<a class="code" href="class_units_1_1_unit.html#a0b3cfbf45f67e200a8b69ffa5da74af5">_attacker</a>.<a class="code" href="interface_units_1_1_i_military_unit.html#ac12b7d985c4d91a52840b33f0951ad63">SidePlayer</a>, <a class="code" href="class_units_1_1_unit.html#a0b3cfbf45f67e200a8b69ffa5da74af5">_attacker</a>);</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;                        Debug.Log(<span class="stringliteral">&quot;UnitDeathEventHandler finished&quot;</span>);</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;                    }</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;                    <span class="keywordflow">catch</span> (Exception e)</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;                    {</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;                        Console.WriteLine(e);</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;                        <span class="keywordflow">throw</span>;</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;                    }</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160; </div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;                    <a class="code" href="class_units_1_1_unit.html#ac99f5f0e5e4cde8226e30379e6c71c2e">Death</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;                    Destroy(gameObject, <a class="code" href="class_units_1_1_unit.html#a6a7f5e83b891dd7210ed52395f2815e8">isDieImmediately</a> ? 0 : 3f);</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;                }</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;            }</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        }</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160; </div>
+<div class="line"><a name="l00295"></a><span class="lineno"><a class="line" href="class_units_1_1_unit.html#a1c04ab3932a2389cb831366fac24ac09">  295</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_units_1_1_unit.html#a1c04ab3932a2389cb831366fac24ac09">Speed</a></div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;        {</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;            <span class="keyword">get</span> =&gt; speed;</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;            <span class="keyword">set</span></div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;            {</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;                speed                = value;</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;                _pathFinder.maxSpeed = value;</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;            }</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;        }</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160; </div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;<span class="preprocessor">        #endregion</span></div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160; </div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160; </div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;<span class="preprocessor">        #region 事件</span></div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160; </div>
+<div class="line"><a name="l00313"></a><span class="lineno"><a class="line" href="class_units_1_1_unit.html#a085d524e8a2422ca683a0d858abd31dc">  313</a></span>&#160;        <span class="keyword">public</span> UnityEvent&lt;GameObject, Transform&gt; <a class="code" href="class_units_1_1_unit.html#a085d524e8a2422ca683a0d858abd31dc">navStopEventHandler</a>;</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160; </div>
+<div class="line"><a name="l00318"></a><span class="lineno"><a class="line" href="class_units_1_1_unit.html#a024252b32cf1a4cdfb42637349c7bc17">  318</a></span>&#160;        <span class="keyword">protected</span> UnityEvent <a class="code" href="class_units_1_1_unit.html#a024252b32cf1a4cdfb42637349c7bc17">StartEventHandler</a>;</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160; </div>
+<div class="line"><a name="l00323"></a><span class="lineno"><a class="line" href="class_units_1_1_unit.html#ab263596fed3217ade6ac331a84d0c184">  323</a></span>&#160;        <span class="keyword">protected</span> UnityEvent&lt;IMilitaryUnit&gt; <a class="code" href="class_units_1_1_unit.html#ab263596fed3217ade6ac331a84d0c184">BeAttackedEventHandler</a> = <span class="keyword">new</span> UnityEvent&lt;IMilitaryUnit&gt;();</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160; </div>
+<div class="line"><a name="l00328"></a><span class="lineno"><a class="line" href="class_units_1_1_unit.html#ab90a1d9dc6ba10ded8a08c959cf70e7d">  328</a></span>&#160;        <span class="keyword">public</span> UnityEvent&lt;<a class="code" href="namespace_player.html">Player</a>.<a class="code" href="class_player_1_1_player.html">Player</a>, <a class="code" href="interface_units_1_1_i_military_unit.html">IMilitaryUnit</a>&gt; <a class="code" href="class_units_1_1_unit.html#ab90a1d9dc6ba10ded8a08c959cf70e7d">UnitDeathEventHandler</a> = <span class="keyword">new</span> UnityEvent&lt;<a class="code" href="namespace_player.html">Player</a>.<a class="code" href="class_player_1_1_player.html">Player</a>, <a class="code" href="interface_units_1_1_i_military_unit.html">IMilitaryUnit</a>&gt;();</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160; </div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;<span class="preprocessor">        #endregion</span></div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160; </div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160; </div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;<span class="preprocessor">        #region 寻路</span></div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160; </div>
+<div class="line"><a name="l00338"></a><span class="lineno"><a class="line" href="class_units_1_1_unit.html#a8c5db521bb8a505b1d6a16a7f925f6fa">  338</a></span>&#160;        <span class="keyword">protected</span> Transform <a class="code" href="class_units_1_1_unit.html#a8c5db521bb8a505b1d6a16a7f925f6fa">InitTarget</a> { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160; </div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;        <span class="keyword">private</span> AIDestinationSetter _destinationSetter;</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;        <span class="keyword">private</span> AIPath              _pathFinder;</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">bool</span>                _isAtTarget;</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">float</span>               _baseTimer;</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160; </div>
+<div class="line"><a name="l00348"></a><span class="lineno"><a class="line" href="class_units_1_1_unit.html#a8a06bfec524c7fbd2467380d407bfd07">  348</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code" href="class_units_1_1_unit.html#a8a06bfec524c7fbd2467380d407bfd07">IsAtEnemyDoor</a> { <span class="keyword">get</span>; <span class="keyword">set</span>; } = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160; </div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;<span class="preprocessor">        #endregion</span></div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160; </div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;        <span class="comment">// IEnumerator WaitForDeath() {</span></div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;        <span class="comment">//     // TODO 死亡五秒消失</span></div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;        <span class="comment">//     yield return new WaitForSeconds(2);</span></div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;        <span class="comment">//     Destroy(gameObject);</span></div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;        <span class="comment">// }</span></div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160; </div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;<span class="preprocessor">        #region 寻路</span></div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160; </div>
+<div class="line"><a name="l00364"></a><span class="lineno"><a class="line" href="class_units_1_1_unit.html#a95ec056c0363f891ce233fa6e4125cd8">  364</a></span>&#160;        <span class="keyword">protected</span> <span class="keywordtype">void</span> <a class="code" href="class_units_1_1_unit.html#a95ec056c0363f891ce233fa6e4125cd8">Goto</a>(Transform tr)</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;        {</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;            _destinationSetter.target = tr;</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;        }</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160; </div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160; </div>
+<div class="line"><a name="l00370"></a><span class="lineno"><a class="line" href="class_units_1_1_unit.html#a40aba08cab1ebd66b7b04a7f1c58e53a">  370</a></span>&#160;        <span class="keyword">protected</span> <span class="keyword">static</span> <span class="keywordtype">float</span> <a class="code" href="class_units_1_1_unit.html#a40aba08cab1ebd66b7b04a7f1c58e53a">GetTwoPointDistanceOnNav</a>(Vector3 oriPoint, Vector3 targetPoint)</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;        {</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="namespace_game_manager.html">GameManager</a>.<a class="code" href="class_game_manager_1_1_game_manager.html">GameManager</a>.<a class="code" href="class_game_manager_1_1_game_manager.html#acafc4a2ac0e6171a1f8436b529b58306">GetManager</a>.<a class="code" href="class_game_manager_1_1_game_manager.html#a5d7f67e9290715ffe7cf844fe819a8ef">seeker</a>.StartPath(oriPoint, targetPoint).GetTotalLength();</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;        }</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160; </div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;<span class="preprocessor">        #endregion</span></div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    }</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;}</div>
+<div class="ttc" id="aclass_game_manager_1_1_game_manager_html"><div class="ttname"><a href="class_game_manager_1_1_game_manager.html">GameManager.GameManager</a></div><div class="ttdoc">关卡全局管理控制器</div><div class="ttdef"><b>Definition:</b> <a href="_game_manager_8cs_source.html#l00014">GameManager.cs:15</a></div></div>
+<div class="ttc" id="aclass_game_manager_1_1_game_manager_html_a5d7f67e9290715ffe7cf844fe819a8ef"><div class="ttname"><a href="class_game_manager_1_1_game_manager.html#a5d7f67e9290715ffe7cf844fe819a8ef">GameManager.GameManager.seeker</a></div><div class="ttdeci">Seeker seeker</div><div class="ttdoc">寻路管理</div><div class="ttdef"><b>Definition:</b> <a href="_game_manager_8cs_source.html#l00029">GameManager.cs:29</a></div></div>
+<div class="ttc" id="aclass_game_manager_1_1_game_manager_html_aada7567448f07270090ffcfd300c0209"><div class="ttname"><a href="class_game_manager_1_1_game_manager.html#aada7567448f07270090ffcfd300c0209">GameManager.GameManager.aSide</a></div><div class="ttdeci">Player.Player aSide</div><div class="ttdoc">我方</div><div class="ttdef"><b>Definition:</b> <a href="_game_manager_8cs_source.html#l00019">GameManager.cs:19</a></div></div>
+<div class="ttc" id="aclass_game_manager_1_1_game_manager_html_ab8aa66d0c0b7535bcd3b3a28ce63ecff"><div class="ttname"><a href="class_game_manager_1_1_game_manager.html#ab8aa66d0c0b7535bcd3b3a28ce63ecff">GameManager.GameManager.bSide</a></div><div class="ttdeci">Player.Player bSide</div><div class="ttdoc">敌人</div><div class="ttdef"><b>Definition:</b> <a href="_game_manager_8cs_source.html#l00024">GameManager.cs:24</a></div></div>
+<div class="ttc" id="aclass_game_manager_1_1_game_manager_html_acafc4a2ac0e6171a1f8436b529b58306"><div class="ttname"><a href="class_game_manager_1_1_game_manager.html#acafc4a2ac0e6171a1f8436b529b58306">GameManager.GameManager.GetManager</a></div><div class="ttdeci">static GameManager GetManager</div><div class="ttdef"><b>Definition:</b> <a href="_game_manager_8cs_source.html#l00077">GameManager.cs:77</a></div></div>
+<div class="ttc" id="aclass_player_1_1_player_html"><div class="ttname"><a href="class_player_1_1_player.html">Player.Player</a></div><div class="ttdoc">玩家</div><div class="ttdef"><b>Definition:</b> <a href="_player_8cs_source.html#l00056">Player.cs:57</a></div></div>
+<div class="ttc" id="aclass_units_1_1_unit_html"><div class="ttname"><a href="class_units_1_1_unit.html">Units.Unit</a></div><div class="ttdoc">单位</div><div class="ttdef"><b>Definition:</b> <a href="_unit_8cs_source.html#l00122">Unit.cs:123</a></div></div>
+<div class="ttc" id="aclass_units_1_1_unit_html_a024252b32cf1a4cdfb42637349c7bc17"><div class="ttname"><a href="class_units_1_1_unit.html#a024252b32cf1a4cdfb42637349c7bc17">Units.Unit.StartEventHandler</a></div><div class="ttdeci">UnityEvent StartEventHandler</div><div class="ttdoc">开始事件</div><div class="ttdef"><b>Definition:</b> <a href="_unit_8cs_source.html#l00318">Unit.cs:318</a></div></div>
+<div class="ttc" id="aclass_units_1_1_unit_html_a0476e18af2e2b75754c60574f7690dff"><div class="ttname"><a href="class_units_1_1_unit.html#a0476e18af2e2b75754c60574f7690dff">Units.Unit.Awake</a></div><div class="ttdeci">virtual void Awake()</div><div class="ttdef"><b>Definition:</b> <a href="_unit_8cs_source.html#l00194">Unit.cs:194</a></div></div>
+<div class="ttc" id="aclass_units_1_1_unit_html_a07de03d8a1527cf2b3148ba545178b3c"><div class="ttname"><a href="class_units_1_1_unit.html#a07de03d8a1527cf2b3148ba545178b3c">Units.Unit.defence</a></div><div class="ttdeci">int defence</div><div class="ttdoc">防御力</div><div class="ttdef"><b>Definition:</b> <a href="_unit_8cs_source.html#l00133">Unit.cs:133</a></div></div>
+<div class="ttc" id="aclass_units_1_1_unit_html_a085d524e8a2422ca683a0d858abd31dc"><div class="ttname"><a href="class_units_1_1_unit.html#a085d524e8a2422ca683a0d858abd31dc">Units.Unit.navStopEventHandler</a></div><div class="ttdeci">UnityEvent&lt; GameObject, Transform &gt; navStopEventHandler</div><div class="ttdoc">目的地到达事件</div><div class="ttdef"><b>Definition:</b> <a href="_unit_8cs_source.html#l00313">Unit.cs:313</a></div></div>
+<div class="ttc" id="aclass_units_1_1_unit_html_a0b3cfbf45f67e200a8b69ffa5da74af5"><div class="ttname"><a href="class_units_1_1_unit.html#a0b3cfbf45f67e200a8b69ffa5da74af5">Units.Unit._attacker</a></div><div class="ttdeci">IMilitaryUnit _attacker</div><div class="ttdef"><b>Definition:</b> <a href="_unit_8cs_source.html#l00190">Unit.cs:190</a></div></div>
+<div class="ttc" id="aclass_units_1_1_unit_html_a1c04ab3932a2389cb831366fac24ac09"><div class="ttname"><a href="class_units_1_1_unit.html#a1c04ab3932a2389cb831366fac24ac09">Units.Unit.Speed</a></div><div class="ttdeci">float Speed</div><div class="ttdoc">速度</div><div class="ttdef"><b>Definition:</b> <a href="_unit_8cs_source.html#l00295">Unit.cs:296</a></div></div>
+<div class="ttc" id="aclass_units_1_1_unit_html_a21aed8b6a593a60a19ee2c02b89c2902"><div class="ttname"><a href="class_units_1_1_unit.html#a21aed8b6a593a60a19ee2c02b89c2902">Units.Unit.playerOwnMax</a></div><div class="ttdeci">int playerOwnMax</div><div class="ttdoc">玩家最大拥有数量</div><div class="ttdef"><b>Definition:</b> <a href="_unit_8cs_source.html#l00143">Unit.cs:143</a></div></div>
+<div class="ttc" id="aclass_units_1_1_unit_html_a2419cf5d09b95de12d26c9dfd6edb3b4"><div class="ttname"><a href="class_units_1_1_unit.html#a2419cf5d09b95de12d26c9dfd6edb3b4">Units.Unit.isUnmovable</a></div><div class="ttdeci">bool isUnmovable</div><div class="ttdoc">是否不可移动</div><div class="ttdef"><b>Definition:</b> <a href="_unit_8cs_source.html#l00138">Unit.cs:138</a></div></div>
+<div class="ttc" id="aclass_units_1_1_unit_html_a40aba08cab1ebd66b7b04a7f1c58e53a"><div class="ttname"><a href="class_units_1_1_unit.html#a40aba08cab1ebd66b7b04a7f1c58e53a">Units.Unit.GetTwoPointDistanceOnNav</a></div><div class="ttdeci">static float GetTwoPointDistanceOnNav(Vector3 oriPoint, Vector3 targetPoint)</div><div class="ttdef"><b>Definition:</b> <a href="_unit_8cs_source.html#l00370">Unit.cs:370</a></div></div>
+<div class="ttc" id="aclass_units_1_1_unit_html_a40b7230b66922e771488ef6fba922d0b"><div class="ttname"><a href="class_units_1_1_unit.html#a40b7230b66922e771488ef6fba922d0b">Units.Unit.costFood</a></div><div class="ttdeci">int costFood</div><div class="ttdoc">生产成本（食物）</div><div class="ttdef"><b>Definition:</b> <a href="_unit_8cs_source.html#l00171">Unit.cs:171</a></div></div>
+<div class="ttc" id="aclass_units_1_1_unit_html_a42800b6151ca67913291bf4d10fdf7ae"><div class="ttname"><a href="class_units_1_1_unit.html#a42800b6151ca67913291bf4d10fdf7ae">Units.Unit.BeAttacked</a></div><div class="ttdeci">virtual void BeAttacked(IMilitaryUnit attacker)</div><div class="ttdoc">被攻击</div><div class="ttdef"><b>Definition:</b> <a href="_unit_8cs_source.html#l00245">Unit.cs:245</a></div></div>
+<div class="ttc" id="aclass_units_1_1_unit_html_a6a7f5e83b891dd7210ed52395f2815e8"><div class="ttname"><a href="class_units_1_1_unit.html#a6a7f5e83b891dd7210ed52395f2815e8">Units.Unit.isDieImmediately</a></div><div class="ttdeci">bool isDieImmediately</div><div class="ttdef"><b>Definition:</b> <a href="_unit_8cs_source.html#l00183">Unit.cs:183</a></div></div>
+<div class="ttc" id="aclass_units_1_1_unit_html_a6ac6a6ddc2d1d852a91d310b9ebd73df"><div class="ttname"><a href="class_units_1_1_unit.html#a6ac6a6ddc2d1d852a91d310b9ebd73df">Units.Unit.costGold</a></div><div class="ttdeci">int costGold</div><div class="ttdoc">生产成本（黄金）</div><div class="ttdef"><b>Definition:</b> <a href="_unit_8cs_source.html#l00181">Unit.cs:181</a></div></div>
+<div class="ttc" id="aclass_units_1_1_unit_html_a6c1a18207afb2578135d197555005739"><div class="ttname"><a href="class_units_1_1_unit.html#a6c1a18207afb2578135d197555005739">Units.Unit.costWood</a></div><div class="ttdeci">int costWood</div><div class="ttdoc">生产成本（木材）</div><div class="ttdef"><b>Definition:</b> <a href="_unit_8cs_source.html#l00176">Unit.cs:176</a></div></div>
+<div class="ttc" id="aclass_units_1_1_unit_html_a77e6c4758b533726d985402fb293fa67"><div class="ttname"><a href="class_units_1_1_unit.html#a77e6c4758b533726d985402fb293fa67">Units.Unit.Update</a></div><div class="ttdeci">virtual void Update()</div><div class="ttdef"><b>Definition:</b> <a href="_unit_8cs_source.html#l00216">Unit.cs:216</a></div></div>
+<div class="ttc" id="aclass_units_1_1_unit_html_a7a1bc522166157786e7e988d49c6e79a"><div class="ttname"><a href="class_units_1_1_unit.html#a7a1bc522166157786e7e988d49c6e79a">Units.Unit.unitRigidbody</a></div><div class="ttdeci">Rigidbody unitRigidbody</div><div class="ttdoc">单位刚体</div><div class="ttdef"><b>Definition:</b> <a href="_unit_8cs_source.html#l00148">Unit.cs:148</a></div></div>
+<div class="ttc" id="aclass_units_1_1_unit_html_a8430d0dc73a42b2ed47ab576c137fbc7"><div class="ttname"><a href="class_units_1_1_unit.html#a8430d0dc73a42b2ed47ab576c137fbc7">Units.Unit.sidePlayer</a></div><div class="ttdeci">Player.Player sidePlayer</div><div class="ttdoc">所属玩家</div><div class="ttdef"><b>Definition:</b> <a href="_unit_8cs_source.html#l00160">Unit.cs:160</a></div></div>
+<div class="ttc" id="aclass_units_1_1_unit_html_a8a06bfec524c7fbd2467380d407bfd07"><div class="ttname"><a href="class_units_1_1_unit.html#a8a06bfec524c7fbd2467380d407bfd07">Units.Unit.IsAtEnemyDoor</a></div><div class="ttdeci">bool IsAtEnemyDoor</div><div class="ttdoc">是否在敌人家门口</div><div class="ttdef"><b>Definition:</b> <a href="_unit_8cs_source.html#l00348">Unit.cs:348</a></div></div>
+<div class="ttc" id="aclass_units_1_1_unit_html_a8c5db521bb8a505b1d6a16a7f925f6fa"><div class="ttname"><a href="class_units_1_1_unit.html#a8c5db521bb8a505b1d6a16a7f925f6fa">Units.Unit.InitTarget</a></div><div class="ttdeci">Transform InitTarget</div><div class="ttdoc">初始目标</div><div class="ttdef"><b>Definition:</b> <a href="_unit_8cs_source.html#l00338">Unit.cs:338</a></div></div>
+<div class="ttc" id="aclass_units_1_1_unit_html_a93f7e4e027ddee5cb07f9db457bf6e4f"><div class="ttname"><a href="class_units_1_1_unit.html#a93f7e4e027ddee5cb07f9db457bf6e4f">Units.Unit.road</a></div><div class="ttdeci">Road road</div><div class="ttdoc">路</div><div class="ttdef"><b>Definition:</b> <a href="_unit_8cs_source.html#l00155">Unit.cs:155</a></div></div>
+<div class="ttc" id="aclass_units_1_1_unit_html_a94b412a6a0252854846756c1d15c6653"><div class="ttname"><a href="class_units_1_1_unit.html#a94b412a6a0252854846756c1d15c6653">Units.Unit.HP</a></div><div class="ttdeci">int??? HP</div><div class="ttdoc">体力值</div><div class="ttdef"><b>Definition:</b> <a href="_unit_8cs_source.html#l00264">Unit.cs:265</a></div></div>
+<div class="ttc" id="aclass_units_1_1_unit_html_a95ec056c0363f891ce233fa6e4125cd8"><div class="ttname"><a href="class_units_1_1_unit.html#a95ec056c0363f891ce233fa6e4125cd8">Units.Unit.Goto</a></div><div class="ttdeci">void Goto(Transform tr)</div><div class="ttdoc">前往目的地</div><div class="ttdef"><b>Definition:</b> <a href="_unit_8cs_source.html#l00364">Unit.cs:364</a></div></div>
+<div class="ttc" id="aclass_units_1_1_unit_html_a9bbed64b4fe366576e0e547e5753f814"><div class="ttname"><a href="class_units_1_1_unit.html#a9bbed64b4fe366576e0e547e5753f814">Units.Unit.Start</a></div><div class="ttdeci">virtual void Start()</div><div class="ttdef"><b>Definition:</b> <a href="_unit_8cs_source.html#l00205">Unit.cs:205</a></div></div>
+<div class="ttc" id="aclass_units_1_1_unit_html_ab19ce04843e871350019b82375ab2fdf"><div class="ttname"><a href="class_units_1_1_unit.html#ab19ce04843e871350019b82375ab2fdf">Units.Unit.unitType</a></div><div class="ttdeci">UnitType unitType</div><div class="ttdoc">单位类型</div><div class="ttdef"><b>Definition:</b> <a href="_unit_8cs_source.html#l00165">Unit.cs:165</a></div></div>
+<div class="ttc" id="aclass_units_1_1_unit_html_ab263596fed3217ade6ac331a84d0c184"><div class="ttname"><a href="class_units_1_1_unit.html#ab263596fed3217ade6ac331a84d0c184">Units.Unit.BeAttackedEventHandler</a></div><div class="ttdeci">UnityEvent&lt; IMilitaryUnit &gt; BeAttackedEventHandler</div><div class="ttdoc">受到攻击事件</div><div class="ttdef"><b>Definition:</b> <a href="_unit_8cs_source.html#l00323">Unit.cs:323</a></div></div>
+<div class="ttc" id="aclass_units_1_1_unit_html_ab90a1d9dc6ba10ded8a08c959cf70e7d"><div class="ttname"><a href="class_units_1_1_unit.html#ab90a1d9dc6ba10ded8a08c959cf70e7d">Units.Unit.UnitDeathEventHandler</a></div><div class="ttdeci">UnityEvent&lt; Player.Player, IMilitaryUnit &gt; UnitDeathEventHandler</div><div class="ttdoc">死亡事件</div><div class="ttdef"><b>Definition:</b> <a href="_unit_8cs_source.html#l00328">Unit.cs:328</a></div></div>
+<div class="ttc" id="aclass_units_1_1_unit_html_ac99f5f0e5e4cde8226e30379e6c71c2e"><div class="ttname"><a href="class_units_1_1_unit.html#ac99f5f0e5e4cde8226e30379e6c71c2e">Units.Unit.Death</a></div><div class="ttdeci">bool Death</div><div class="ttdef"><b>Definition:</b> <a href="_unit_8cs_source.html#l00259">Unit.cs:259</a></div></div>
+<div class="ttc" id="aclass_units_1_1_unit_html_ae4031b42363d802c6ae80ba120090659"><div class="ttname"><a href="class_units_1_1_unit.html#ae4031b42363d802c6ae80ba120090659">Units.Unit.deathReward</a></div><div class="ttdeci">int deathReward</div><div class="ttdoc">击杀奖励</div><div class="ttdef"><b>Definition:</b> <a href="_unit_8cs_source.html#l00188">Unit.cs:188</a></div></div>
+<div class="ttc" id="ainterface_units_1_1_i_military_unit_html"><div class="ttname"><a href="interface_units_1_1_i_military_unit.html">Units.IMilitaryUnit</a></div><div class="ttdoc">攻击性单位接口</div><div class="ttdef"><b>Definition:</b> <a href="_unit_8cs_source.html#l00059">Unit.cs:60</a></div></div>
+<div class="ttc" id="ainterface_units_1_1_i_military_unit_html_a257c85d654af2ea067a1406e43de452d"><div class="ttname"><a href="interface_units_1_1_i_military_unit.html#a257c85d654af2ea067a1406e43de452d">Units.IMilitaryUnit.AttackValue</a></div><div class="ttdeci">int AttackValue</div><div class="ttdoc">攻击力</div><div class="ttdef"><b>Definition:</b> <a href="_unit_8cs_source.html#l00064">Unit.cs:64</a></div></div>
+<div class="ttc" id="ainterface_units_1_1_i_military_unit_html_a39f5e61371c10f28e9702aced2469e61"><div class="ttname"><a href="interface_units_1_1_i_military_unit.html#a39f5e61371c10f28e9702aced2469e61">Units.IMilitaryUnit.AttackColdDownTime</a></div><div class="ttdeci">float AttackColdDownTime</div><div class="ttdoc">攻击冷却时间</div><div class="ttdef"><b>Definition:</b> <a href="_unit_8cs_source.html#l00069">Unit.cs:69</a></div></div>
+<div class="ttc" id="ainterface_units_1_1_i_military_unit_html_a64dea51c52f11ccc5a1f71b257f4c5e6"><div class="ttname"><a href="interface_units_1_1_i_military_unit.html#a64dea51c52f11ccc5a1f71b257f4c5e6">Units.IMilitaryUnit.OriginalVelocity</a></div><div class="ttdeci">Vector3 OriginalVelocity</div><div class="ttdoc">初速度</div><div class="ttdef"><b>Definition:</b> <a href="_unit_8cs_source.html#l00089">Unit.cs:89</a></div></div>
+<div class="ttc" id="ainterface_units_1_1_i_military_unit_html_a6865a4b72876df6fbe3fd58c7b16fe42"><div class="ttname"><a href="interface_units_1_1_i_military_unit.html#a6865a4b72876df6fbe3fd58c7b16fe42">Units.IMilitaryUnit.GetUnit</a></div><div class="ttdeci">Unit GetUnit()</div><div class="ttdoc">获取单位</div></div>
+<div class="ttc" id="ainterface_units_1_1_i_military_unit_html_a856a2d6c9512c812fecf2e7fd0955902"><div class="ttname"><a href="interface_units_1_1_i_military_unit.html#a856a2d6c9512c812fecf2e7fd0955902">Units.IMilitaryUnit.AttackRange</a></div><div class="ttdeci">float AttackRange</div><div class="ttdoc">攻击范围</div><div class="ttdef"><b>Definition:</b> <a href="_unit_8cs_source.html#l00074">Unit.cs:74</a></div></div>
+<div class="ttc" id="ainterface_units_1_1_i_military_unit_html_a86e44fbae9870aa511daff9ab8677f0c"><div class="ttname"><a href="interface_units_1_1_i_military_unit.html#a86e44fbae9870aa511daff9ab8677f0c">Units.IMilitaryUnit.DefenceValue</a></div><div class="ttdeci">int DefenceValue</div><div class="ttdoc">防御力</div><div class="ttdef"><b>Definition:</b> <a href="_unit_8cs_source.html#l00079">Unit.cs:79</a></div></div>
+<div class="ttc" id="ainterface_units_1_1_i_military_unit_html_aa5cb8f7532bedbb1a6e68c340c1033f0"><div class="ttname"><a href="interface_units_1_1_i_military_unit.html#aa5cb8f7532bedbb1a6e68c340c1033f0">Units.IMilitaryUnit.AttackEvent</a></div><div class="ttdeci">UnityEvent&lt; Unit &gt; AttackEvent</div><div class="ttdoc">攻击事件</div><div class="ttdef"><b>Definition:</b> <a href="_unit_8cs_source.html#l00099">Unit.cs:99</a></div></div>
+<div class="ttc" id="ainterface_units_1_1_i_military_unit_html_ab21f63d6a15746afbd38279db4f79e78"><div class="ttname"><a href="interface_units_1_1_i_military_unit.html#ab21f63d6a15746afbd38279db4f79e78">Units.IMilitaryUnit.UnderAttackedEvent</a></div><div class="ttdeci">UnityEvent&lt; IMilitaryUnit &gt; UnderAttackedEvent</div><div class="ttdoc">被攻击事件</div><div class="ttdef"><b>Definition:</b> <a href="_unit_8cs_source.html#l00104">Unit.cs:104</a></div></div>
+<div class="ttc" id="ainterface_units_1_1_i_military_unit_html_abc4dbf85ad45a1aed97e7715c072874c"><div class="ttname"><a href="interface_units_1_1_i_military_unit.html#abc4dbf85ad45a1aed97e7715c072874c">Units.IMilitaryUnit.SpeedValue</a></div><div class="ttdeci">float SpeedValue</div><div class="ttdoc">速度</div><div class="ttdef"><b>Definition:</b> <a href="_unit_8cs_source.html#l00084">Unit.cs:84</a></div></div>
+<div class="ttc" id="ainterface_units_1_1_i_military_unit_html_abd2a484419c1b79ea94d826245339622"><div class="ttname"><a href="interface_units_1_1_i_military_unit.html#abd2a484419c1b79ea94d826245339622">Units.IMilitaryUnit.Attack</a></div><div class="ttdeci">void Attack()</div><div class="ttdoc">攻击</div></div>
+<div class="ttc" id="ainterface_units_1_1_i_military_unit_html_ac12b7d985c4d91a52840b33f0951ad63"><div class="ttname"><a href="interface_units_1_1_i_military_unit.html#ac12b7d985c4d91a52840b33f0951ad63">Units.IMilitaryUnit.SidePlayer</a></div><div class="ttdeci">Player.Player SidePlayer</div><div class="ttdoc">所属玩家</div><div class="ttdef"><b>Definition:</b> <a href="_unit_8cs_source.html#l00094">Unit.cs:94</a></div></div>
+<div class="ttc" id="anamespace_game_manager_html"><div class="ttname"><a href="namespace_game_manager.html">GameManager</a></div><div class="ttdef"><b>Definition:</b> <a href="_game_manager_8cs_source.html#l00009">GameManager.cs:10</a></div></div>
+<div class="ttc" id="anamespace_player_html"><div class="ttname"><a href="namespace_player.html">Player</a></div><div class="ttdef"><b>Definition:</b> <a href="_player_8cs_source.html#l00010">Player.cs:11</a></div></div>
+<div class="ttc" id="anamespace_player_html_a61f3646142986499ed36c80a34f38427"><div class="ttname"><a href="namespace_player.html#a61f3646142986499ed36c80a34f38427">Player.GameResourceType</a></div><div class="ttdeci">GameResourceType</div><div class="ttdoc">资源类型</div><div class="ttdef"><b>Definition:</b> <a href="_player_8cs_source.html#l00015">Player.cs:16</a></div></div>
+<div class="ttc" id="anamespace_units_html"><div class="ttname"><a href="namespace_units.html">Units</a></div><div class="ttdef"><b>Definition:</b> <a href="_buff_8cs_source.html#l00004">Buff.cs:5</a></div></div>
+<div class="ttc" id="anamespace_units_html_a916a18c8572b926f5bacb64a5af82715"><div class="ttname"><a href="namespace_units.html#a916a18c8572b926f5bacb64a5af82715">Units.Road</a></div><div class="ttdeci">Road</div><div class="ttdoc">路</div><div class="ttdef"><b>Definition:</b> <a href="_unit_8cs_source.html#l00012">Unit.cs:13</a></div></div>
+<div class="ttc" id="anamespace_units_html_a916a18c8572b926f5bacb64a5af82715a1448e86d90e0feb307c2894c24e87767"><div class="ttname"><a href="namespace_units.html#a916a18c8572b926f5bacb64a5af82715a1448e86d90e0feb307c2894c24e87767">Units.Road.Bot</a></div><div class="ttdeci">@ Bot</div><div class="ttdoc">下路</div></div>
+<div class="ttc" id="anamespace_units_html_a916a18c8572b926f5bacb64a5af82715a55c6b09cbca39ef0cdb728eb112a5049"><div class="ttname"><a href="namespace_units.html#a916a18c8572b926f5bacb64a5af82715a55c6b09cbca39ef0cdb728eb112a5049">Units.Road.Mid</a></div><div class="ttdeci">@ Mid</div><div class="ttdoc">中路</div></div>
+<div class="ttc" id="anamespace_units_html_a916a18c8572b926f5bacb64a5af82715aa4ffdcf0dc1f31b9acaf295d75b51d00"><div class="ttname"><a href="namespace_units.html#a916a18c8572b926f5bacb64a5af82715aa4ffdcf0dc1f31b9acaf295d75b51d00">Units.Road.Top</a></div><div class="ttdeci">@ Top</div><div class="ttdoc">上路</div></div>
+<div class="ttc" id="anamespace_units_html_aa6ae92e8a7d84afa54f9018b0f614763"><div class="ttname"><a href="namespace_units.html#aa6ae92e8a7d84afa54f9018b0f614763">Units.UnitType</a></div><div class="ttdeci">UnitType</div><div class="ttdoc">单位类型</div><div class="ttdef"><b>Definition:</b> <a href="_unit_8cs_source.html#l00033">Unit.cs:34</a></div></div>
+<div class="ttc" id="anamespace_units_html_aa6ae92e8a7d84afa54f9018b0f614763a4521848d8ecf72aedcbcad85b20b50ba"><div class="ttname"><a href="namespace_units.html#aa6ae92e8a7d84afa54f9018b0f614763a4521848d8ecf72aedcbcad85b20b50ba">Units.UnitType.Enemy0</a></div><div class="ttdeci">@ Enemy0</div><div class="ttdoc">普通敌人</div></div>
+<div class="ttc" id="anamespace_units_html_aa6ae92e8a7d84afa54f9018b0f614763a55429fa01b19f7193811ed985797b9b9"><div class="ttname"><a href="namespace_units.html#aa6ae92e8a7d84afa54f9018b0f614763a55429fa01b19f7193811ed985797b9b9">Units.UnitType.Archer</a></div><div class="ttdeci">@ Archer</div><div class="ttdoc">弓箭手</div></div>
+<div class="ttc" id="anamespace_units_html_aa6ae92e8a7d84afa54f9018b0f614763a8c844e3084a2699eb2301c3ce2b7fe97"><div class="ttname"><a href="namespace_units.html#aa6ae92e8a7d84afa54f9018b0f614763a8c844e3084a2699eb2301c3ce2b7fe97">Units.UnitType.KiteGirl</a></div><div class="ttdeci">@ KiteGirl</div><div class="ttdoc">风筝女</div></div>
+<div class="ttc" id="anamespace_units_html_aa6ae92e8a7d84afa54f9018b0f614763abcf70104d2838284289b0f44a126474c"><div class="ttname"><a href="namespace_units.html#aa6ae92e8a7d84afa54f9018b0f614763abcf70104d2838284289b0f44a126474c">Units.UnitType.LanternBoy</a></div><div class="ttdeci">@ LanternBoy</div><div class="ttdoc">灯笼男</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_a5079711ee210cb3f5000c30d3746d06.html">SimpleRTS</a></li><li class="navelem"><a class="el" href="dir_ec7b684f6ba09c3c3a1f78fc68be2b45.html">Simplified_RTS</a></li><li class="navelem"><a class="el" href="dir_fc9fc45e4060f68dac2ba8008ad7420a.html">Assets</a></li><li class="navelem"><a class="el" href="dir_9c83f749c47014e6bfe3d69c7ba163ff.html">Scripts</a></li><li class="navelem"><a class="el" href="dir_c00f259fa01133e5b2dbe561e69e292e.html">Units</a></li><li class="navelem"><a class="el" href="_unit_8cs.html">Unit.cs</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

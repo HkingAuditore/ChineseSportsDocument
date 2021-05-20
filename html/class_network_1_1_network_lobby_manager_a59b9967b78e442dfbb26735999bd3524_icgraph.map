@@ -1,0 +1,4 @@
+<map id="Network.NetworkLobbyManager.ShowPlayerInfo" name="Network.NetworkLobbyManager.ShowPlayerInfo">
+<area shape="rect" id="node1" title="展示玩家信息" alt="" coords="263,5,472,47"/>
+<area shape="rect" id="node2" href="$class_network_1_1_network_lobby_manager.html#a95ed4dc9770944811d37ca6a8ac58941" title="加入房间" alt="" coords="5,5,215,47"/>
+</map>

@@ -1,0 +1,453 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>古代运动图鉴: Network.NetworkPlayerManager类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Icon_Small.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">古代运动图鉴
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_network_1_1_network_player_manager.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="class_network_1_1_network_player_manager-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">Network.NetworkPlayerManager类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>网络玩家管理  
+ <a href="class_network_1_1_network_player_manager.html#details">更多...</a></p>
+<div class="dynheader">
+类 Network.NetworkPlayerManager 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_network_1_1_network_player_manager__inherit__graph.svg" width="264" height="492"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+Network.NetworkPlayerManager 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_network_1_1_network_player_manager__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ad53c25c8f56590bee091f5f2858d0a1f"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network_1_1_network_player_manager.html#ad53c25c8f56590bee091f5f2858d0a1f">OnPlayerPropertiesUpdate</a> (Photon.Realtime.Player targetPlayer, Hashtable changedProps)</td></tr>
+<tr class="memdesc:ad53c25c8f56590bee091f5f2858d0a1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">玩家数值更新  <a href="class_network_1_1_network_player_manager.html#ad53c25c8f56590bee091f5f2858d0a1f">更多...</a><br /></td></tr>
+<tr class="separator:ad53c25c8f56590bee091f5f2858d0a1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7375579b5c46afcceed1cbbad40f530b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network_1_1_network_player_manager.html#a7375579b5c46afcceed1cbbad40f530b">SendAddFarmer</a> (<a class="el" href="namespace_player.html#a61f3646142986499ed36c80a34f38427">GameResourceType</a> rs)</td></tr>
+<tr class="memdesc:a7375579b5c46afcceed1cbbad40f530b"><td class="mdescLeft">&#160;</td><td class="mdescRight">A发送过来，传输给另一个端的B 添加农民  <a href="class_network_1_1_network_player_manager.html#a7375579b5c46afcceed1cbbad40f530b">更多...</a><br /></td></tr>
+<tr class="separator:a7375579b5c46afcceed1cbbad40f530b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9d3d595857baa8819665c4e3d8e963a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network_1_1_network_player_manager.html#af9d3d595857baa8819665c4e3d8e963a">RPC_AddFarmer</a> (<a class="el" href="namespace_player.html#a61f3646142986499ed36c80a34f38427">GameResourceType</a> rs)</td></tr>
+<tr class="separator:af9d3d595857baa8819665c4e3d8e963a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a377cda49caf2508d8f486f63f0492fd7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network_1_1_network_player_manager.html#a377cda49caf2508d8f486f63f0492fd7">SendSubtractFarmer</a> (<a class="el" href="namespace_player.html#a61f3646142986499ed36c80a34f38427">GameResourceType</a> rs)</td></tr>
+<tr class="separator:a377cda49caf2508d8f486f63f0492fd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a548e313293fad4a85758adac63fb10ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network_1_1_network_player_manager.html#a548e313293fad4a85758adac63fb10ce">RPC_SubtractFarmer</a> (<a class="el" href="namespace_player.html#a61f3646142986499ed36c80a34f38427">GameResourceType</a> rs)</td></tr>
+<tr class="separator:a548e313293fad4a85758adac63fb10ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab93a6a01213893d551ba0a581e7fb1e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network_1_1_network_player_manager.html#ab93a6a01213893d551ba0a581e7fb1e1">SendInstantiateUnit</a> (int chosenUnit, <a class="el" href="namespace_units.html#a916a18c8572b926f5bacb64a5af82715">Road</a> rd, Vector3 oriPoint)</td></tr>
+<tr class="memdesc:ab93a6a01213893d551ba0a581e7fb1e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">派遣单位  <a href="class_network_1_1_network_player_manager.html#ab93a6a01213893d551ba0a581e7fb1e1">更多...</a><br /></td></tr>
+<tr class="separator:ab93a6a01213893d551ba0a581e7fb1e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66a4fa383e35b40695258db563bc3069"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network_1_1_network_player_manager.html#a66a4fa383e35b40695258db563bc3069">RPC_SendInstantiateUnit</a> (int chosenUnit, <a class="el" href="namespace_units.html#a916a18c8572b926f5bacb64a5af82715">Road</a> rd, Vector3 oriPoint)</td></tr>
+<tr class="separator:a66a4fa383e35b40695258db563bc3069"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a0788f4f5a556f2615a534d90e40fea27"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_player_1_1_player_online___a_side.html">PlayerOnline_ASide</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network_1_1_network_player_manager.html#a0788f4f5a556f2615a534d90e40fea27">playerASideOnline</a></td></tr>
+<tr class="memdesc:a0788f4f5a556f2615a534d90e40fea27"><td class="mdescLeft">&#160;</td><td class="mdescRight">线上玩家A  <a href="class_network_1_1_network_player_manager.html#a0788f4f5a556f2615a534d90e40fea27">更多...</a><br /></td></tr>
+<tr class="separator:a0788f4f5a556f2615a534d90e40fea27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9e70bbc7a6c1645e056053d2bc8b858"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_player_1_1_player_online___b_side.html">PlayerOnline_BSide</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network_1_1_network_player_manager.html#ae9e70bbc7a6c1645e056053d2bc8b858">playerBSideOnline</a></td></tr>
+<tr class="memdesc:ae9e70bbc7a6c1645e056053d2bc8b858"><td class="mdescLeft">&#160;</td><td class="mdescRight">线上玩家B  <a href="class_network_1_1_network_player_manager.html#ae9e70bbc7a6c1645e056053d2bc8b858">更多...</a><br /></td></tr>
+<tr class="separator:ae9e70bbc7a6c1645e056053d2bc8b858"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>网络玩家管理 </p>
+
+<p class="definition">在文件 <a class="el" href="_network_player_manager_8cs_source.html">NetworkPlayerManager.cs</a> 第 <a class="el" href="_network_player_manager_8cs_source.html#l00012">12</a> 行定义.</p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="ad53c25c8f56590bee091f5f2858d0a1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad53c25c8f56590bee091f5f2858d0a1f">&#9670;&nbsp;</a></span>OnPlayerPropertiesUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void Network.NetworkPlayerManager.OnPlayerPropertiesUpdate </td>
+          <td>(</td>
+          <td class="paramtype">Photon.Realtime.Player&#160;</td>
+          <td class="paramname"><em>targetPlayer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Hashtable&#160;</td>
+          <td class="paramname"><em>changedProps</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>玩家数值更新 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">targetPlayer</td><td>玩家</td></tr>
+    <tr><td class="paramname">changedProps</td><td>改变数值组</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="_network_player_manager_8cs_source.html">NetworkPlayerManager.cs</a> 第 <a class="el" href="_network_player_manager_8cs_source.html#l00029">29</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="_network_player_manager_8cs_source.html#l00022">Network.NetworkPlayerManager.playerBSideOnline</a>, <a class="el" href="_player_online___b_side_8cs_source.html#l00022">Player.PlayerOnline_BSide.PlayerPhoton</a> , 以及 <a class="el" href="_player_online___b_side_8cs_source.html#l00046">Player.PlayerOnline_BSide.UpdateRemotePlayerProperties()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_network_1_1_network_player_manager_ad53c25c8f56590bee091f5f2858d0a1f_cgraph.svg" width="520" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="af9d3d595857baa8819665c4e3d8e963a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9d3d595857baa8819665c4e3d8e963a">&#9670;&nbsp;</a></span>RPC_AddFarmer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Network.NetworkPlayerManager.RPC_AddFarmer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_player.html#a61f3646142986499ed36c80a34f38427">GameResourceType</a>&#160;</td>
+          <td class="paramname"><em>rs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="_network_player_manager_8cs_source.html">NetworkPlayerManager.cs</a> 第 <a class="el" href="_network_player_manager_8cs_source.html#l00055">55</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="_player_8cs_source.html#l00408">Player.Player.AddFarmer()</a> , 以及 <a class="el" href="_network_player_manager_8cs_source.html#l00022">Network.NetworkPlayerManager.playerBSideOnline</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_network_1_1_network_player_manager_af9d3d595857baa8819665c4e3d8e963a_cgraph.svg" width="438" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a66a4fa383e35b40695258db563bc3069"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66a4fa383e35b40695258db563bc3069">&#9670;&nbsp;</a></span>RPC_SendInstantiateUnit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Network.NetworkPlayerManager.RPC_SendInstantiateUnit </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>chosenUnit</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_units.html#a916a18c8572b926f5bacb64a5af82715">Road</a>&#160;</td>
+          <td class="paramname"><em>rd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector3&#160;</td>
+          <td class="paramname"><em>oriPoint</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="_network_player_manager_8cs_source.html">NetworkPlayerManager.cs</a> 第 <a class="el" href="_network_player_manager_8cs_source.html#l00089">89</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="_player_8cs_source.html#l00717">Player.Player.InstantiateUnit()</a> , 以及 <a class="el" href="_network_player_manager_8cs_source.html#l00022">Network.NetworkPlayerManager.playerBSideOnline</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_network_1_1_network_player_manager_a66a4fa383e35b40695258db563bc3069_cgraph.svg" width="456" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a548e313293fad4a85758adac63fb10ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a548e313293fad4a85758adac63fb10ce">&#9670;&nbsp;</a></span>RPC_SubtractFarmer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Network.NetworkPlayerManager.RPC_SubtractFarmer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_player.html#a61f3646142986499ed36c80a34f38427">GameResourceType</a>&#160;</td>
+          <td class="paramname"><em>rs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="_network_player_manager_8cs_source.html">NetworkPlayerManager.cs</a> 第 <a class="el" href="_network_player_manager_8cs_source.html#l00067">67</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="_network_player_manager_8cs_source.html#l00022">Network.NetworkPlayerManager.playerBSideOnline</a> , 以及 <a class="el" href="_player_8cs_source.html#l00417">Player.Player.SubtractFarmer()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_network_1_1_network_player_manager_a548e313293fad4a85758adac63fb10ce_cgraph.svg" width="464" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a7375579b5c46afcceed1cbbad40f530b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7375579b5c46afcceed1cbbad40f530b">&#9670;&nbsp;</a></span>SendAddFarmer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Network.NetworkPlayerManager.SendAddFarmer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_player.html#a61f3646142986499ed36c80a34f38427">GameResourceType</a>&#160;</td>
+          <td class="paramname"><em>rs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A发送过来，传输给另一个端的B 添加农民 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rs</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="_network_player_manager_8cs_source.html">NetworkPlayerManager.cs</a> 第 <a class="el" href="_network_player_manager_8cs_source.html#l00048">48</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="_player_online___a_side_8cs_source.html#l00054">Player.PlayerOnline_ASide.AddFarmer()</a> , 以及 <a class="el" href="_player_online___a_side_8cs_source.html#l00067">Player.PlayerOnline_ASide.SubtractFarmer()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_network_1_1_network_player_manager_a7375579b5c46afcceed1cbbad40f530b_icgraph.svg" width="428" height="118"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ab93a6a01213893d551ba0a581e7fb1e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab93a6a01213893d551ba0a581e7fb1e1">&#9670;&nbsp;</a></span>SendInstantiateUnit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Network.NetworkPlayerManager.SendInstantiateUnit </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>chosenUnit</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_units.html#a916a18c8572b926f5bacb64a5af82715">Road</a>&#160;</td>
+          <td class="paramname"><em>rd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector3&#160;</td>
+          <td class="paramname"><em>oriPoint</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>派遣单位 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">chosenUnit</td><td></td></tr>
+    <tr><td class="paramname">rd</td><td></td></tr>
+    <tr><td class="paramname">oriPoint</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="_network_player_manager_8cs_source.html">NetworkPlayerManager.cs</a> 第 <a class="el" href="_network_player_manager_8cs_source.html#l00082">82</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="_player_online___a_side_8cs_source.html#l00082">Player.PlayerOnline_ASide.InstantiateUnit()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_network_1_1_network_player_manager_ab93a6a01213893d551ba0a581e7fb1e1_icgraph.svg" width="420" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a377cda49caf2508d8f486f63f0492fd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a377cda49caf2508d8f486f63f0492fd7">&#9670;&nbsp;</a></span>SendSubtractFarmer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Network.NetworkPlayerManager.SendSubtractFarmer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_player.html#a61f3646142986499ed36c80a34f38427">GameResourceType</a>&#160;</td>
+          <td class="paramname"><em>rs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="_network_player_manager_8cs_source.html">NetworkPlayerManager.cs</a> 第 <a class="el" href="_network_player_manager_8cs_source.html#l00061">61</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a0788f4f5a556f2615a534d90e40fea27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0788f4f5a556f2615a534d90e40fea27">&#9670;&nbsp;</a></span>playerASideOnline</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_player_1_1_player_online___a_side.html">PlayerOnline_ASide</a> Network.NetworkPlayerManager.playerASideOnline</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>线上玩家A </p>
+
+<p class="definition">在文件 <a class="el" href="_network_player_manager_8cs_source.html">NetworkPlayerManager.cs</a> 第 <a class="el" href="_network_player_manager_8cs_source.html#l00017">17</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ae9e70bbc7a6c1645e056053d2bc8b858"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9e70bbc7a6c1645e056053d2bc8b858">&#9670;&nbsp;</a></span>playerBSideOnline</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_player_1_1_player_online___b_side.html">PlayerOnline_BSide</a> Network.NetworkPlayerManager.playerBSideOnline</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>线上玩家B </p>
+
+<p class="definition">在文件 <a class="el" href="_network_player_manager_8cs_source.html">NetworkPlayerManager.cs</a> 第 <a class="el" href="_network_player_manager_8cs_source.html#l00022">22</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="_network_player_manager_8cs_source.html#l00029">Network.NetworkPlayerManager.OnPlayerPropertiesUpdate()</a>, <a class="el" href="_network_player_manager_8cs_source.html#l00055">Network.NetworkPlayerManager.RPC_AddFarmer()</a>, <a class="el" href="_network_player_manager_8cs_source.html#l00089">Network.NetworkPlayerManager.RPC_SendInstantiateUnit()</a> , 以及 <a class="el" href="_network_player_manager_8cs_source.html#l00067">Network.NetworkPlayerManager.RPC_SubtractFarmer()</a>.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>SimpleRTS/Simplified_RTS/Assets/Scripts/Network/<a class="el" href="_network_player_manager_8cs_source.html">NetworkPlayerManager.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespace_network.html">Network</a></li><li class="navelem"><a class="el" href="class_network_1_1_network_player_manager.html">NetworkPlayerManager</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

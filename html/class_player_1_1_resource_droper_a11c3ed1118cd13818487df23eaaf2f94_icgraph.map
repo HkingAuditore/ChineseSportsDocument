@@ -1,0 +1,4 @@
+<map id="Player.ResourceDroper.CollectResource" name="Player.ResourceDroper.CollectResource">
+<area shape="rect" id="node1" title="收集资源" alt="" coords="224,5,424,47"/>
+<area shape="rect" id="node2" href="$class_resource_droper_u_i.html#ac62714f3189e099ea6517fae17e66a79" title=" " alt="" coords="5,13,176,39"/>
+</map>

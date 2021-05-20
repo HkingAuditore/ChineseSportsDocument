@@ -1,0 +1,5 @@
+<map id="Player.PollutionPlayerAI" name="Player.PollutionPlayerAI">
+<area shape="rect" id="node1" title=" " alt="" coords="5,388,168,465"/>
+<area shape="rect" id="node2" href="$class_player_1_1_player_a_i.html" title="敌人AI" alt="" coords="6,131,167,340"/>
+<area shape="rect" id="node3" title=" " alt="" coords="31,5,142,83"/>
+</map>

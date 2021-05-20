@@ -1,0 +1,4 @@
+<map id="Network.NetworkLobbyManager.OnJoinedRoom" name="Network.NetworkLobbyManager.OnJoinedRoom">
+<area shape="rect" id="node1" title="加入房间" alt="" coords="5,5,215,47"/>
+<area shape="rect" id="node2" href="$class_network_1_1_network_lobby_manager.html#a59b9967b78e442dfbb26735999bd3524" title="展示玩家信息" alt="" coords="263,5,472,47"/>
+</map>

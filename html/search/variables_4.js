@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['death_1090',['Death',['../class_units_1_1_unit.html#ac99f5f0e5e4cde8226e30379e6c71c2e',1,'Units::Unit']]],
+  ['deatheffect_1091',['deathEffect',['../class_units_1_1_neutral_units.html#a7586f886909bf757811c1dd731e97d47',1,'Units::NeutralUnits']]],
+  ['deathreward_1092',['deathReward',['../class_units_1_1_unit.html#ae4031b42363d802c6ae80ba120090659',1,'Units::Unit']]],
+  ['defence_1093',['defence',['../class_units_1_1_unit.html#a07de03d8a1527cf2b3148ba545178b3c',1,'Units::Unit']]],
+  ['defencebuff_1094',['defenceBuff',['../class_units_1_1_buff.html#ab9a0a3f9d6a25a9d0dd4e6ea664e13ed',1,'Units::Buff']]],
+  ['delaytime_1095',['DelayTime',['../class_gameplay_1_1_event_system_1_1_global_event_args.html#aced70050acb6e74246ad6de5ce5ae0e2',1,'Gameplay::EventSystem::GlobalEventArgs']]],
+  ['descriptiontext_1096',['descriptionText',['../class_u_i_1_1_chinese_sports_1_1_main_1_1_character_view_u_i.html#a524148e66e9ddb66942bb8873a722153',1,'UI::ChineseSports::Main::CharacterViewUI']]],
+  ['disablesounds_1097',['disableSounds',['../class_setting_u_i.html#a83c2b7127af3d42f7ee9fe5a88df9632',1,'SettingUI']]],
+  ['dispatchablefarmerstext_1098',['dispatchableFarmersText',['../class_player_resouce_u_i.html#ac1b004c2b593c636242d0a7eb3ef4e2d',1,'PlayerResouceUI']]],
+  ['dispatchmanagerui_1099',['dispatchManagerUI',['../class_u_i_1_1_local_1_1_unit_dispatch_u_i.html#a3004828fc4d63c090c306b131158aba6',1,'UI::Local::UnitDispatchUI']]],
+  ['door_1100',['door',['../class_player_1_1_player.html#aecf875f71b247e2613c26b84701bf782',1,'Player::Player']]],
+  ['droparea_1101',['dropArea',['../class_player_1_1_resource_droper.html#a35a271ab692493070a05a9ae54bcf57f',1,'Player::ResourceDroper']]],
+  ['dropcoldtime_1102',['dropColdTime',['../class_player_1_1_resource_droper.html#af811c357ea6af2878e41449d7791d3cb',1,'Player::ResourceDroper']]],
+  ['dropcountmax_1103',['dropCountMax',['../class_player_1_1_resource_droper.html#a9bf5fbfaaf3b77fb7d0b09b4860f96bd',1,'Player::ResourceDroper']]],
+  ['dropcountmin_1104',['dropCountMin',['../class_player_1_1_resource_droper.html#adb711377eba6fd6e88f876d415e6c7b7',1,'Player::ResourceDroper']]],
+  ['dropprefab_1105',['dropPrefab',['../class_player_1_1_resource_droper.html#a881f39f540cc135e7acd9c909b317775',1,'Player::ResourceDroper']]],
+  ['dropvalue_1106',['dropValue',['../class_player_1_1_resource_droper.html#af04e658038df02c825767a7ca2753b5a',1,'Player::ResourceDroper']]]
+];

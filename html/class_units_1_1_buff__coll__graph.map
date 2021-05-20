@@ -1,0 +1,10 @@
+<map id="Units.Buff" name="Units.Buff">
+<area shape="rect" id="node1" title="提升效果" alt="" coords="130,1717,336,1897"/>
+<area shape="rect" id="node2" title=" " alt="" coords="386,5,496,83"/>
+<area shape="rect" id="node3" href="$class_units_1_1_unit.html" title="单位" alt="" coords="122,1079,344,1611"/>
+<area shape="rect" id="node4" href="$class_player_1_1_player.html" title="玩家" alt="" coords="489,132,756,1016"/>
+<area shape="rect" id="node6" href="$class_units_1_1_unit.html" title="单位" alt="" coords="684,1079,905,1611"/>
+<area shape="rect" id="node5" href="$class_units_1_1_farmer.html" title="农民" alt="" coords="556,1673,758,1941"/>
+<area shape="rect" id="node8" href="$class_units_1_1_door.html" title="基地门" alt="" coords="829,1761,986,1853"/>
+<area shape="rect" id="node7" href="$interface_units_1_1_i_military_unit.html" title="攻击性单位接口" alt="" coords="278,455,465,693"/>
+</map>

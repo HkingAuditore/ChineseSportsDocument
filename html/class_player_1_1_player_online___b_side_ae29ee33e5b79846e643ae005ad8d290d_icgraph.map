@@ -1,0 +1,5 @@
+<map id="Player.PlayerOnline_BSide.UpdateRemotePlayerProperties" name="Player.PlayerOnline_BSide.UpdateRemotePlayerProperties">
+<area shape="rect" id="node1" title="更新远程玩家信息" alt="" coords="264,39,515,80"/>
+<area shape="rect" id="node2" href="$class_network_1_1_network_player_manager.html#ad53c25c8f56590bee091f5f2858d0a1f" title="玩家数值更新" alt="" coords="5,5,216,47"/>
+<area shape="rect" id="node3" href="$class_player_1_1_player_online___b_side.html#afa4870049ee6f87dfc1406de6d1c653d" title=" " alt="" coords="42,71,179,112"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="Units.Unit.BeAttacked" name="Units.Unit.BeAttacked">
+<area shape="rect" id="node1" title="被攻击" alt="" coords="248,5,399,32"/>
+<area shape="rect" id="node2" href="$class_units_1_1_melee_1_1_melee_unit.html#addf33f8e0adbea0f20c70de37223d978" title="攻击" alt="" coords="5,5,200,32"/>
+</map>

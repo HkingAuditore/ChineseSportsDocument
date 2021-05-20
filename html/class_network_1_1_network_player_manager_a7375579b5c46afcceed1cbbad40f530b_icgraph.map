@@ -1,0 +1,5 @@
+<map id="Network.NetworkPlayerManager.SendAddFarmer" name="Network.NetworkPlayerManager.SendAddFarmer">
+<area shape="rect" id="node1" title="A发送过来，传输给另一个端的B 添加农民" alt="" coords="212,39,423,80"/>
+<area shape="rect" id="node2" href="$class_player_1_1_player_online___a_side.html#a8e3143c35eddb5818b8f06a85cae1b36" title="增加农民" alt="" coords="16,5,153,47"/>
+<area shape="rect" id="node3" href="$class_player_1_1_player_online___a_side.html#a801e3815c18c820b970508e72e678b52" title="减少农民" alt="" coords="5,71,164,112"/>
+</map>

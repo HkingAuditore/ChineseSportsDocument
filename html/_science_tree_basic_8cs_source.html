@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>古代运动图鉴: SimpleRTS/Simplified_RTS/Assets/Scripts/Gameplay/ScienceTree/ScienceTreeBasic.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Icon_Small.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">古代运动图鉴
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('_science_tree_basic_8cs_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">ScienceTreeBasic.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_science_tree_basic_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_gameplay.html">Gameplay</a>.<a class="code" href="namespace_gameplay_1_1_event_system.html">EventSystem</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> UnityEngine;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="namespace_gameplay_1_1_science_tree.html">    4</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_gameplay_1_1_science_tree.html">Gameplay.ScienceTree</a></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_gameplay_1_1_science_tree_1_1_science_tree_basic.html">    9</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_gameplay_1_1_science_tree_1_1_science_tree_basic.html">ScienceTreeBasic</a> : MonoBehaviour</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    {</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_gameplay_1_1_science_tree_1_1_science_tree_basic.html#a2174e790b0c0fa609860affb15906ede">   14</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="class_gameplay_1_1_event_system_1_1_global_event_manager.html">GlobalEventManager</a> <a class="code" href="class_gameplay_1_1_science_tree_1_1_science_tree_basic.html#a2174e790b0c0fa609860affb15906ede">globalEventManager</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    }</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;}</div>
+<div class="ttc" id="aclass_gameplay_1_1_event_system_1_1_global_event_manager_html"><div class="ttname"><a href="class_gameplay_1_1_event_system_1_1_global_event_manager.html">Gameplay.EventSystem.GlobalEventManager</a></div><div class="ttdoc">全局事件管理</div><div class="ttdef"><b>Definition:</b> <a href="_global_event_manager_8cs_source.html#l00011">GlobalEventManager.cs:12</a></div></div>
+<div class="ttc" id="aclass_gameplay_1_1_science_tree_1_1_science_tree_basic_html"><div class="ttname"><a href="class_gameplay_1_1_science_tree_1_1_science_tree_basic.html">Gameplay.ScienceTree.ScienceTreeBasic</a></div><div class="ttdoc">科技树</div><div class="ttdef"><b>Definition:</b> <a href="_science_tree_basic_8cs_source.html#l00009">ScienceTreeBasic.cs:10</a></div></div>
+<div class="ttc" id="aclass_gameplay_1_1_science_tree_1_1_science_tree_basic_html_a2174e790b0c0fa609860affb15906ede"><div class="ttname"><a href="class_gameplay_1_1_science_tree_1_1_science_tree_basic.html#a2174e790b0c0fa609860affb15906ede">Gameplay.ScienceTree.ScienceTreeBasic.globalEventManager</a></div><div class="ttdeci">GlobalEventManager globalEventManager</div><div class="ttdoc">全局事件管理引用</div><div class="ttdef"><b>Definition:</b> <a href="_science_tree_basic_8cs_source.html#l00014">ScienceTreeBasic.cs:14</a></div></div>
+<div class="ttc" id="anamespace_gameplay_1_1_event_system_html"><div class="ttname"><a href="namespace_gameplay_1_1_event_system.html">Gameplay.EventSystem</a></div><div class="ttdef"><b>Definition:</b> <a href="_global_event_args_8cs_source.html#l00001">GlobalEventArgs.cs:2</a></div></div>
+<div class="ttc" id="anamespace_gameplay_1_1_science_tree_html"><div class="ttname"><a href="namespace_gameplay_1_1_science_tree.html">Gameplay.ScienceTree</a></div><div class="ttdef"><b>Definition:</b> <a href="_science_tree_basic_8cs_source.html#l00004">ScienceTreeBasic.cs:5</a></div></div>
+<div class="ttc" id="anamespace_gameplay_html"><div class="ttname"><a href="namespace_gameplay.html">Gameplay</a></div><div class="ttdef"><b>Definition:</b> <a href="_global_event_args_8cs_source.html#l00001">GlobalEventArgs.cs:2</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_a5079711ee210cb3f5000c30d3746d06.html">SimpleRTS</a></li><li class="navelem"><a class="el" href="dir_ec7b684f6ba09c3c3a1f78fc68be2b45.html">Simplified_RTS</a></li><li class="navelem"><a class="el" href="dir_fc9fc45e4060f68dac2ba8008ad7420a.html">Assets</a></li><li class="navelem"><a class="el" href="dir_9c83f749c47014e6bfe3d69c7ba163ff.html">Scripts</a></li><li class="navelem"><a class="el" href="dir_9386dde93197650387e525364e34464d.html">Gameplay</a></li><li class="navelem"><a class="el" href="dir_5104a1fbfcc596dd2b3ecc2ed66db016.html">ScienceTree</a></li><li class="navelem"><a class="el" href="_science_tree_basic_8cs.html">ScienceTreeBasic.cs</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

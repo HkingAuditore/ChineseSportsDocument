@@ -1,0 +1,4 @@
+<map id="Network.NetworkPlayerManager.SendInstantiateUnit" name="Network.NetworkPlayerManager.SendInstantiateUnit">
+<area shape="rect" id="node1" title="派遣单位" alt="" coords="204,5,415,47"/>
+<area shape="rect" id="node2" href="$class_player_1_1_player_online___a_side.html#a3adb1421d764a450e22de788dd96b341" title="生成单位" alt="" coords="5,5,156,47"/>
+</map>

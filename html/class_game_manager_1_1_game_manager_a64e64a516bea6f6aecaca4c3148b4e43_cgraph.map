@@ -1,0 +1,6 @@
+<map id="GameManager.GameManager.PlayerWin" name="GameManager.GameManager.PlayerWin">
+<area shape="rect" id="node1" title="我方胜利" alt="" coords="5,27,205,69"/>
+<area shape="rect" id="node2" href="$class_saver_1_1_x_m_l_saver.html#a293075c8032703755a711c16005c517d" title="存档" alt="" coords="253,5,428,32"/>
+<area shape="rect" id="node3" href="$class_u_i_1_1_chinese_sports_1_1_battle_1_1_result_u_i.html#aee0048338efe9f7d4867ec3a61e7aae4" title=" " alt="" coords="258,57,423,98"/>
+<area shape="rect" id="node4" href="$class_u_i_1_1_chinese_sports_1_1_battle_1_1_result_u_i.html#a64e79da353dfd6c9d0cb12581041077f" title=" " alt="" coords="476,57,641,98"/>
+</map>

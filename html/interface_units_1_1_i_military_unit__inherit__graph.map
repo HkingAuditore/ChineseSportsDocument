@@ -1,0 +1,5 @@
+<map id="Units.IMilitaryUnit" name="Units.IMilitaryUnit">
+<area shape="rect" id="node1" title="攻击性单位接口" alt="" coords="111,5,297,244"/>
+<area shape="rect" id="node2" href="$class_units_1_1_melee_1_1_melee_unit.html" title="近战单位" alt="" coords="5,321,192,604"/>
+<area shape="rect" id="node3" href="$class_units_1_1_ranged_attack_1_1_ranged_attack_unit.html" title="远程攻击单位" alt="" coords="216,292,403,633"/>
+</map>

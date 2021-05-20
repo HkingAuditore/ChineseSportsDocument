@@ -1,0 +1,10 @@
+<map id="PlayerResouceUI" name="PlayerResouceUI">
+<area shape="rect" id="node1" title=" " alt="" coords="107,1365,249,1442"/>
+<area shape="rect" id="node2" title=" " alt="" coords="429,5,540,83"/>
+<area shape="rect" id="node3" href="$class_player_1_1_player.html" title="玩家" alt="" coords="351,132,618,1016"/>
+<area shape="rect" id="node5" href="$class_units_1_1_unit.html" title="单位" alt="" coords="630,1137,851,1669"/>
+<area shape="rect" id="node4" href="$class_units_1_1_farmer.html" title="农民" alt="" coords="385,1719,587,1987"/>
+<area shape="rect" id="node7" href="$class_units_1_1_door.html" title="基地门" alt="" coords="637,1807,794,1899"/>
+<area shape="rect" id="node6" href="$interface_units_1_1_i_military_unit.html" title="攻击性单位接口" alt="" coords="743,455,930,693"/>
+<area shape="rect" id="node8" title=" " alt="" coords="164,535,211,613"/>
+</map>

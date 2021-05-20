@@ -1,0 +1,9 @@
+<map id="UI.Local.FarmerDispatchUI" name="UI.Local.FarmerDispatchUI">
+<area shape="rect" id="node1" title=" " alt="" coords="5,1269,183,1420"/>
+<area shape="rect" id="node2" title=" " alt="" coords="243,5,353,83"/>
+<area shape="rect" id="node3" href="$class_player_1_1_player.html" title="玩家" alt="" coords="165,132,431,1016"/>
+<area shape="rect" id="node5" href="$class_units_1_1_unit.html" title="单位" alt="" coords="426,1079,647,1611"/>
+<area shape="rect" id="node4" href="$class_units_1_1_farmer.html" title="农民" alt="" coords="181,1660,383,1928"/>
+<area shape="rect" id="node7" href="$class_units_1_1_door.html" title="基地门" alt="" coords="433,1748,590,1840"/>
+<area shape="rect" id="node6" href="$interface_units_1_1_i_military_unit.html" title="攻击性单位接口" alt="" coords="539,455,726,693"/>
+</map>

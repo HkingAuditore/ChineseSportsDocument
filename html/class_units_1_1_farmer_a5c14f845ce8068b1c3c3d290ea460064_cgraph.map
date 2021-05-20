@@ -1,0 +1,5 @@
+<map id="Units.Farmer.Drop" name="Units.Farmer.Drop">
+<area shape="rect" id="node1" title="放下资源" alt="" coords="5,31,133,57"/>
+<area shape="rect" id="node2" href="$class_player_1_1_player.html#a5dc06c6cb394474907fbcde1ed4c5e93" title="增减资源" alt="" coords="181,5,384,32"/>
+<area shape="rect" id="node3" href="$class_units_1_1_unit.html#a95ec056c0363f891ce233fa6e4125cd8" title="前往目的地" alt="" coords="227,56,338,83"/>
+</map>

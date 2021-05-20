@@ -1,0 +1,4 @@
+<map id="Units.Farmer.Work" name="Units.Farmer.Work">
+<area shape="rect" id="node1" title="/工作" alt="" coords="5,5,137,32"/>
+<area shape="rect" id="node2" href="$class_units_1_1_unit.html#a95ec056c0363f891ce233fa6e4125cd8" title="前往目的地" alt="" coords="185,5,296,32"/>
+</map>

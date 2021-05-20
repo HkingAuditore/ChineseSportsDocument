@@ -1,0 +1,13 @@
+<map id="Player.Player.ChangeResource" name="Player.Player.ChangeResource">
+<area shape="rect" id="node1" title="增减资源" alt="" coords="715,202,917,229"/>
+<area shape="rect" id="node2" href="$class_u_i_1_1_chinese_sports_1_1_battle_1_1_dispatch_unit_chinese_u_i.html#a2125461659d2b91d4274ffc0831420a2" title=" " alt="" coords="444,5,655,47"/>
+<area shape="rect" id="node3" href="$class_u_i_1_1_local_1_1_unit_dispatch_u_i.html#a52a7e874d8e8b614fc860f27d4defc1f" title=" " alt="" coords="468,71,631,112"/>
+<area shape="rect" id="node4" href="$class_player_1_1_player_a_i.html#ab8e53c5b988195ceea6001484ae26869" title="派遣单位" alt="" coords="466,136,633,177"/>
+<area shape="rect" id="node7" href="$class_units_1_1_farmer.html#a5c14f845ce8068b1c3c3d290ea460064" title="放下资源" alt="" coords="485,202,613,229"/>
+<area shape="rect" id="node9" href="$class_player_resouce_u_i.html#ab3f22753c66877208366f713dbebb5d8" title=" " alt="" coords="450,253,649,279"/>
+<area shape="rect" id="node10" href="$class_u_i_1_1_chinese_sports_1_1_battle_1_1_dispatch_unit_chinese_u_i.html#aa06f910d70f415942e4e4e22d498db13" title=" " alt="" coords="432,304,667,345"/>
+<area shape="rect" id="node11" href="$class_u_i_1_1_local_1_1_unit_dispatch_u_i.html#a9389261196fc2879cf1879c7a638877d" title=" " alt="" coords="468,369,631,411"/>
+<area shape="rect" id="node5" href="$class_player_1_1_player_a_i.html#ab3a9572e4b157a2a9117c83c5e460a8c" title="AI决策" alt="" coords="211,143,384,170"/>
+<area shape="rect" id="node6" href="$class_player_1_1_player_a_i.html#a12510584dc41ca7b97c2f49a680bb455" title=" " alt="" coords="5,143,163,170"/>
+<area shape="rect" id="node8" href="$class_units_1_1_farmer.html#afd481c40717c93060b64c5c4afdfd562" title=" " alt="" coords="233,202,362,229"/>
+</map>

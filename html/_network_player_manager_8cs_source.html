@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>古代运动图鉴: SimpleRTS/Simplified_RTS/Assets/Scripts/Network/NetworkPlayerManager.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Icon_Small.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">古代运动图鉴
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('_network_player_manager_8cs_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">NetworkPlayerManager.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_network_player_manager_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> ExitGames.Client.Photon;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> Photon.Pun;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_player.html">Player</a>;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_units.html">Units</a>;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">using</span> UnityEngine;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_network.html">Network</a></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_network_1_1_network_player_manager.html">   12</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_network_1_1_network_player_manager.html">NetworkPlayerManager</a> : MonoBehaviourPunCallbacks</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    {</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_network_1_1_network_player_manager.html#a0788f4f5a556f2615a534d90e40fea27">   17</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="class_player_1_1_player_online___a_side.html">PlayerOnline_ASide</a> <a class="code" href="class_network_1_1_network_player_manager.html#a0788f4f5a556f2615a534d90e40fea27">playerASideOnline</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_network_1_1_network_player_manager.html#ae9e70bbc7a6c1645e056053d2bc8b858">   22</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="class_player_1_1_player_online___b_side.html">PlayerOnline_BSide</a> <a class="code" href="class_network_1_1_network_player_manager.html#ae9e70bbc7a6c1645e056053d2bc8b858">playerBSideOnline</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_network_1_1_network_player_manager.html#ad53c25c8f56590bee091f5f2858d0a1f">   29</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_network_1_1_network_player_manager.html#ad53c25c8f56590bee091f5f2858d0a1f">OnPlayerPropertiesUpdate</a>(Photon.Realtime.Player targetPlayer, Hashtable changedProps)</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            base.OnPlayerPropertiesUpdate(targetPlayer, changedProps);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            Debug.Log(<span class="stringliteral">&quot;Properties Changed!&quot;</span>);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <span class="keywordflow">if</span> (targetPlayer != <span class="keyword">null</span> &amp;&amp; Equals(targetPlayer, <a class="code" href="class_network_1_1_network_player_manager.html#ae9e70bbc7a6c1645e056053d2bc8b858">playerBSideOnline</a>.<a class="code" href="class_player_1_1_player_online___b_side.html#aca086a3391c220c2b0f07015218d9e19">PlayerPhoton</a>))</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                <span class="comment">// 需要优化</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                <a class="code" href="class_network_1_1_network_player_manager.html#ae9e70bbc7a6c1645e056053d2bc8b858">playerBSideOnline</a>.<a class="code" href="class_player_1_1_player_online___b_side.html#ae29ee33e5b79846e643ae005ad8d290d">UpdateRemotePlayerProperties</a>();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        }</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">        #region 操作命令传输</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">        #region 农民调遣</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="class_network_1_1_network_player_manager.html#a7375579b5c46afcceed1cbbad40f530b">   48</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_network_1_1_network_player_manager.html#a7375579b5c46afcceed1cbbad40f530b">SendAddFarmer</a>(<a class="code" href="namespace_player.html#a61f3646142986499ed36c80a34f38427">GameResourceType</a> rs)</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <span class="comment">// Debug.Log(&quot;Call PRC!&quot;);</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            photonView.RPC(<span class="stringliteral">&quot;RPC_AddFarmer&quot;</span>, RpcTarget.Others, rs);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        [PunRPC]</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="class_network_1_1_network_player_manager.html#af9d3d595857baa8819665c4e3d8e963a">   55</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_network_1_1_network_player_manager.html#af9d3d595857baa8819665c4e3d8e963a">RPC_AddFarmer</a>(<a class="code" href="namespace_player.html#a61f3646142986499ed36c80a34f38427">GameResourceType</a> rs)</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <span class="comment">// Debug.Log(&quot;On PRC!&quot;);</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <a class="code" href="class_network_1_1_network_player_manager.html#ae9e70bbc7a6c1645e056053d2bc8b858">playerBSideOnline</a>.<a class="code" href="class_player_1_1_player.html#ae903d2ee26dd2ecdaed6e580eb89348d">AddFarmer</a>(rs);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="class_network_1_1_network_player_manager.html#a377cda49caf2508d8f486f63f0492fd7">   61</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_network_1_1_network_player_manager.html#a377cda49caf2508d8f486f63f0492fd7">SendSubtractFarmer</a>(<a class="code" href="namespace_player.html#a61f3646142986499ed36c80a34f38427">GameResourceType</a> rs)</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            photonView.RPC(<span class="stringliteral">&quot;RPC_SubtractFarmer&quot;</span>, RpcTarget.Others, rs);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        [PunRPC]</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="class_network_1_1_network_player_manager.html#a548e313293fad4a85758adac63fb10ce">   67</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_network_1_1_network_player_manager.html#a548e313293fad4a85758adac63fb10ce">RPC_SubtractFarmer</a>(<a class="code" href="namespace_player.html#a61f3646142986499ed36c80a34f38427">GameResourceType</a> rs)</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            <a class="code" href="class_network_1_1_network_player_manager.html#ae9e70bbc7a6c1645e056053d2bc8b858">playerBSideOnline</a>.<a class="code" href="class_player_1_1_player.html#a5afc99ce48af004fdcbd060eb57509a5">SubtractFarmer</a>(rs);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">        #endregion</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">        #region 单位调遣</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="class_network_1_1_network_player_manager.html#ab93a6a01213893d551ba0a581e7fb1e1">   82</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_network_1_1_network_player_manager.html#ab93a6a01213893d551ba0a581e7fb1e1">SendInstantiateUnit</a>(<span class="keywordtype">int</span> chosenUnit, <a class="code" href="namespace_units.html#a916a18c8572b926f5bacb64a5af82715">Road</a> rd, Vector3 oriPoint)</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            oriPoint.x *= -1;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            photonView.RPC(<span class="stringliteral">&quot;RPC_SendInstantiateUnit&quot;</span>, RpcTarget.Others, chosenUnit, rd, oriPoint);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        [PunRPC]</div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="class_network_1_1_network_player_manager.html#a66a4fa383e35b40695258db563bc3069">   89</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_network_1_1_network_player_manager.html#a66a4fa383e35b40695258db563bc3069">RPC_SendInstantiateUnit</a>(<span class="keywordtype">int</span> chosenUnit, <a class="code" href="namespace_units.html#a916a18c8572b926f5bacb64a5af82715">Road</a> rd, Vector3 oriPoint)</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            <a class="code" href="class_network_1_1_network_player_manager.html#ae9e70bbc7a6c1645e056053d2bc8b858">playerBSideOnline</a>.<a class="code" href="class_player_1_1_player.html#a584f743e7fe9cae9df4cc11e54e1d6fb">InstantiateUnit</a>(chosenUnit, rd, oriPoint);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">        #endregion</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor">        #endregion</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    }</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;}</div>
+<div class="ttc" id="aclass_network_1_1_network_player_manager_html"><div class="ttname"><a href="class_network_1_1_network_player_manager.html">Network.NetworkPlayerManager</a></div><div class="ttdoc">网络玩家管理</div><div class="ttdef"><b>Definition:</b> <a href="_network_player_manager_8cs_source.html#l00012">NetworkPlayerManager.cs:13</a></div></div>
+<div class="ttc" id="aclass_network_1_1_network_player_manager_html_a0788f4f5a556f2615a534d90e40fea27"><div class="ttname"><a href="class_network_1_1_network_player_manager.html#a0788f4f5a556f2615a534d90e40fea27">Network.NetworkPlayerManager.playerASideOnline</a></div><div class="ttdeci">PlayerOnline_ASide playerASideOnline</div><div class="ttdoc">线上玩家A</div><div class="ttdef"><b>Definition:</b> <a href="_network_player_manager_8cs_source.html#l00017">NetworkPlayerManager.cs:17</a></div></div>
+<div class="ttc" id="aclass_network_1_1_network_player_manager_html_a377cda49caf2508d8f486f63f0492fd7"><div class="ttname"><a href="class_network_1_1_network_player_manager.html#a377cda49caf2508d8f486f63f0492fd7">Network.NetworkPlayerManager.SendSubtractFarmer</a></div><div class="ttdeci">void SendSubtractFarmer(GameResourceType rs)</div><div class="ttdef"><b>Definition:</b> <a href="_network_player_manager_8cs_source.html#l00061">NetworkPlayerManager.cs:61</a></div></div>
+<div class="ttc" id="aclass_network_1_1_network_player_manager_html_a548e313293fad4a85758adac63fb10ce"><div class="ttname"><a href="class_network_1_1_network_player_manager.html#a548e313293fad4a85758adac63fb10ce">Network.NetworkPlayerManager.RPC_SubtractFarmer</a></div><div class="ttdeci">void RPC_SubtractFarmer(GameResourceType rs)</div><div class="ttdef"><b>Definition:</b> <a href="_network_player_manager_8cs_source.html#l00067">NetworkPlayerManager.cs:67</a></div></div>
+<div class="ttc" id="aclass_network_1_1_network_player_manager_html_a66a4fa383e35b40695258db563bc3069"><div class="ttname"><a href="class_network_1_1_network_player_manager.html#a66a4fa383e35b40695258db563bc3069">Network.NetworkPlayerManager.RPC_SendInstantiateUnit</a></div><div class="ttdeci">void RPC_SendInstantiateUnit(int chosenUnit, Road rd, Vector3 oriPoint)</div><div class="ttdef"><b>Definition:</b> <a href="_network_player_manager_8cs_source.html#l00089">NetworkPlayerManager.cs:89</a></div></div>
+<div class="ttc" id="aclass_network_1_1_network_player_manager_html_a7375579b5c46afcceed1cbbad40f530b"><div class="ttname"><a href="class_network_1_1_network_player_manager.html#a7375579b5c46afcceed1cbbad40f530b">Network.NetworkPlayerManager.SendAddFarmer</a></div><div class="ttdeci">void SendAddFarmer(GameResourceType rs)</div><div class="ttdoc">A发送过来，传输给另一个端的B 添加农民</div><div class="ttdef"><b>Definition:</b> <a href="_network_player_manager_8cs_source.html#l00048">NetworkPlayerManager.cs:48</a></div></div>
+<div class="ttc" id="aclass_network_1_1_network_player_manager_html_ab93a6a01213893d551ba0a581e7fb1e1"><div class="ttname"><a href="class_network_1_1_network_player_manager.html#ab93a6a01213893d551ba0a581e7fb1e1">Network.NetworkPlayerManager.SendInstantiateUnit</a></div><div class="ttdeci">void SendInstantiateUnit(int chosenUnit, Road rd, Vector3 oriPoint)</div><div class="ttdoc">派遣单位</div><div class="ttdef"><b>Definition:</b> <a href="_network_player_manager_8cs_source.html#l00082">NetworkPlayerManager.cs:82</a></div></div>
+<div class="ttc" id="aclass_network_1_1_network_player_manager_html_ad53c25c8f56590bee091f5f2858d0a1f"><div class="ttname"><a href="class_network_1_1_network_player_manager.html#ad53c25c8f56590bee091f5f2858d0a1f">Network.NetworkPlayerManager.OnPlayerPropertiesUpdate</a></div><div class="ttdeci">override void OnPlayerPropertiesUpdate(Photon.Realtime.Player targetPlayer, Hashtable changedProps)</div><div class="ttdoc">玩家数值更新</div><div class="ttdef"><b>Definition:</b> <a href="_network_player_manager_8cs_source.html#l00029">NetworkPlayerManager.cs:29</a></div></div>
+<div class="ttc" id="aclass_network_1_1_network_player_manager_html_ae9e70bbc7a6c1645e056053d2bc8b858"><div class="ttname"><a href="class_network_1_1_network_player_manager.html#ae9e70bbc7a6c1645e056053d2bc8b858">Network.NetworkPlayerManager.playerBSideOnline</a></div><div class="ttdeci">PlayerOnline_BSide playerBSideOnline</div><div class="ttdoc">线上玩家B</div><div class="ttdef"><b>Definition:</b> <a href="_network_player_manager_8cs_source.html#l00022">NetworkPlayerManager.cs:22</a></div></div>
+<div class="ttc" id="aclass_network_1_1_network_player_manager_html_af9d3d595857baa8819665c4e3d8e963a"><div class="ttname"><a href="class_network_1_1_network_player_manager.html#af9d3d595857baa8819665c4e3d8e963a">Network.NetworkPlayerManager.RPC_AddFarmer</a></div><div class="ttdeci">void RPC_AddFarmer(GameResourceType rs)</div><div class="ttdef"><b>Definition:</b> <a href="_network_player_manager_8cs_source.html#l00055">NetworkPlayerManager.cs:55</a></div></div>
+<div class="ttc" id="aclass_player_1_1_player_html_a584f743e7fe9cae9df4cc11e54e1d6fb"><div class="ttname"><a href="class_player_1_1_player.html#a584f743e7fe9cae9df4cc11e54e1d6fb">Player.Player.InstantiateUnit</a></div><div class="ttdeci">virtual void InstantiateUnit(int chosenUnit, Road rd, Vector3 oriPoint)</div><div class="ttdoc">生成单个单位</div><div class="ttdef"><b>Definition:</b> <a href="_player_8cs_source.html#l00717">Player.cs:717</a></div></div>
+<div class="ttc" id="aclass_player_1_1_player_html_a5afc99ce48af004fdcbd060eb57509a5"><div class="ttname"><a href="class_player_1_1_player.html#a5afc99ce48af004fdcbd060eb57509a5">Player.Player.SubtractFarmer</a></div><div class="ttdeci">virtual void SubtractFarmer(GameResourceType rs)</div><div class="ttdoc">减少一条路的农民分配</div><div class="ttdef"><b>Definition:</b> <a href="_player_8cs_source.html#l00417">Player.cs:417</a></div></div>
+<div class="ttc" id="aclass_player_1_1_player_html_ae903d2ee26dd2ecdaed6e580eb89348d"><div class="ttname"><a href="class_player_1_1_player.html#ae903d2ee26dd2ecdaed6e580eb89348d">Player.Player.AddFarmer</a></div><div class="ttdeci">virtual void AddFarmer(GameResourceType rs)</div><div class="ttdoc">增加一条路的农民分配</div><div class="ttdef"><b>Definition:</b> <a href="_player_8cs_source.html#l00408">Player.cs:408</a></div></div>
+<div class="ttc" id="aclass_player_1_1_player_online___a_side_html"><div class="ttname"><a href="class_player_1_1_player_online___a_side.html">Player.PlayerOnline_ASide</a></div><div class="ttdef"><b>Definition:</b> <a href="_player_online___a_side_8cs_source.html#l00010">PlayerOnline_ASide.cs:11</a></div></div>
+<div class="ttc" id="aclass_player_1_1_player_online___b_side_html"><div class="ttname"><a href="class_player_1_1_player_online___b_side.html">Player.PlayerOnline_BSide</a></div><div class="ttdef"><b>Definition:</b> <a href="_player_online___b_side_8cs_source.html#l00008">PlayerOnline_BSide.cs:9</a></div></div>
+<div class="ttc" id="aclass_player_1_1_player_online___b_side_html_aca086a3391c220c2b0f07015218d9e19"><div class="ttname"><a href="class_player_1_1_player_online___b_side.html#aca086a3391c220c2b0f07015218d9e19">Player.PlayerOnline_BSide.PlayerPhoton</a></div><div class="ttdeci">Photon.Realtime.Player PlayerPhoton</div><div class="ttdef"><b>Definition:</b> <a href="_player_online___b_side_8cs_source.html#l00022">PlayerOnline_BSide.cs:22</a></div></div>
+<div class="ttc" id="aclass_player_1_1_player_online___b_side_html_ae29ee33e5b79846e643ae005ad8d290d"><div class="ttname"><a href="class_player_1_1_player_online___b_side.html#ae29ee33e5b79846e643ae005ad8d290d">Player.PlayerOnline_BSide.UpdateRemotePlayerProperties</a></div><div class="ttdeci">void UpdateRemotePlayerProperties()</div><div class="ttdoc">更新远程玩家信息</div><div class="ttdef"><b>Definition:</b> <a href="_player_online___b_side_8cs_source.html#l00046">PlayerOnline_BSide.cs:46</a></div></div>
+<div class="ttc" id="anamespace_network_html"><div class="ttname"><a href="namespace_network.html">Network</a></div><div class="ttdef"><b>Definition:</b> <a href="_network_lobby_manager_8cs_source.html#l00009">NetworkLobbyManager.cs:10</a></div></div>
+<div class="ttc" id="anamespace_player_html"><div class="ttname"><a href="namespace_player.html">Player</a></div><div class="ttdef"><b>Definition:</b> <a href="_player_8cs_source.html#l00010">Player.cs:11</a></div></div>
+<div class="ttc" id="anamespace_player_html_a61f3646142986499ed36c80a34f38427"><div class="ttname"><a href="namespace_player.html#a61f3646142986499ed36c80a34f38427">Player.GameResourceType</a></div><div class="ttdeci">GameResourceType</div><div class="ttdoc">资源类型</div><div class="ttdef"><b>Definition:</b> <a href="_player_8cs_source.html#l00015">Player.cs:16</a></div></div>
+<div class="ttc" id="anamespace_units_html"><div class="ttname"><a href="namespace_units.html">Units</a></div><div class="ttdef"><b>Definition:</b> <a href="_buff_8cs_source.html#l00004">Buff.cs:5</a></div></div>
+<div class="ttc" id="anamespace_units_html_a916a18c8572b926f5bacb64a5af82715"><div class="ttname"><a href="namespace_units.html#a916a18c8572b926f5bacb64a5af82715">Units.Road</a></div><div class="ttdeci">Road</div><div class="ttdoc">路</div><div class="ttdef"><b>Definition:</b> <a href="_unit_8cs_source.html#l00012">Unit.cs:13</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_a5079711ee210cb3f5000c30d3746d06.html">SimpleRTS</a></li><li class="navelem"><a class="el" href="dir_ec7b684f6ba09c3c3a1f78fc68be2b45.html">Simplified_RTS</a></li><li class="navelem"><a class="el" href="dir_fc9fc45e4060f68dac2ba8008ad7420a.html">Assets</a></li><li class="navelem"><a class="el" href="dir_9c83f749c47014e6bfe3d69c7ba163ff.html">Scripts</a></li><li class="navelem"><a class="el" href="dir_37538701f8017981ba1a5579d75e318a.html">Network</a></li><li class="navelem"><a class="el" href="_network_player_manager_8cs.html">NetworkPlayerManager.cs</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

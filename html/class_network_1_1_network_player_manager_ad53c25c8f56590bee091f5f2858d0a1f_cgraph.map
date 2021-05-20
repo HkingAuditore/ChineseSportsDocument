@@ -1,0 +1,4 @@
+<map id="Network.NetworkPlayerManager.OnPlayerPropertiesUpdate" name="Network.NetworkPlayerManager.OnPlayerPropertiesUpdate">
+<area shape="rect" id="node1" title="玩家数值更新" alt="" coords="5,5,216,47"/>
+<area shape="rect" id="node2" href="$class_player_1_1_player_online___b_side.html#ae29ee33e5b79846e643ae005ad8d290d" title="更新远程玩家信息" alt="" coords="264,5,515,47"/>
+</map>

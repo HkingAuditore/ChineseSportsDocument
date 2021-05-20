@@ -1,0 +1,351 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>古代运动图鉴: SimpleRTS/Simplified_RTS/Assets/Scripts/Player/PlayerAI.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Icon_Small.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">古代运动图鉴
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('_player_a_i_8cs_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">PlayerAI.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_player_a_i_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> System;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> System.Linq;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_units.html">Units</a>;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> UnityEngine;</div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="_player_a_i_8cs.html#a832e8f52fca5a678819ec96269dcb532">    5</a></span>&#160;<span class="keyword">using</span> <a class="code" href="_player_8cs.html#a832e8f52fca5a678819ec96269dcb532">Random</a> = UnityEngine.Random;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_player.html">Player</a></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_player_1_1_player_a_i.html">   12</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_player_1_1_player_a_i.html">PlayerAI</a> : MonoBehaviour</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    {</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_player_1_1_player_a_i.html#a985a1ce9787e687a04505985bb36190c">   17</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="namespace_player.html">Player</a> <a class="code" href="class_player_1_1_player_a_i.html#a985a1ce9787e687a04505985bb36190c">aiPlayer</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_player_1_1_player_a_i.html#a8ec13e296e8662a35dcf9e0f431b00f8">   22</a></span>&#160;        [Header(<span class="stringliteral">&quot;AI相关&quot;</span>)] [Space(15)] <span class="keyword">public</span> <span class="keywordtype">bool</span>[] <a class="code" href="class_player_1_1_player_a_i.html#a8ec13e296e8662a35dcf9e0f431b00f8">enableRoads</a> = <span class="keyword">new</span> <span class="keywordtype">bool</span>[3];</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_player_1_1_player_a_i.html#a7f855f3136404883461b50a9fe3a45d9">   27</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_player_1_1_player_a_i.html#a7f855f3136404883461b50a9fe3a45d9">aiRestTime</a> = 5f;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keyword">private</span> readonly <span class="keywordtype">int</span> _botSend = 0;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keyword">private</span> readonly <span class="keywordtype">int</span> _midSend = 0;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keyword">private</span> readonly <span class="keywordtype">int</span> _topSend = 0;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keyword">private</span>          <span class="keywordtype">int</span> _botEnemy;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keyword">private</span> LayerMask _enemyLayer;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_player_1_1_player_a_i.html#a19e9a719cfa4c751027f154d5c9cf313">   37</a></span>&#160;        <span class="keyword">protected</span> <span class="keywordtype">bool</span> <a class="code" href="class_player_1_1_player_a_i.html#a19e9a719cfa4c751027f154d5c9cf313">_isColdDown</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keyword">private</span>   <span class="keywordtype">int</span>  _midEnemy;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keyword">private</span>   <span class="keywordtype">int</span>  _topEnemy;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keyword">private</span> <a class="code" href="class_units_1_1_unit.html">Unit</a>[] aiAvailableUnits;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="class_player_1_1_player_a_i.html#a08bff3b12d9131147c4037ac2d518b08">   48</a></span>&#160;        <span class="keyword">protected</span> <span class="keywordtype">void</span> <a class="code" href="class_player_1_1_player_a_i.html#a08bff3b12d9131147c4037ac2d518b08">Start</a>()</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            _enemyLayer =</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                LayerMask.NameToLayer(LayerMask.LayerToName(gameObject.layer) == <span class="stringliteral">&quot;ASide&quot;</span> ? <span class="stringliteral">&quot;BSide&quot;</span> : <span class="stringliteral">&quot;ASide&quot;</span>);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <span class="comment">// Debug.Log(GameManager.GameManager.GetManager.unitsList.Count);</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            aiAvailableUnits = (from availableUnit in <a class="code" href="class_player_1_1_player_a_i.html#a985a1ce9787e687a04505985bb36190c">aiPlayer</a>.<a class="code" href="class_player_1_1_player.html#aab9cee3f7daa140d64191d06b4887014">availableUnits</a></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                                select <a class="code" href="namespace_game_manager.html">GameManager</a>.<a class="code" href="class_game_manager_1_1_game_manager.html">GameManager</a>.<a class="code" href="class_game_manager_1_1_game_manager.html#acafc4a2ac0e6171a1f8436b529b58306">GetManager</a>.<a class="code" href="class_game_manager_1_1_game_manager.html#a7fd88d015e1adf60cccf39fcfaefb2e2">unitsList</a>[availableUnit].UnitPrefab).ToArray();</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="class_player_1_1_player_a_i.html#a12510584dc41ca7b97c2f49a680bb455">   59</a></span>&#160;        <span class="keyword">protected</span> <span class="keywordtype">void</span> <a class="code" href="class_player_1_1_player_a_i.html#a12510584dc41ca7b97c2f49a680bb455">Update</a>()</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            <span class="keywordflow">if</span> (!<a class="code" href="class_player_1_1_player_a_i.html#a19e9a719cfa4c751027f154d5c9cf313">_isColdDown</a>)</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                <a class="code" href="class_player_1_1_player_a_i.html#ab3a9572e4b157a2a9117c83c5e460a8c">AIGaming</a>();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="class_player_1_1_player_a_i.html#ab3a9572e4b157a2a9117c83c5e460a8c">   68</a></span>&#160;        <span class="keyword">protected</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_player_1_1_player_a_i.html#ab3a9572e4b157a2a9117c83c5e460a8c">AIGaming</a>()</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <a class="code" href="class_player_1_1_player_a_i.html#ac772b0dc62609d2aecd2718277612b86">CountEnemy</a>();</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <a class="code" href="class_player_1_1_player_a_i.html#ab8e53c5b988195ceea6001484ae26869">DispatchUnits</a>(1);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="class_player_1_1_player_a_i.html#a985a1ce9787e687a04505985bb36190c">aiPlayer</a>.<a class="code" href="class_player_1_1_player.html#a77be96d9cdecda489d5d1f8a7c26d59e">enableFarmer</a>)</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                AIDispatchFarmers();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <a class="code" href="class_player_1_1_player_a_i.html#a19e9a719cfa4c751027f154d5c9cf313">_isColdDown</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            Invoke(<span class="stringliteral">&quot;RestEnd&quot;</span>, <a class="code" href="class_player_1_1_player_a_i.html#a7f855f3136404883461b50a9fe3a45d9">aiRestTime</a>);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="class_player_1_1_player_a_i.html#ac772b0dc62609d2aecd2718277612b86">   81</a></span>&#160;        <span class="keyword">protected</span> <span class="keywordtype">void</span> <a class="code" href="class_player_1_1_player_a_i.html#ac772b0dc62609d2aecd2718277612b86">CountEnemy</a>()</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            _topEnemy = GameObject.FindGameObjectsWithTag(<span class="stringliteral">&quot;Top&quot;</span>).Count(gb =&gt; (_enemyLayer.value &amp; (1 &lt;&lt; gb.layer)) &gt; 0);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            _midEnemy = GameObject.FindGameObjectsWithTag(<span class="stringliteral">&quot;Mid&quot;</span>).Count(gb =&gt; (_enemyLayer.value &amp; (1 &lt;&lt; gb.layer)) &gt; 0);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            _botEnemy = GameObject.FindGameObjectsWithTag(<span class="stringliteral">&quot;Bot&quot;</span>).Count(gb =&gt; (_enemyLayer.value &amp; (1 &lt;&lt; gb.layer)) &gt; 0);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="class_player_1_1_player_a_i.html#ab8e53c5b988195ceea6001484ae26869">   91</a></span>&#160;        <span class="keyword">protected</span> <span class="keywordtype">void</span> <a class="code" href="class_player_1_1_player_a_i.html#ab8e53c5b988195ceea6001484ae26869">DispatchUnits</a>()</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        {</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <span class="comment">//TODO mid</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            var sendRoad = <a class="code" href="namespace_units.html#a916a18c8572b926f5bacb64a5af82715">Road</a>.Mid;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            var sendArray = <span class="keyword">new</span> <span class="keywordtype">int</span>[aiAvailableUnits.Length];</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            <span class="comment">// int maxSendIndex = 0;</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            <span class="keywordflow">for</span> (var i = 0; i &lt; sendArray.Length; i++) sendArray[i] = GetUnitMaxSend(aiAvailableUnits[i]);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            <a class="code" href="class_units_1_1_unit.html">Unit</a> sendUnit;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            var  probability = <a class="code" href="_player_8cs.html#a832e8f52fca5a678819ec96269dcb532">Random</a>.Range(0f, 1f);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            <span class="keywordflow">if</span> (probability &lt; 0.5f)</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                sendUnit = aiAvailableUnits[Array.IndexOf(sendArray, sendArray.Max())];</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                sendUnit = aiAvailableUnits[<a class="code" href="_player_8cs.html#a832e8f52fca5a678819ec96269dcb532">Random</a>.Range(0, aiAvailableUnits.Length)];</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            <span class="comment">//消耗木材、食物资源计算</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            var foodAndWoodSend = <a class="code" href="class_player_1_1_player_a_i.html#a985a1ce9787e687a04505985bb36190c">aiPlayer</a>.<a class="code" href="class_player_1_1_player.html#aa30e0fbd6f30ab0a6d56306a3a45e97a">Food</a> / sendUnit.<a class="code" href="class_units_1_1_unit.html#a40b7230b66922e771488ef6fba922d0b">costFood</a> &gt; <a class="code" href="class_player_1_1_player_a_i.html#a985a1ce9787e687a04505985bb36190c">aiPlayer</a>.<a class="code" href="class_player_1_1_player.html#a2622b6d971885095e60743f299a8768d">Wood</a> / sendUnit.<a class="code" href="class_units_1_1_unit.html#a6c1a18207afb2578135d197555005739">costWood</a></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                ? <a class="code" href="class_player_1_1_player_a_i.html#a985a1ce9787e687a04505985bb36190c">aiPlayer</a>.<a class="code" href="class_player_1_1_player.html#a2622b6d971885095e60743f299a8768d">Wood</a> / sendUnit.<a class="code" href="class_units_1_1_unit.html#a6c1a18207afb2578135d197555005739">costWood</a></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                : <a class="code" href="class_player_1_1_player_a_i.html#a985a1ce9787e687a04505985bb36190c">aiPlayer</a>.<a class="code" href="class_player_1_1_player.html#aa30e0fbd6f30ab0a6d56306a3a45e97a">Food</a> / sendUnit.<a class="code" href="class_units_1_1_unit.html#a40b7230b66922e771488ef6fba922d0b">costFood</a>;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            <span class="comment">//派遣数量随机</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            var foodAndWoodSendNumber = <a class="code" href="_player_8cs.html#a832e8f52fca5a678819ec96269dcb532">Random</a>.Range((<span class="keywordtype">int</span>) Mathf.Ceil(foodAndWoodSend * 0.5f), foodAndWoodSend);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            <span class="comment">//消耗金矿资源计算</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            var goldSend = <a class="code" href="class_player_1_1_player_a_i.html#a985a1ce9787e687a04505985bb36190c">aiPlayer</a>.<a class="code" href="class_player_1_1_player.html#a4c62a3c99ece17b174de5ce65cdea55c">Gold</a> / sendUnit.<a class="code" href="class_units_1_1_unit.html#a6ac6a6ddc2d1d852a91d310b9ebd73df">costGold</a>;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            <span class="comment">//派遣数量随机</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            var goldSendNumber = <a class="code" href="_player_8cs.html#a832e8f52fca5a678819ec96269dcb532">Random</a>.Range((<span class="keywordtype">int</span>) Mathf.Ceil(goldSend * 0.5f), goldSend);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            var costFood = foodAndWoodSendNumber * sendUnit.<a class="code" href="class_units_1_1_unit.html#a40b7230b66922e771488ef6fba922d0b">costFood</a>;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            var costWood = foodAndWoodSendNumber * sendUnit.<a class="code" href="class_units_1_1_unit.html#a6c1a18207afb2578135d197555005739">costWood</a>;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            var costGold = goldSendNumber        * sendUnit.<a class="code" href="class_units_1_1_unit.html#a6ac6a6ddc2d1d852a91d310b9ebd73df">costGold</a>;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            <a class="code" href="class_player_1_1_player_a_i.html#a985a1ce9787e687a04505985bb36190c">aiPlayer</a>.<a class="code" href="class_player_1_1_player.html#a5dc06c6cb394474907fbcde1ed4c5e93">ChangeResource</a>(<a class="code" href="namespace_player.html#a61f3646142986499ed36c80a34f38427">GameResourceType</a>.Food, -costFood);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            <a class="code" href="class_player_1_1_player_a_i.html#a985a1ce9787e687a04505985bb36190c">aiPlayer</a>.<a class="code" href="class_player_1_1_player.html#a5dc06c6cb394474907fbcde1ed4c5e93">ChangeResource</a>(<a class="code" href="namespace_player.html#a61f3646142986499ed36c80a34f38427">GameResourceType</a>.Wood, -costWood);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            <a class="code" href="class_player_1_1_player_a_i.html#a985a1ce9787e687a04505985bb36190c">aiPlayer</a>.<a class="code" href="class_player_1_1_player.html#a5dc06c6cb394474907fbcde1ed4c5e93">ChangeResource</a>(<a class="code" href="namespace_player.html#a61f3646142986499ed36c80a34f38427">GameResourceType</a>.Gold, -costGold);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            <a class="code" href="class_player_1_1_player_a_i.html#a985a1ce9787e687a04505985bb36190c">aiPlayer</a>.<a class="code" href="class_player_1_1_player.html#a7bafb34edc1a7b368ec8d554d3885e26">SetUnits</a>(RoadToTransform(sendRoad).position, Array.IndexOf(aiAvailableUnits, sendUnit), sendRoad,</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;                              goldSendNumber + foodAndWoodSendNumber);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        }</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00138"></a><span class="lineno"><a class="line" href="class_player_1_1_player_a_i.html#a2c5a4e54aeb7741699f56f68f66ead21">  138</a></span>&#160;        <span class="keyword">protected</span> <span class="keywordtype">void</span> <a class="code" href="class_player_1_1_player_a_i.html#a2c5a4e54aeb7741699f56f68f66ead21">DispatchUnits</a>(<span class="keywordtype">int</span> num)</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        {</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;            <span class="comment">//TODO mid</span></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;            var sendRoad = <a class="code" href="namespace_units.html#a916a18c8572b926f5bacb64a5af82715">Road</a>.Mid;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;            var sendArray = <span class="keyword">new</span> <span class="keywordtype">int</span>[aiAvailableUnits.Length];</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;            <span class="comment">// int maxSendIndex = 0;</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;            <span class="keywordflow">for</span> (var i = 0; i &lt; sendArray.Length; i++) sendArray[i] = GetUnitMaxSend(aiAvailableUnits[i]);</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;            <a class="code" href="class_units_1_1_unit.html">Unit</a> sendUnit;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;            var  probability = <a class="code" href="_player_8cs.html#a832e8f52fca5a678819ec96269dcb532">Random</a>.Range(0f, 1f);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;            <span class="keywordflow">if</span> (probability &lt; 0.5f)</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                sendUnit = aiAvailableUnits[Array.IndexOf(sendArray, sendArray.Max())];</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                sendUnit = aiAvailableUnits[<a class="code" href="_player_8cs.html#a832e8f52fca5a678819ec96269dcb532">Random</a>.Range(0, aiAvailableUnits.Length)];</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            <span class="comment">//消耗木材、食物资源计算</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            var foodAndWoodSend = <a class="code" href="class_player_1_1_player_a_i.html#a985a1ce9787e687a04505985bb36190c">aiPlayer</a>.<a class="code" href="class_player_1_1_player.html#aa30e0fbd6f30ab0a6d56306a3a45e97a">Food</a> / sendUnit.<a class="code" href="class_units_1_1_unit.html#a40b7230b66922e771488ef6fba922d0b">costFood</a> &gt; <a class="code" href="class_player_1_1_player_a_i.html#a985a1ce9787e687a04505985bb36190c">aiPlayer</a>.<a class="code" href="class_player_1_1_player.html#a2622b6d971885095e60743f299a8768d">Wood</a> / sendUnit.<a class="code" href="class_units_1_1_unit.html#a6c1a18207afb2578135d197555005739">costWood</a></div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;                ? <a class="code" href="class_player_1_1_player_a_i.html#a985a1ce9787e687a04505985bb36190c">aiPlayer</a>.<a class="code" href="class_player_1_1_player.html#a2622b6d971885095e60743f299a8768d">Wood</a> / sendUnit.<a class="code" href="class_units_1_1_unit.html#a6c1a18207afb2578135d197555005739">costWood</a></div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;                : <a class="code" href="class_player_1_1_player_a_i.html#a985a1ce9787e687a04505985bb36190c">aiPlayer</a>.<a class="code" href="class_player_1_1_player.html#aa30e0fbd6f30ab0a6d56306a3a45e97a">Food</a> / sendUnit.<a class="code" href="class_units_1_1_unit.html#a40b7230b66922e771488ef6fba922d0b">costFood</a>;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            <span class="comment">//派遣数量随机</span></div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            var foodAndWoodSendNumber = <a class="code" href="_player_8cs.html#a832e8f52fca5a678819ec96269dcb532">Random</a>.Range((<span class="keywordtype">int</span>) Mathf.Ceil(foodAndWoodSend * 0.5f), foodAndWoodSend);</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            foodAndWoodSendNumber = foodAndWoodSendNumber &gt; num ? num : foodAndWoodSend;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;            <span class="comment">//消耗金矿资源计算</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;            var goldSend = <a class="code" href="class_player_1_1_player_a_i.html#a985a1ce9787e687a04505985bb36190c">aiPlayer</a>.<a class="code" href="class_player_1_1_player.html#a4c62a3c99ece17b174de5ce65cdea55c">Gold</a> / sendUnit.<a class="code" href="class_units_1_1_unit.html#a6ac6a6ddc2d1d852a91d310b9ebd73df">costGold</a>;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            <span class="comment">//派遣数量随机</span></div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            var goldSendNumber = <a class="code" href="_player_8cs.html#a832e8f52fca5a678819ec96269dcb532">Random</a>.Range((<span class="keywordtype">int</span>) Mathf.Ceil(goldSend * 0.5f), goldSend);</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            goldSendNumber = goldSendNumber &gt; num ? num : goldSendNumber;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160; </div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;            var costFood = foodAndWoodSendNumber * sendUnit.<a class="code" href="class_units_1_1_unit.html#a40b7230b66922e771488ef6fba922d0b">costFood</a>;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            var costWood = foodAndWoodSendNumber * sendUnit.<a class="code" href="class_units_1_1_unit.html#a6c1a18207afb2578135d197555005739">costWood</a>;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;            var costGold = goldSendNumber        * sendUnit.<a class="code" href="class_units_1_1_unit.html#a6ac6a6ddc2d1d852a91d310b9ebd73df">costGold</a>;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160; </div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;            <a class="code" href="class_player_1_1_player_a_i.html#a985a1ce9787e687a04505985bb36190c">aiPlayer</a>.<a class="code" href="class_player_1_1_player.html#a5dc06c6cb394474907fbcde1ed4c5e93">ChangeResource</a>(<a class="code" href="namespace_player.html#a61f3646142986499ed36c80a34f38427">GameResourceType</a>.Food, -costFood);</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;            <a class="code" href="class_player_1_1_player_a_i.html#a985a1ce9787e687a04505985bb36190c">aiPlayer</a>.<a class="code" href="class_player_1_1_player.html#a5dc06c6cb394474907fbcde1ed4c5e93">ChangeResource</a>(<a class="code" href="namespace_player.html#a61f3646142986499ed36c80a34f38427">GameResourceType</a>.Wood, -costWood);</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            <a class="code" href="class_player_1_1_player_a_i.html#a985a1ce9787e687a04505985bb36190c">aiPlayer</a>.<a class="code" href="class_player_1_1_player.html#a5dc06c6cb394474907fbcde1ed4c5e93">ChangeResource</a>(<a class="code" href="namespace_player.html#a61f3646142986499ed36c80a34f38427">GameResourceType</a>.Gold, -costGold);</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            <a class="code" href="class_player_1_1_player_a_i.html#a985a1ce9787e687a04505985bb36190c">aiPlayer</a>.<a class="code" href="class_player_1_1_player.html#a7bafb34edc1a7b368ec8d554d3885e26">SetUnits</a>(RoadToTransform(sendRoad).position, Array.IndexOf(aiAvailableUnits, sendUnit), sendRoad,</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;                              goldSendNumber + foodAndWoodSendNumber);</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        }</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160; </div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> RestEnd()</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        {</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            <a class="code" href="class_player_1_1_player_a_i.html#a19e9a719cfa4c751027f154d5c9cf313">_isColdDown</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        }</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160; </div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> AIDispatchFarmers()</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        {</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="class_player_1_1_player_a_i.html#a985a1ce9787e687a04505985bb36190c">aiPlayer</a>.<a class="code" href="class_player_1_1_player.html#a59e682ae8f798dc6a8f655de892ec522">DispatchableFarmer</a> &gt; 0)</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;            {</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;                var leastFarmerResource = (<a class="code" href="namespace_player.html#a61f3646142986499ed36c80a34f38427">GameResourceType</a>) Array.IndexOf(<a class="code" href="class_player_1_1_player_a_i.html#a985a1ce9787e687a04505985bb36190c">aiPlayer</a>.<a class="code" href="class_player_1_1_player.html#a79a80bfa08f07996fe18e149bc97e809">RoadFarmers</a>, <a class="code" href="class_player_1_1_player_a_i.html#a985a1ce9787e687a04505985bb36190c">aiPlayer</a>.<a class="code" href="class_player_1_1_player.html#a79a80bfa08f07996fe18e149bc97e809">RoadFarmers</a>.Min());</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;                <a class="code" href="class_player_1_1_player_a_i.html#a985a1ce9787e687a04505985bb36190c">aiPlayer</a>.<a class="code" href="class_player_1_1_player.html#ae903d2ee26dd2ecdaed6e580eb89348d">AddFarmer</a>(leastFarmerResource);</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;            }</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        }</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160; </div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        <span class="comment">//寻找敌我双方人数差值最大的一条路</span></div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        <span class="keyword">private</span> <a class="code" href="namespace_units.html#a916a18c8572b926f5bacb64a5af82715">Road</a> FindBiggestDisadvantageRoad()</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        {</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;            var power = <a class="code" href="_player_8cs.html#a832e8f52fca5a678819ec96269dcb532">Random</a>.Range(0f, 1f);</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;            <span class="keywordflow">if</span> (power &lt; 0.5f)</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;            {</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;                <span class="keywordflow">if</span> (power &lt; 0.15f) <span class="keywordflow">return</span> <a class="code" href="namespace_units.html#a916a18c8572b926f5bacb64a5af82715">Road</a>.Top;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;                <span class="keywordflow">if</span> (power &gt; 0.35f) <span class="keywordflow">return</span> <a class="code" href="namespace_units.html#a916a18c8572b926f5bacb64a5af82715">Road</a>.Bot;</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="namespace_units.html#a916a18c8572b926f5bacb64a5af82715">Road</a>.Mid;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;            }</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160; </div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;            <span class="keywordtype">int</span>[] tmp = {_topEnemy - _topSend, _midEnemy - _midSend, _botEnemy - _botSend};</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;            <span class="keywordflow">if</span> (_midEnemy - _midSend == tmp.Max())</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="namespace_units.html#a916a18c8572b926f5bacb64a5af82715">Road</a>.Mid;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;            <span class="keywordflow">if</span> (_topEnemy - _topSend == tmp.Max())</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="namespace_units.html#a916a18c8572b926f5bacb64a5af82715">Road</a>.Top;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160; </div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="namespace_units.html#a916a18c8572b926f5bacb64a5af82715">Road</a>.Bot;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        }</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160; </div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        <span class="keyword">private</span> Transform RoadToTransform(<a class="code" href="namespace_units.html#a916a18c8572b926f5bacb64a5af82715">Road</a> road)</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        {</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;            <span class="keywordflow">switch</span> (road)</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;            {</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;                <span class="keywordflow">case</span> <a class="code" href="namespace_units.html#a916a18c8572b926f5bacb64a5af82715">Road</a>.Top:</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;                    <span class="keywordflow">return</span> <a class="code" href="class_player_1_1_player_a_i.html#a985a1ce9787e687a04505985bb36190c">aiPlayer</a>.<a class="code" href="class_player_1_1_player.html#a24ff1e3db5d98e343237f579d7297bbf">Top</a>;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;                <span class="keywordflow">case</span> <a class="code" href="namespace_units.html#a916a18c8572b926f5bacb64a5af82715">Road</a>.Mid:</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;                    <span class="keywordflow">return</span> <a class="code" href="class_player_1_1_player_a_i.html#a985a1ce9787e687a04505985bb36190c">aiPlayer</a>.<a class="code" href="class_player_1_1_player.html#a6831806dd0c04efbc36e441fb2baf7a4">Mid</a>;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;                <span class="keywordflow">case</span> <a class="code" href="namespace_units.html#a916a18c8572b926f5bacb64a5af82715">Road</a>.Bot:</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;                    <span class="keywordflow">return</span> <a class="code" href="class_player_1_1_player_a_i.html#a985a1ce9787e687a04505985bb36190c">aiPlayer</a>.<a class="code" href="class_player_1_1_player.html#ae8b333c7df177dca46933e3665d535b8">Bot</a>;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;                <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;                    <span class="keywordflow">throw</span> <span class="keyword">new</span> ArgumentOutOfRangeException(nameof(road), road, <span class="keyword">null</span>);</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;            }</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        }</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160; </div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">int</span> GetUnitMaxSend(<a class="code" href="class_units_1_1_unit.html">Unit</a> unit)</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        {</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;            var maxFoodAndWoodCost = <a class="code" href="class_player_1_1_player_a_i.html#a985a1ce9787e687a04505985bb36190c">aiPlayer</a>.<a class="code" href="class_player_1_1_player.html#aa30e0fbd6f30ab0a6d56306a3a45e97a">Food</a> / unit.<a class="code" href="class_units_1_1_unit.html#a40b7230b66922e771488ef6fba922d0b">costFood</a> &gt; <a class="code" href="class_player_1_1_player_a_i.html#a985a1ce9787e687a04505985bb36190c">aiPlayer</a>.<a class="code" href="class_player_1_1_player.html#a2622b6d971885095e60743f299a8768d">Wood</a> / unit.<a class="code" href="class_units_1_1_unit.html#a6c1a18207afb2578135d197555005739">costWood</a></div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;                ? <a class="code" href="class_player_1_1_player_a_i.html#a985a1ce9787e687a04505985bb36190c">aiPlayer</a>.<a class="code" href="class_player_1_1_player.html#a2622b6d971885095e60743f299a8768d">Wood</a> / unit.<a class="code" href="class_units_1_1_unit.html#a6c1a18207afb2578135d197555005739">costWood</a></div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;                : <a class="code" href="class_player_1_1_player_a_i.html#a985a1ce9787e687a04505985bb36190c">aiPlayer</a>.<a class="code" href="class_player_1_1_player.html#aa30e0fbd6f30ab0a6d56306a3a45e97a">Food</a> / unit.<a class="code" href="class_units_1_1_unit.html#a40b7230b66922e771488ef6fba922d0b">costFood</a>;</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;            var maxGoldCost = <a class="code" href="class_player_1_1_player_a_i.html#a985a1ce9787e687a04505985bb36190c">aiPlayer</a>.<a class="code" href="class_player_1_1_player.html#a4c62a3c99ece17b174de5ce65cdea55c">Gold</a> / unit.<a class="code" href="class_units_1_1_unit.html#a6ac6a6ddc2d1d852a91d310b9ebd73df">costGold</a>;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160; </div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;            <span class="keywordflow">return</span> maxFoodAndWoodCost + maxGoldCost;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        }</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    }</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;}</div>
+<div class="ttc" id="a_player_8cs_html_a832e8f52fca5a678819ec96269dcb532"><div class="ttname"><a href="_player_8cs.html#a832e8f52fca5a678819ec96269dcb532">Random</a></div><div class="ttdeci">UnityEngine.Random Random</div><div class="ttdef"><b>Definition:</b> <a href="_player_8cs_source.html#l00008">Player.cs:8</a></div></div>
+<div class="ttc" id="aclass_game_manager_1_1_game_manager_html"><div class="ttname"><a href="class_game_manager_1_1_game_manager.html">GameManager.GameManager</a></div><div class="ttdoc">关卡全局管理控制器</div><div class="ttdef"><b>Definition:</b> <a href="_game_manager_8cs_source.html#l00014">GameManager.cs:15</a></div></div>
+<div class="ttc" id="aclass_game_manager_1_1_game_manager_html_a7fd88d015e1adf60cccf39fcfaefb2e2"><div class="ttname"><a href="class_game_manager_1_1_game_manager.html#a7fd88d015e1adf60cccf39fcfaefb2e2">GameManager.GameManager.unitsList</a></div><div class="ttdeci">List&lt; UnitDict &gt; unitsList</div><div class="ttdoc">单位列表</div><div class="ttdef"><b>Definition:</b> <a href="_game_manager_8cs_source.html#l00039">GameManager.cs:39</a></div></div>
+<div class="ttc" id="aclass_game_manager_1_1_game_manager_html_acafc4a2ac0e6171a1f8436b529b58306"><div class="ttname"><a href="class_game_manager_1_1_game_manager.html#acafc4a2ac0e6171a1f8436b529b58306">GameManager.GameManager.GetManager</a></div><div class="ttdeci">static GameManager GetManager</div><div class="ttdef"><b>Definition:</b> <a href="_game_manager_8cs_source.html#l00077">GameManager.cs:77</a></div></div>
+<div class="ttc" id="aclass_player_1_1_player_a_i_html"><div class="ttname"><a href="class_player_1_1_player_a_i.html">Player.PlayerAI</a></div><div class="ttdoc">敌人AI</div><div class="ttdef"><b>Definition:</b> <a href="_player_a_i_8cs_source.html#l00012">PlayerAI.cs:13</a></div></div>
+<div class="ttc" id="aclass_player_1_1_player_a_i_html_a08bff3b12d9131147c4037ac2d518b08"><div class="ttname"><a href="class_player_1_1_player_a_i.html#a08bff3b12d9131147c4037ac2d518b08">Player.PlayerAI.Start</a></div><div class="ttdeci">void Start()</div><div class="ttdef"><b>Definition:</b> <a href="_player_a_i_8cs_source.html#l00048">PlayerAI.cs:48</a></div></div>
+<div class="ttc" id="aclass_player_1_1_player_a_i_html_a12510584dc41ca7b97c2f49a680bb455"><div class="ttname"><a href="class_player_1_1_player_a_i.html#a12510584dc41ca7b97c2f49a680bb455">Player.PlayerAI.Update</a></div><div class="ttdeci">void Update()</div><div class="ttdef"><b>Definition:</b> <a href="_player_a_i_8cs_source.html#l00059">PlayerAI.cs:59</a></div></div>
+<div class="ttc" id="aclass_player_1_1_player_a_i_html_a19e9a719cfa4c751027f154d5c9cf313"><div class="ttname"><a href="class_player_1_1_player_a_i.html#a19e9a719cfa4c751027f154d5c9cf313">Player.PlayerAI._isColdDown</a></div><div class="ttdeci">bool _isColdDown</div><div class="ttdef"><b>Definition:</b> <a href="_player_a_i_8cs_source.html#l00037">PlayerAI.cs:37</a></div></div>
+<div class="ttc" id="aclass_player_1_1_player_a_i_html_a2c5a4e54aeb7741699f56f68f66ead21"><div class="ttname"><a href="class_player_1_1_player_a_i.html#a2c5a4e54aeb7741699f56f68f66ead21">Player.PlayerAI.DispatchUnits</a></div><div class="ttdeci">void DispatchUnits(int num)</div><div class="ttdoc">派遣单位</div><div class="ttdef"><b>Definition:</b> <a href="_player_a_i_8cs_source.html#l00138">PlayerAI.cs:138</a></div></div>
+<div class="ttc" id="aclass_player_1_1_player_a_i_html_a7f855f3136404883461b50a9fe3a45d9"><div class="ttname"><a href="class_player_1_1_player_a_i.html#a7f855f3136404883461b50a9fe3a45d9">Player.PlayerAI.aiRestTime</a></div><div class="ttdeci">float aiRestTime</div><div class="ttdoc">AI决策休眠时间</div><div class="ttdef"><b>Definition:</b> <a href="_player_a_i_8cs_source.html#l00027">PlayerAI.cs:27</a></div></div>
+<div class="ttc" id="aclass_player_1_1_player_a_i_html_a8ec13e296e8662a35dcf9e0f431b00f8"><div class="ttname"><a href="class_player_1_1_player_a_i.html#a8ec13e296e8662a35dcf9e0f431b00f8">Player.PlayerAI.enableRoads</a></div><div class="ttdeci">bool[] enableRoads</div><div class="ttdoc">允许派遣的路</div><div class="ttdef"><b>Definition:</b> <a href="_player_a_i_8cs_source.html#l00022">PlayerAI.cs:22</a></div></div>
+<div class="ttc" id="aclass_player_1_1_player_a_i_html_a985a1ce9787e687a04505985bb36190c"><div class="ttname"><a href="class_player_1_1_player_a_i.html#a985a1ce9787e687a04505985bb36190c">Player.PlayerAI.aiPlayer</a></div><div class="ttdeci">Player aiPlayer</div><div class="ttdoc">AI控制的Player方</div><div class="ttdef"><b>Definition:</b> <a href="_player_a_i_8cs_source.html#l00017">PlayerAI.cs:17</a></div></div>
+<div class="ttc" id="aclass_player_1_1_player_a_i_html_ab3a9572e4b157a2a9117c83c5e460a8c"><div class="ttname"><a href="class_player_1_1_player_a_i.html#ab3a9572e4b157a2a9117c83c5e460a8c">Player.PlayerAI.AIGaming</a></div><div class="ttdeci">virtual void AIGaming()</div><div class="ttdoc">AI决策</div><div class="ttdef"><b>Definition:</b> <a href="_player_a_i_8cs_source.html#l00068">PlayerAI.cs:68</a></div></div>
+<div class="ttc" id="aclass_player_1_1_player_a_i_html_ab8e53c5b988195ceea6001484ae26869"><div class="ttname"><a href="class_player_1_1_player_a_i.html#ab8e53c5b988195ceea6001484ae26869">Player.PlayerAI.DispatchUnits</a></div><div class="ttdeci">void DispatchUnits()</div><div class="ttdoc">派遣单位</div><div class="ttdef"><b>Definition:</b> <a href="_player_a_i_8cs_source.html#l00091">PlayerAI.cs:91</a></div></div>
+<div class="ttc" id="aclass_player_1_1_player_a_i_html_ac772b0dc62609d2aecd2718277612b86"><div class="ttname"><a href="class_player_1_1_player_a_i.html#ac772b0dc62609d2aecd2718277612b86">Player.PlayerAI.CountEnemy</a></div><div class="ttdeci">void CountEnemy()</div><div class="ttdoc">路危险权重决策</div><div class="ttdef"><b>Definition:</b> <a href="_player_a_i_8cs_source.html#l00081">PlayerAI.cs:81</a></div></div>
+<div class="ttc" id="aclass_player_1_1_player_html_a24ff1e3db5d98e343237f579d7297bbf"><div class="ttname"><a href="class_player_1_1_player.html#a24ff1e3db5d98e343237f579d7297bbf">Player.Player.Top</a></div><div class="ttdeci">Transform Top</div><div class="ttdoc">上路派出位置</div><div class="ttdef"><b>Definition:</b> <a href="_player_8cs_source.html#l00308">Player.cs:308</a></div></div>
+<div class="ttc" id="aclass_player_1_1_player_html_a2622b6d971885095e60743f299a8768d"><div class="ttname"><a href="class_player_1_1_player.html#a2622b6d971885095e60743f299a8768d">Player.Player.Wood</a></div><div class="ttdeci">int Wood</div><div class="ttdoc">木材</div><div class="ttdef"><b>Definition:</b> <a href="_player_8cs_source.html#l00183">Player.cs:184</a></div></div>
+<div class="ttc" id="aclass_player_1_1_player_html_a4c62a3c99ece17b174de5ce65cdea55c"><div class="ttname"><a href="class_player_1_1_player.html#a4c62a3c99ece17b174de5ce65cdea55c">Player.Player.Gold</a></div><div class="ttdeci">int Gold</div><div class="ttdoc">黄金</div><div class="ttdef"><b>Definition:</b> <a href="_player_8cs_source.html#l00202">Player.cs:203</a></div></div>
+<div class="ttc" id="aclass_player_1_1_player_html_a59e682ae8f798dc6a8f655de892ec522"><div class="ttname"><a href="class_player_1_1_player.html#a59e682ae8f798dc6a8f655de892ec522">Player.Player.DispatchableFarmer</a></div><div class="ttdeci">int DispatchableFarmer</div><div class="ttdoc">可调遣农民数量</div><div class="ttdef"><b>Definition:</b> <a href="_player_8cs_source.html#l00358">Player.cs:359</a></div></div>
+<div class="ttc" id="aclass_player_1_1_player_html_a5dc06c6cb394474907fbcde1ed4c5e93"><div class="ttname"><a href="class_player_1_1_player.html#a5dc06c6cb394474907fbcde1ed4c5e93">Player.Player.ChangeResource</a></div><div class="ttdeci">virtual void ChangeResource(GameResourceType gameResourceType, int count)</div><div class="ttdoc">增减资源</div><div class="ttdef"><b>Definition:</b> <a href="_player_8cs_source.html#l00223">Player.cs:223</a></div></div>
+<div class="ttc" id="aclass_player_1_1_player_html_a6831806dd0c04efbc36e441fb2baf7a4"><div class="ttname"><a href="class_player_1_1_player.html#a6831806dd0c04efbc36e441fb2baf7a4">Player.Player.Mid</a></div><div class="ttdeci">Transform Mid</div><div class="ttdoc">中路派出位置</div><div class="ttdef"><b>Definition:</b> <a href="_player_8cs_source.html#l00313">Player.cs:313</a></div></div>
+<div class="ttc" id="aclass_player_1_1_player_html_a77be96d9cdecda489d5d1f8a7c26d59e"><div class="ttname"><a href="class_player_1_1_player.html#a77be96d9cdecda489d5d1f8a7c26d59e">Player.Player.enableFarmer</a></div><div class="ttdeci">bool enableFarmer</div><div class="ttdoc">是否允许派出农民</div><div class="ttdef"><b>Definition:</b> <a href="_player_8cs_source.html#l00287">Player.cs:287</a></div></div>
+<div class="ttc" id="aclass_player_1_1_player_html_a79a80bfa08f07996fe18e149bc97e809"><div class="ttname"><a href="class_player_1_1_player.html#a79a80bfa08f07996fe18e149bc97e809">Player.Player.RoadFarmers</a></div><div class="ttdeci">int[] RoadFarmers</div><div class="ttdoc">每条路农民数量</div><div class="ttdef"><b>Definition:</b> <a href="_player_8cs_source.html#l00374">Player.cs:375</a></div></div>
+<div class="ttc" id="aclass_player_1_1_player_html_a7bafb34edc1a7b368ec8d554d3885e26"><div class="ttname"><a href="class_player_1_1_player.html#a7bafb34edc1a7b368ec8d554d3885e26">Player.Player.SetUnits</a></div><div class="ttdeci">void SetUnits(Vector3 tr, int chosenUnit, Road rd, int number)</div><div class="ttdoc">派遣单位</div><div class="ttdef"><b>Definition:</b> <a href="_player_8cs_source.html#l00662">Player.cs:662</a></div></div>
+<div class="ttc" id="aclass_player_1_1_player_html_aa30e0fbd6f30ab0a6d56306a3a45e97a"><div class="ttname"><a href="class_player_1_1_player.html#aa30e0fbd6f30ab0a6d56306a3a45e97a">Player.Player.Food</a></div><div class="ttdeci">int Food</div><div class="ttdoc">食物</div><div class="ttdef"><b>Definition:</b> <a href="_player_8cs_source.html#l00164">Player.cs:165</a></div></div>
+<div class="ttc" id="aclass_player_1_1_player_html_aab9cee3f7daa140d64191d06b4887014"><div class="ttname"><a href="class_player_1_1_player.html#aab9cee3f7daa140d64191d06b4887014">Player.Player.availableUnits</a></div><div class="ttdeci">int[] availableUnits</div><div class="ttdoc">玩家可用单位</div><div class="ttdef"><b>Definition:</b> <a href="_player_8cs_source.html#l00635">Player.cs:635</a></div></div>
+<div class="ttc" id="aclass_player_1_1_player_html_ae8b333c7df177dca46933e3665d535b8"><div class="ttname"><a href="class_player_1_1_player.html#ae8b333c7df177dca46933e3665d535b8">Player.Player.Bot</a></div><div class="ttdeci">Transform Bot</div><div class="ttdoc">下路排除位置</div><div class="ttdef"><b>Definition:</b> <a href="_player_8cs_source.html#l00318">Player.cs:318</a></div></div>
+<div class="ttc" id="aclass_player_1_1_player_html_ae903d2ee26dd2ecdaed6e580eb89348d"><div class="ttname"><a href="class_player_1_1_player.html#ae903d2ee26dd2ecdaed6e580eb89348d">Player.Player.AddFarmer</a></div><div class="ttdeci">virtual void AddFarmer(GameResourceType rs)</div><div class="ttdoc">增加一条路的农民分配</div><div class="ttdef"><b>Definition:</b> <a href="_player_8cs_source.html#l00408">Player.cs:408</a></div></div>
+<div class="ttc" id="aclass_units_1_1_unit_html"><div class="ttname"><a href="class_units_1_1_unit.html">Units.Unit</a></div><div class="ttdoc">单位</div><div class="ttdef"><b>Definition:</b> <a href="_unit_8cs_source.html#l00122">Unit.cs:123</a></div></div>
+<div class="ttc" id="aclass_units_1_1_unit_html_a40b7230b66922e771488ef6fba922d0b"><div class="ttname"><a href="class_units_1_1_unit.html#a40b7230b66922e771488ef6fba922d0b">Units.Unit.costFood</a></div><div class="ttdeci">int costFood</div><div class="ttdoc">生产成本（食物）</div><div class="ttdef"><b>Definition:</b> <a href="_unit_8cs_source.html#l00171">Unit.cs:171</a></div></div>
+<div class="ttc" id="aclass_units_1_1_unit_html_a6ac6a6ddc2d1d852a91d310b9ebd73df"><div class="ttname"><a href="class_units_1_1_unit.html#a6ac6a6ddc2d1d852a91d310b9ebd73df">Units.Unit.costGold</a></div><div class="ttdeci">int costGold</div><div class="ttdoc">生产成本（黄金）</div><div class="ttdef"><b>Definition:</b> <a href="_unit_8cs_source.html#l00181">Unit.cs:181</a></div></div>
+<div class="ttc" id="aclass_units_1_1_unit_html_a6c1a18207afb2578135d197555005739"><div class="ttname"><a href="class_units_1_1_unit.html#a6c1a18207afb2578135d197555005739">Units.Unit.costWood</a></div><div class="ttdeci">int costWood</div><div class="ttdoc">生产成本（木材）</div><div class="ttdef"><b>Definition:</b> <a href="_unit_8cs_source.html#l00176">Unit.cs:176</a></div></div>
+<div class="ttc" id="anamespace_game_manager_html"><div class="ttname"><a href="namespace_game_manager.html">GameManager</a></div><div class="ttdef"><b>Definition:</b> <a href="_game_manager_8cs_source.html#l00009">GameManager.cs:10</a></div></div>
+<div class="ttc" id="anamespace_player_html"><div class="ttname"><a href="namespace_player.html">Player</a></div><div class="ttdef"><b>Definition:</b> <a href="_player_8cs_source.html#l00010">Player.cs:11</a></div></div>
+<div class="ttc" id="anamespace_player_html_a61f3646142986499ed36c80a34f38427"><div class="ttname"><a href="namespace_player.html#a61f3646142986499ed36c80a34f38427">Player.GameResourceType</a></div><div class="ttdeci">GameResourceType</div><div class="ttdoc">资源类型</div><div class="ttdef"><b>Definition:</b> <a href="_player_8cs_source.html#l00015">Player.cs:16</a></div></div>
+<div class="ttc" id="anamespace_units_html"><div class="ttname"><a href="namespace_units.html">Units</a></div><div class="ttdef"><b>Definition:</b> <a href="_buff_8cs_source.html#l00004">Buff.cs:5</a></div></div>
+<div class="ttc" id="anamespace_units_html_a916a18c8572b926f5bacb64a5af82715"><div class="ttname"><a href="namespace_units.html#a916a18c8572b926f5bacb64a5af82715">Units.Road</a></div><div class="ttdeci">Road</div><div class="ttdoc">路</div><div class="ttdef"><b>Definition:</b> <a href="_unit_8cs_source.html#l00012">Unit.cs:13</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_a5079711ee210cb3f5000c30d3746d06.html">SimpleRTS</a></li><li class="navelem"><a class="el" href="dir_ec7b684f6ba09c3c3a1f78fc68be2b45.html">Simplified_RTS</a></li><li class="navelem"><a class="el" href="dir_fc9fc45e4060f68dac2ba8008ad7420a.html">Assets</a></li><li class="navelem"><a class="el" href="dir_9c83f749c47014e6bfe3d69c7ba163ff.html">Scripts</a></li><li class="navelem"><a class="el" href="dir_57278868c90159c1d8d270ccaf0ca9db.html">Player</a></li><li class="navelem"><a class="el" href="_player_a_i_8cs.html">PlayerAI.cs</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

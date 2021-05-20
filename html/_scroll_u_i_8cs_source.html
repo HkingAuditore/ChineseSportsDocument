@@ -1,0 +1,226 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>古代运动图鉴: SimpleRTS/Simplified_RTS/Assets/Scripts/UI/ChineseSports/Main/ScrollUI.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Icon_Small.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">古代运动图鉴
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('_scroll_u_i_8cs_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">ScrollUI.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_scroll_u_i_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> System.Collections;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_saver.html">Saver</a>;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> UnityEngine;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> UnityEngine.UI;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_video.html">Video</a>;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_u_i_1_1_chinese_sports_1_1_main.html">UI.ChineseSports.Main</a></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i.html">    9</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i.html">ScrollUI</a> : MonoBehaviour</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    {</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i.html#ab27e94182ba1d5740e0b848d1bfffaf5">   11</a></span>&#160;        <span class="keyword">public</span> Animator <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i.html#ab27e94182ba1d5740e0b848d1bfffaf5">scrollAnimator</a>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i.html#a364332603e7c4f4fcd16d1bb3b9487eb">   13</a></span>&#160;        [Range(0, 1)] <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i.html#a364332603e7c4f4fcd16d1bb3b9487eb">fillAmount</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i.html#a538a981998e08b53b594af84d9211bdf">   15</a></span>&#160;        <span class="keyword">public</span>                        <a class="code" href="class_u_i_1_1_fill_bar_u_i.html">FillBarUI</a>          <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i.html#a538a981998e08b53b594af84d9211bdf">bar</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i.html#a1141c67048bc090e8690d653f227bfca">   16</a></span>&#160;        <span class="keyword">public</span>                        <span class="keywordtype">string</span>             <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i.html#a1141c67048bc090e8690d653f227bfca">sceneName</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i.html#af936ad416b1da9c9cfced0405379efe2">   17</a></span>&#160;        <span class="keyword">public</span>                        Text               <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i.html#af936ad416b1da9c9cfced0405379efe2">titleText</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i.html#a1fd9ab2ed4e8ef997c5615e3d459fc9c">   18</a></span>&#160;        <span class="keyword">public</span>                        Image              <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i.html#a1fd9ab2ed4e8ef997c5615e3d459fc9c">titleImage</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i.html#a37c1320e6332d789016dec61b4365b40">   19</a></span>&#160;        <span class="keyword">public</span>                        <a class="code" href="class_video_1_1_video_player_manager.html">VideoPlayerManager</a> <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i.html#a37c1320e6332d789016dec61b4365b40">videoPlayerManager</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i.html#a98484094d3ef11325c0ccbb6653dd962">   20</a></span>&#160;        <span class="keyword">public</span>                        Sprite             <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i.html#a98484094d3ef11325c0ccbb6653dd962">titleSprite</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        [Header(<span class="stringliteral">&quot;Scroll UI&quot;</span>)] <span class="keyword">private</span> <span class="keywordtype">string</span>             titleName;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i.html#a101f36b126d7d376ad82f5ac34b92f97">   23</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i.html#a101f36b126d7d376ad82f5ac34b92f97">TitleName</a></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            <span class="keyword">get</span> =&gt; titleName;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <span class="keyword">set</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                titleName      = value;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i.html#af936ad416b1da9c9cfced0405379efe2">titleText</a>.text = <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i.html#a101f36b126d7d376ad82f5ac34b92f97">TitleName</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            }</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        }</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i.html#a596bc10b8de94a379f794115daff93e2">   33</a></span>&#160;        <span class="keyword">public</span> Sprite <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i.html#a596bc10b8de94a379f794115daff93e2">TitleSprite</a></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <span class="keyword">get</span> =&gt; <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i.html#a98484094d3ef11325c0ccbb6653dd962">titleSprite</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <span class="keyword">set</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i.html#a98484094d3ef11325c0ccbb6653dd962">titleSprite</a>       = value;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i.html#a1fd9ab2ed4e8ef997c5615e3d459fc9c">titleImage</a>.sprite = <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i.html#a596bc10b8de94a379f794115daff93e2">TitleSprite</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            }</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> Start()</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i.html#a642cb3163830d1ee0c67c9d610b41b8b">SetFillBar</a>();</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#if UNITY_EDITOR</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> Update()</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i.html#a642cb3163830d1ee0c67c9d610b41b8b">SetFillBar</a>();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        [ContextMenu(<span class="stringliteral">&quot;SetFillBar&quot;</span>)]</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i.html#a642cb3163830d1ee0c67c9d610b41b8b">   58</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i.html#a642cb3163830d1ee0c67c9d610b41b8b">SetFillBar</a>()</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i.html#a538a981998e08b53b594af84d9211bdf">bar</a>.<a class="code" href="class_u_i_1_1_fill_bar_u_i.html#a6a77eba7280f1be3d5c32cfd463dfc69">FillAmount</a> = <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i.html#a364332603e7c4f4fcd16d1bb3b9487eb">fillAmount</a>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i.html#a538a981998e08b53b594af84d9211bdf">bar</a>.<a class="code" href="class_u_i_1_1_fill_bar_u_i.html#a61397b8a39e8f4f0cf7d3c84205d5bf1">SetFill</a>();</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i.html#a2a8e475bc5a9321df715dec9fceecba2">   64</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i.html#a2a8e475bc5a9321df715dec9fceecba2">Close</a>()</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i.html#ab27e94182ba1d5740e0b848d1bfffaf5">scrollAnimator</a>.SetTrigger(<span class="stringliteral">&quot;Close&quot;</span>);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            StartCoroutine(WaitCloseAnimation());</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keyword">private</span> IEnumerator WaitCloseAnimation()</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            Debug.Log(<a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i.html#ab27e94182ba1d5740e0b848d1bfffaf5">scrollAnimator</a>.GetCurrentAnimatorStateInfo(0).IsName(<span class="stringliteral">&quot;Closed&quot;</span>));</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            yield <span class="keywordflow">return</span> <span class="keyword">new</span> WaitUntil(() =&gt; <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i.html#ab27e94182ba1d5740e0b848d1bfffaf5">scrollAnimator</a>.GetCurrentAnimatorStateInfo(0).IsName(<span class="stringliteral">&quot;Closed&quot;</span>));</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            Debug.Log(<span class="stringliteral">&quot;Animation End!&quot;</span>);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            gameObject.SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i.html#a3df0fcef27cb6132fe2105f3f1cc4742">   78</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i.html#a3df0fcef27cb6132fe2105f3f1cc4742">LoadBattle</a>()</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <span class="comment">// SceneManager.LoadScene(sceneName);</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            <a class="code" href="class_saver_1_1_data_transfer.html">DataTransfer</a>.<a class="code" href="class_saver_1_1_data_transfer.html#a1799857a85084ca9d006affc941d9d36">GetDataTransfer</a>.<a class="code" href="class_saver_1_1_data_transfer.html#a7dfee1eea2bfe71edbb142428e87029b">LoadSceneInLoadingScene</a>(<a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i.html#a1141c67048bc090e8690d653f227bfca">sceneName</a>);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i.html#a8bc77c90e4f2a1c4e9fc20b948267a35">   84</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i.html#a8bc77c90e4f2a1c4e9fc20b948267a35">ShowVideo</a>()</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i.html#a37c1320e6332d789016dec61b4365b40">videoPlayerManager</a>.<a class="code" href="class_video_1_1_video_player_manager.html#a2e68d166989dae6070eb07923a604590">videoClipName</a> = titleName;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i.html#a37c1320e6332d789016dec61b4365b40">videoPlayerManager</a>.gameObject.SetActive(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i.html#a37c1320e6332d789016dec61b4365b40">videoPlayerManager</a>.<a class="code" href="class_video_1_1_video_player_manager.html#a46ddbe7114114e94297aa129a83877b9">Play</a>();</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i.html#ad8ad709959097ef3b67cf70d06b8a2a6">   91</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i.html#ad8ad709959097ef3b67cf70d06b8a2a6">StopVideo</a>()</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        {</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i.html#a37c1320e6332d789016dec61b4365b40">videoPlayerManager</a>.<a class="code" href="class_video_1_1_video_player_manager.html#a46ef9471d00ea3f80371fc379193d6ce">Stop</a>();</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i.html#a37c1320e6332d789016dec61b4365b40">videoPlayerManager</a>.gameObject.SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        }</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    }</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;}</div>
+<div class="ttc" id="aclass_saver_1_1_data_transfer_html"><div class="ttname"><a href="class_saver_1_1_data_transfer.html">Saver.DataTransfer</a></div><div class="ttdoc">数据传输</div><div class="ttdef"><b>Definition:</b> <a href="_data_transfer_8cs_source.html#l00015">DataTransfer.cs:16</a></div></div>
+<div class="ttc" id="aclass_saver_1_1_data_transfer_html_a1799857a85084ca9d006affc941d9d36"><div class="ttname"><a href="class_saver_1_1_data_transfer.html#a1799857a85084ca9d006affc941d9d36">Saver.DataTransfer.GetDataTransfer</a></div><div class="ttdeci">static DataTransfer GetDataTransfer</div><div class="ttdef"><b>Definition:</b> <a href="_data_transfer_8cs_source.html#l00067">DataTransfer.cs:67</a></div></div>
+<div class="ttc" id="aclass_saver_1_1_data_transfer_html_a7dfee1eea2bfe71edbb142428e87029b"><div class="ttname"><a href="class_saver_1_1_data_transfer.html#a7dfee1eea2bfe71edbb142428e87029b">Saver.DataTransfer.LoadSceneInLoadingScene</a></div><div class="ttdeci">void LoadSceneInLoadingScene(string sceneName)</div><div class="ttdoc">使用进度条加载</div><div class="ttdef"><b>Definition:</b> <a href="_data_transfer_8cs_source.html#l00099">DataTransfer.cs:99</a></div></div>
+<div class="ttc" id="aclass_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i_html"><div class="ttname"><a href="class_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i.html">UI.ChineseSports.Main.ScrollUI</a></div><div class="ttdef"><b>Definition:</b> <a href="_scroll_u_i_8cs_source.html#l00009">ScrollUI.cs:10</a></div></div>
+<div class="ttc" id="aclass_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i_html_a101f36b126d7d376ad82f5ac34b92f97"><div class="ttname"><a href="class_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i.html#a101f36b126d7d376ad82f5ac34b92f97">UI.ChineseSports.Main.ScrollUI.TitleName</a></div><div class="ttdeci">string TitleName</div><div class="ttdef"><b>Definition:</b> <a href="_scroll_u_i_8cs_source.html#l00023">ScrollUI.cs:24</a></div></div>
+<div class="ttc" id="aclass_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i_html_a1141c67048bc090e8690d653f227bfca"><div class="ttname"><a href="class_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i.html#a1141c67048bc090e8690d653f227bfca">UI.ChineseSports.Main.ScrollUI.sceneName</a></div><div class="ttdeci">string sceneName</div><div class="ttdef"><b>Definition:</b> <a href="_scroll_u_i_8cs_source.html#l00016">ScrollUI.cs:16</a></div></div>
+<div class="ttc" id="aclass_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i_html_a1fd9ab2ed4e8ef997c5615e3d459fc9c"><div class="ttname"><a href="class_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i.html#a1fd9ab2ed4e8ef997c5615e3d459fc9c">UI.ChineseSports.Main.ScrollUI.titleImage</a></div><div class="ttdeci">Image titleImage</div><div class="ttdef"><b>Definition:</b> <a href="_scroll_u_i_8cs_source.html#l00018">ScrollUI.cs:18</a></div></div>
+<div class="ttc" id="aclass_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i_html_a2a8e475bc5a9321df715dec9fceecba2"><div class="ttname"><a href="class_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i.html#a2a8e475bc5a9321df715dec9fceecba2">UI.ChineseSports.Main.ScrollUI.Close</a></div><div class="ttdeci">void Close()</div><div class="ttdef"><b>Definition:</b> <a href="_scroll_u_i_8cs_source.html#l00064">ScrollUI.cs:64</a></div></div>
+<div class="ttc" id="aclass_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i_html_a364332603e7c4f4fcd16d1bb3b9487eb"><div class="ttname"><a href="class_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i.html#a364332603e7c4f4fcd16d1bb3b9487eb">UI.ChineseSports.Main.ScrollUI.fillAmount</a></div><div class="ttdeci">float fillAmount</div><div class="ttdef"><b>Definition:</b> <a href="_scroll_u_i_8cs_source.html#l00013">ScrollUI.cs:13</a></div></div>
+<div class="ttc" id="aclass_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i_html_a37c1320e6332d789016dec61b4365b40"><div class="ttname"><a href="class_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i.html#a37c1320e6332d789016dec61b4365b40">UI.ChineseSports.Main.ScrollUI.videoPlayerManager</a></div><div class="ttdeci">VideoPlayerManager videoPlayerManager</div><div class="ttdef"><b>Definition:</b> <a href="_scroll_u_i_8cs_source.html#l00019">ScrollUI.cs:19</a></div></div>
+<div class="ttc" id="aclass_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i_html_a3df0fcef27cb6132fe2105f3f1cc4742"><div class="ttname"><a href="class_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i.html#a3df0fcef27cb6132fe2105f3f1cc4742">UI.ChineseSports.Main.ScrollUI.LoadBattle</a></div><div class="ttdeci">void LoadBattle()</div><div class="ttdef"><b>Definition:</b> <a href="_scroll_u_i_8cs_source.html#l00078">ScrollUI.cs:78</a></div></div>
+<div class="ttc" id="aclass_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i_html_a538a981998e08b53b594af84d9211bdf"><div class="ttname"><a href="class_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i.html#a538a981998e08b53b594af84d9211bdf">UI.ChineseSports.Main.ScrollUI.bar</a></div><div class="ttdeci">FillBarUI bar</div><div class="ttdef"><b>Definition:</b> <a href="_scroll_u_i_8cs_source.html#l00015">ScrollUI.cs:15</a></div></div>
+<div class="ttc" id="aclass_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i_html_a596bc10b8de94a379f794115daff93e2"><div class="ttname"><a href="class_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i.html#a596bc10b8de94a379f794115daff93e2">UI.ChineseSports.Main.ScrollUI.TitleSprite</a></div><div class="ttdeci">Sprite TitleSprite</div><div class="ttdef"><b>Definition:</b> <a href="_scroll_u_i_8cs_source.html#l00033">ScrollUI.cs:34</a></div></div>
+<div class="ttc" id="aclass_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i_html_a642cb3163830d1ee0c67c9d610b41b8b"><div class="ttname"><a href="class_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i.html#a642cb3163830d1ee0c67c9d610b41b8b">UI.ChineseSports.Main.ScrollUI.SetFillBar</a></div><div class="ttdeci">void SetFillBar()</div><div class="ttdef"><b>Definition:</b> <a href="_scroll_u_i_8cs_source.html#l00058">ScrollUI.cs:58</a></div></div>
+<div class="ttc" id="aclass_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i_html_a8bc77c90e4f2a1c4e9fc20b948267a35"><div class="ttname"><a href="class_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i.html#a8bc77c90e4f2a1c4e9fc20b948267a35">UI.ChineseSports.Main.ScrollUI.ShowVideo</a></div><div class="ttdeci">void ShowVideo()</div><div class="ttdef"><b>Definition:</b> <a href="_scroll_u_i_8cs_source.html#l00084">ScrollUI.cs:84</a></div></div>
+<div class="ttc" id="aclass_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i_html_a98484094d3ef11325c0ccbb6653dd962"><div class="ttname"><a href="class_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i.html#a98484094d3ef11325c0ccbb6653dd962">UI.ChineseSports.Main.ScrollUI.titleSprite</a></div><div class="ttdeci">Sprite titleSprite</div><div class="ttdef"><b>Definition:</b> <a href="_scroll_u_i_8cs_source.html#l00020">ScrollUI.cs:20</a></div></div>
+<div class="ttc" id="aclass_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i_html_ab27e94182ba1d5740e0b848d1bfffaf5"><div class="ttname"><a href="class_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i.html#ab27e94182ba1d5740e0b848d1bfffaf5">UI.ChineseSports.Main.ScrollUI.scrollAnimator</a></div><div class="ttdeci">Animator scrollAnimator</div><div class="ttdef"><b>Definition:</b> <a href="_scroll_u_i_8cs_source.html#l00011">ScrollUI.cs:11</a></div></div>
+<div class="ttc" id="aclass_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i_html_ad8ad709959097ef3b67cf70d06b8a2a6"><div class="ttname"><a href="class_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i.html#ad8ad709959097ef3b67cf70d06b8a2a6">UI.ChineseSports.Main.ScrollUI.StopVideo</a></div><div class="ttdeci">void StopVideo()</div><div class="ttdef"><b>Definition:</b> <a href="_scroll_u_i_8cs_source.html#l00091">ScrollUI.cs:91</a></div></div>
+<div class="ttc" id="aclass_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i_html_af936ad416b1da9c9cfced0405379efe2"><div class="ttname"><a href="class_u_i_1_1_chinese_sports_1_1_main_1_1_scroll_u_i.html#af936ad416b1da9c9cfced0405379efe2">UI.ChineseSports.Main.ScrollUI.titleText</a></div><div class="ttdeci">Text titleText</div><div class="ttdef"><b>Definition:</b> <a href="_scroll_u_i_8cs_source.html#l00017">ScrollUI.cs:17</a></div></div>
+<div class="ttc" id="aclass_u_i_1_1_fill_bar_u_i_html"><div class="ttname"><a href="class_u_i_1_1_fill_bar_u_i.html">UI.FillBarUI</a></div><div class="ttdef"><b>Definition:</b> <a href="_fill_bar_u_i_8cs_source.html#l00006">FillBarUI.cs:7</a></div></div>
+<div class="ttc" id="aclass_u_i_1_1_fill_bar_u_i_html_a61397b8a39e8f4f0cf7d3c84205d5bf1"><div class="ttname"><a href="class_u_i_1_1_fill_bar_u_i.html#a61397b8a39e8f4f0cf7d3c84205d5bf1">UI.FillBarUI.SetFill</a></div><div class="ttdeci">void SetFill()</div><div class="ttdef"><b>Definition:</b> <a href="_fill_bar_u_i_8cs_source.html#l00021">FillBarUI.cs:21</a></div></div>
+<div class="ttc" id="aclass_u_i_1_1_fill_bar_u_i_html_a6a77eba7280f1be3d5c32cfd463dfc69"><div class="ttname"><a href="class_u_i_1_1_fill_bar_u_i.html#a6a77eba7280f1be3d5c32cfd463dfc69">UI.FillBarUI.FillAmount</a></div><div class="ttdeci">float? FillAmount</div><div class="ttdef"><b>Definition:</b> <a href="_fill_bar_u_i_8cs_source.html#l00014">FillBarUI.cs:15</a></div></div>
+<div class="ttc" id="aclass_video_1_1_video_player_manager_html"><div class="ttname"><a href="class_video_1_1_video_player_manager.html">Video.VideoPlayerManager</a></div><div class="ttdoc">视频播放管理</div><div class="ttdef"><b>Definition:</b> <a href="_video_player_manager_8cs_source.html#l00011">VideoPlayerManager.cs:12</a></div></div>
+<div class="ttc" id="aclass_video_1_1_video_player_manager_html_a2e68d166989dae6070eb07923a604590"><div class="ttname"><a href="class_video_1_1_video_player_manager.html#a2e68d166989dae6070eb07923a604590">Video.VideoPlayerManager.videoClipName</a></div><div class="ttdeci">string videoClipName</div><div class="ttdef"><b>Definition:</b> <a href="_video_player_manager_8cs_source.html#l00016">VideoPlayerManager.cs:16</a></div></div>
+<div class="ttc" id="aclass_video_1_1_video_player_manager_html_a46ddbe7114114e94297aa129a83877b9"><div class="ttname"><a href="class_video_1_1_video_player_manager.html#a46ddbe7114114e94297aa129a83877b9">Video.VideoPlayerManager.Play</a></div><div class="ttdeci">void Play()</div><div class="ttdef"><b>Definition:</b> <a href="_video_player_manager_8cs_source.html#l00025">VideoPlayerManager.cs:25</a></div></div>
+<div class="ttc" id="aclass_video_1_1_video_player_manager_html_a46ef9471d00ea3f80371fc379193d6ce"><div class="ttname"><a href="class_video_1_1_video_player_manager.html#a46ef9471d00ea3f80371fc379193d6ce">Video.VideoPlayerManager.Stop</a></div><div class="ttdeci">void Stop()</div><div class="ttdef"><b>Definition:</b> <a href="_video_player_manager_8cs_source.html#l00037">VideoPlayerManager.cs:37</a></div></div>
+<div class="ttc" id="anamespace_saver_html"><div class="ttname"><a href="namespace_saver.html">Saver</a></div><div class="ttdef"><b>Definition:</b> <a href="_data_transfer_8cs_source.html#l00010">DataTransfer.cs:11</a></div></div>
+<div class="ttc" id="anamespace_u_i_1_1_chinese_sports_1_1_main_html"><div class="ttname"><a href="namespace_u_i_1_1_chinese_sports_1_1_main.html">UI.ChineseSports.Main</a></div><div class="ttdef"><b>Definition:</b> <a href="_character_view_u_i_8cs_source.html#l00008">CharacterViewUI.cs:9</a></div></div>
+<div class="ttc" id="anamespace_video_html"><div class="ttname"><a href="namespace_video.html">Video</a></div><div class="ttdef"><b>Definition:</b> <a href="_video_player_manager_8cs_source.html#l00006">VideoPlayerManager.cs:7</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_a5079711ee210cb3f5000c30d3746d06.html">SimpleRTS</a></li><li class="navelem"><a class="el" href="dir_ec7b684f6ba09c3c3a1f78fc68be2b45.html">Simplified_RTS</a></li><li class="navelem"><a class="el" href="dir_fc9fc45e4060f68dac2ba8008ad7420a.html">Assets</a></li><li class="navelem"><a class="el" href="dir_9c83f749c47014e6bfe3d69c7ba163ff.html">Scripts</a></li><li class="navelem"><a class="el" href="dir_b2e1844b6c2b1bf40f1cbb7462c24dc2.html">UI</a></li><li class="navelem"><a class="el" href="dir_8928665a4f67f4f7310a9dc8123989eb.html">ChineseSports</a></li><li class="navelem"><a class="el" href="dir_c1ed65db1be67000e585f119def3a594.html">Main</a></li><li class="navelem"><a class="el" href="_scroll_u_i_8cs.html">ScrollUI.cs</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

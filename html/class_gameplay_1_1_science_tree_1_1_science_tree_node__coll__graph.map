@@ -1,0 +1,6 @@
+<map id="Gameplay.ScienceTree.ScienceTreeNode" name="Gameplay.ScienceTree.ScienceTreeNode">
+<area shape="rect" id="node1" title="科技树节点" alt="" coords="5,529,213,753"/>
+<area shape="rect" id="node2" title=" " alt="" coords="83,5,194,83"/>
+<area shape="rect" id="node3" href="$class_gameplay_1_1_science_tree_1_1_science_tree_basic.html" title="科技树" alt="" coords="125,375,333,467"/>
+<area shape="rect" id="node4" href="$class_gameplay_1_1_event_system_1_1_global_event_manager.html" title="全局事件管理" alt="" coords="177,132,399,312"/>
+</map>

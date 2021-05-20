@@ -1,0 +1,4 @@
+<map id="Network.NetworkPlayerManager.RPC_SendInstantiateUnit" name="Network.NetworkPlayerManager.RPC_SendInstantiateUnit">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,216,47"/>
+<area shape="rect" id="node2" href="$class_player_1_1_player.html#a584f743e7fe9cae9df4cc11e54e1d6fb" title="生成单个单位" alt="" coords="264,13,451,39"/>
+</map>

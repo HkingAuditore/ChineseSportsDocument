@@ -1,0 +1,6 @@
+<map id="Player.Player" name="Player.Player">
+<area shape="rect" id="node1" title="玩家" alt="" coords="95,131,362,1044"/>
+<area shape="rect" id="node3" href="$class_player_1_1_player_online___a_side.html" title=" " alt="" coords="5,1092,204,1316"/>
+<area shape="rect" id="node4" href="$class_player_1_1_player_online___b_side.html" title=" " alt="" coords="229,1099,479,1309"/>
+<area shape="rect" id="node2" title=" " alt="" coords="173,5,284,83"/>
+</map>

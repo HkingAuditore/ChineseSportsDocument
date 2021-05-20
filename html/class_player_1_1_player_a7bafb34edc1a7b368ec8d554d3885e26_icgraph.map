@@ -1,0 +1,6 @@
+<map id="Player.Player.SetUnits" name="Player.Player.SetUnits">
+<area shape="rect" id="node1" title="派遣单位" alt="" coords="647,13,801,39"/>
+<area shape="rect" id="node2" href="$class_player_1_1_player_a_i.html#ab8e53c5b988195ceea6001484ae26869" title="派遣单位" alt="" coords="432,5,599,47"/>
+<area shape="rect" id="node3" href="$class_player_1_1_player_a_i.html#ab3a9572e4b157a2a9117c83c5e460a8c" title="AI决策" alt="" coords="211,13,384,39"/>
+<area shape="rect" id="node4" href="$class_player_1_1_player_a_i.html#a12510584dc41ca7b97c2f49a680bb455" title=" " alt="" coords="5,13,163,39"/>
+</map>

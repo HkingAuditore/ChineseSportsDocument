@@ -1,0 +1,5 @@
+<map id="Gameplay.EventSystem.GlobalEventManager.RegisterGlobalEvent" name="Gameplay.EventSystem.GlobalEventManager.RegisterGlobalEvent">
+<area shape="rect" id="node1" title="注册全局事件" alt="" coords="496,5,721,47"/>
+<area shape="rect" id="node2" href="$class_gameplay_1_1_science_tree_1_1_science_tree_node.html#a4b97d44856afbeed4dbb0f737ee7c5e5" title="激活" alt="" coords="240,5,448,47"/>
+<area shape="rect" id="node3" href="$class_u_i_1_1_science_tree_1_1_science_tree_node_u_i.html#adec2aaeae637f93c3fc8494512f182be" title=" " alt="" coords="5,5,192,47"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="GameManager.GameManager.PlayerLose" name="GameManager.GameManager.PlayerLose">
+<area shape="rect" id="node1" title="我方失败" alt="" coords="5,5,205,47"/>
+<area shape="rect" id="node2" href="$class_u_i_1_1_chinese_sports_1_1_battle_1_1_result_u_i.html#aee0048338efe9f7d4867ec3a61e7aae4" title=" " alt="" coords="253,5,419,47"/>
+<area shape="rect" id="node3" href="$class_u_i_1_1_chinese_sports_1_1_battle_1_1_result_u_i.html#a64e79da353dfd6c9d0cb12581041077f" title=" " alt="" coords="467,5,632,47"/>
+</map>

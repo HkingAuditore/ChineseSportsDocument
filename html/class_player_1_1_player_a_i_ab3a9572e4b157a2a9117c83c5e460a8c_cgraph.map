@@ -1,0 +1,7 @@
+<map id="Player.PlayerAI.AIGaming" name="Player.PlayerAI.AIGaming">
+<area shape="rect" id="node1" title="AI决策" alt="" coords="5,35,179,61"/>
+<area shape="rect" id="node2" href="$class_player_1_1_player_a_i.html#ac772b0dc62609d2aecd2718277612b86" title="路危险权重决策" alt="" coords="227,5,417,32"/>
+<area shape="rect" id="node3" href="$class_player_1_1_player_a_i.html#ab8e53c5b988195ceea6001484ae26869" title="派遣单位" alt="" coords="239,57,405,98"/>
+<area shape="rect" id="node4" href="$class_player_1_1_player.html#a5dc06c6cb394474907fbcde1ed4c5e93" title="增减资源" alt="" coords="465,39,668,65"/>
+<area shape="rect" id="node5" href="$class_player_1_1_player.html#a7bafb34edc1a7b368ec8d554d3885e26" title="派遣单位" alt="" coords="489,89,644,116"/>
+</map>

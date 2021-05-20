@@ -1,0 +1,13 @@
+<map id="Player.PlayerOnline_ASide" name="Player.PlayerOnline_ASide">
+<area shape="rect" id="node1" title=" " alt="" coords="704,2152,903,2361"/>
+<area shape="rect" id="node9" href="$class_network_1_1_network_player_manager.html" title="网络玩家管理" alt="" coords="521,2424,774,2736"/>
+<area shape="rect" id="node2" href="$class_player_1_1_player.html" title="玩家" alt="" coords="414,1219,681,2103"/>
+<area shape="rect" id="node11" href="$class_player_1_1_player_online___b_side.html" title=" " alt="" coords="371,2799,622,2979"/>
+<area shape="rect" id="node3" title=" " alt="" coords="483,86,593,163"/>
+<area shape="rect" id="node5" href="$class_units_1_1_unit.html" title="单位" alt="" coords="173,307,394,839"/>
+<area shape="rect" id="node6" href="$class_player_1_1_player.html" title="玩家" alt="" coords="107,1219,374,2103"/>
+<area shape="rect" id="node4" href="$class_units_1_1_farmer.html" title="农民" alt="" coords="299,888,500,1156"/>
+<area shape="rect" id="node7" href="$class_units_1_1_door.html" title="基地门" alt="" coords="117,976,274,1068"/>
+<area shape="rect" id="node8" href="$interface_units_1_1_i_military_unit.html" title="攻击性单位接口" alt="" coords="190,5,377,244"/>
+<area shape="rect" id="node10" title=" " alt="" coords="489,2218,680,2295"/>
+</map>

@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>古代运动图鉴: SimpleRTS/Simplified_RTS/Assets/Scripts/UI/ChineseSports/Main/CharacterViewUI.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Icon_Small.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">古代运动图鉴
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('_character_view_u_i_8cs_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">CharacterViewUI.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_character_view_u_i_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> System;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> System.Collections.Generic;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_units.html">Units</a>;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> UnityEngine;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">using</span> UnityEngine.Serialization;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">using</span> UnityEngine.UI;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="namespace_u_i_1_1_chinese_sports_1_1_main.html">    8</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_u_i_1_1_chinese_sports_1_1_main.html">UI.ChineseSports.Main</a></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_character_view_u_i.html">   10</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_character_view_u_i.html">CharacterViewUI</a> : MonoBehaviour</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    {</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_character_view_u_i.html#ad545d2969e9e83af37fd8adb0ee2713a">   12</a></span>&#160;        <span class="keyword">public</span> List&lt;Sprite&gt; <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_character_view_u_i.html#ad545d2969e9e83af37fd8adb0ee2713a">characterSprites</a> = <span class="keyword">new</span> List&lt;Sprite&gt;();</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        [Multiline(3)]</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_character_view_u_i.html#abbfb4c99f5427e82d6ce6953037f2572">   14</a></span>&#160;        <span class="keyword">public</span> List&lt;String&gt;  <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_character_view_u_i.html#abbfb4c99f5427e82d6ce6953037f2572">characterDescriptions</a> = <span class="keyword">new</span> List&lt;string&gt;();</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        [FormerlySerializedAs(<span class="stringliteral">&quot;MilitaryUnits&quot;</span>)] [SerializeField]</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_character_view_u_i.html#ac555e58571b959166130244c164a6a4c">   17</a></span>&#160;        <span class="keyword">public</span> List&lt;Unit&gt; <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_character_view_u_i.html#ac555e58571b959166130244c164a6a4c">militaryUnits</a> = <span class="keyword">new</span> List&lt;Unit&gt;();</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        [FormerlySerializedAs(<span class="stringliteral">&quot;PropertyLines&quot;</span>)]</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_character_view_u_i.html#a30d2caa59db6945016bc924731ccf482">   20</a></span>&#160;        <span class="keyword">public</span> List&lt;PropertyLine&gt; <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_character_view_u_i.html#a30d2caa59db6945016bc924731ccf482">propertyLines</a> = <span class="keyword">new</span> List&lt;PropertyLine&gt;();</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        [FormerlySerializedAs(<span class="stringliteral">&quot;CharacterAvater&quot;</span>)]</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_character_view_u_i.html#a27a4a00a2dff6f6e3b8868e52e8459a2">   23</a></span>&#160;        <span class="keyword">public</span> Image <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_character_view_u_i.html#a27a4a00a2dff6f6e3b8868e52e8459a2">characterAvater</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_character_view_u_i.html#a524148e66e9ddb66942bb8873a722153">   25</a></span>&#160;        <span class="keyword">public</span> Text <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_character_view_u_i.html#a524148e66e9ddb66942bb8873a722153">descriptionText</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_character_view_u_i.html#aa20f3d761b76a0de32ad26d89c912adb">   27</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_character_view_u_i.html#aa20f3d761b76a0de32ad26d89c912adb">CurCharacterSpriteIndex</a> { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> Start()</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_character_view_u_i.html#a460ad5f895fee168e990d69a13bb2865">Set</a>(1);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        }</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_character_view_u_i.html#a460ad5f895fee168e990d69a13bb2865">   34</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_character_view_u_i.html#a460ad5f895fee168e990d69a13bb2865">Set</a>(<span class="keywordtype">int</span> index)</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_character_view_u_i.html#a27a4a00a2dff6f6e3b8868e52e8459a2">characterAvater</a>.sprite = <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_character_view_u_i.html#ad545d2969e9e83af37fd8adb0ee2713a">characterSprites</a>[index];</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_character_view_u_i.html#a524148e66e9ddb66942bb8873a722153">descriptionText</a>.text   = <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_character_view_u_i.html#abbfb4c99f5427e82d6ce6953037f2572">characterDescriptions</a>[index];</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_character_view_u_i.html#a30d2caa59db6945016bc924731ccf482">propertyLines</a>.ForEach(l =&gt;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                                  {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                                      Debug.Log(index);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                                      Debug.Log((<a class="code" href="interface_units_1_1_i_military_unit.html">IMilitaryUnit</a>) <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_character_view_u_i.html#ac555e58571b959166130244c164a6a4c">militaryUnits</a>[index]);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                                      l.MilitaryUnit = (<a class="code" href="interface_units_1_1_i_military_unit.html">IMilitaryUnit</a>) <a class="code" href="class_u_i_1_1_chinese_sports_1_1_main_1_1_character_view_u_i.html#ac555e58571b959166130244c164a6a4c">militaryUnits</a>[index];</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                                      <span class="comment">// Debug.Log((IMilitaryUnit)militaryUnits[index]);</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                                  });</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
+<div class="ttc" id="aclass_u_i_1_1_chinese_sports_1_1_main_1_1_character_view_u_i_html"><div class="ttname"><a href="class_u_i_1_1_chinese_sports_1_1_main_1_1_character_view_u_i.html">UI.ChineseSports.Main.CharacterViewUI</a></div><div class="ttdef"><b>Definition:</b> <a href="_character_view_u_i_8cs_source.html#l00010">CharacterViewUI.cs:11</a></div></div>
+<div class="ttc" id="aclass_u_i_1_1_chinese_sports_1_1_main_1_1_character_view_u_i_html_a27a4a00a2dff6f6e3b8868e52e8459a2"><div class="ttname"><a href="class_u_i_1_1_chinese_sports_1_1_main_1_1_character_view_u_i.html#a27a4a00a2dff6f6e3b8868e52e8459a2">UI.ChineseSports.Main.CharacterViewUI.characterAvater</a></div><div class="ttdeci">Image characterAvater</div><div class="ttdef"><b>Definition:</b> <a href="_character_view_u_i_8cs_source.html#l00023">CharacterViewUI.cs:23</a></div></div>
+<div class="ttc" id="aclass_u_i_1_1_chinese_sports_1_1_main_1_1_character_view_u_i_html_a30d2caa59db6945016bc924731ccf482"><div class="ttname"><a href="class_u_i_1_1_chinese_sports_1_1_main_1_1_character_view_u_i.html#a30d2caa59db6945016bc924731ccf482">UI.ChineseSports.Main.CharacterViewUI.propertyLines</a></div><div class="ttdeci">List&lt; PropertyLine &gt; propertyLines</div><div class="ttdef"><b>Definition:</b> <a href="_character_view_u_i_8cs_source.html#l00020">CharacterViewUI.cs:20</a></div></div>
+<div class="ttc" id="aclass_u_i_1_1_chinese_sports_1_1_main_1_1_character_view_u_i_html_a460ad5f895fee168e990d69a13bb2865"><div class="ttname"><a href="class_u_i_1_1_chinese_sports_1_1_main_1_1_character_view_u_i.html#a460ad5f895fee168e990d69a13bb2865">UI.ChineseSports.Main.CharacterViewUI.Set</a></div><div class="ttdeci">void Set(int index)</div><div class="ttdef"><b>Definition:</b> <a href="_character_view_u_i_8cs_source.html#l00034">CharacterViewUI.cs:34</a></div></div>
+<div class="ttc" id="aclass_u_i_1_1_chinese_sports_1_1_main_1_1_character_view_u_i_html_a524148e66e9ddb66942bb8873a722153"><div class="ttname"><a href="class_u_i_1_1_chinese_sports_1_1_main_1_1_character_view_u_i.html#a524148e66e9ddb66942bb8873a722153">UI.ChineseSports.Main.CharacterViewUI.descriptionText</a></div><div class="ttdeci">Text descriptionText</div><div class="ttdef"><b>Definition:</b> <a href="_character_view_u_i_8cs_source.html#l00025">CharacterViewUI.cs:25</a></div></div>
+<div class="ttc" id="aclass_u_i_1_1_chinese_sports_1_1_main_1_1_character_view_u_i_html_aa20f3d761b76a0de32ad26d89c912adb"><div class="ttname"><a href="class_u_i_1_1_chinese_sports_1_1_main_1_1_character_view_u_i.html#aa20f3d761b76a0de32ad26d89c912adb">UI.ChineseSports.Main.CharacterViewUI.CurCharacterSpriteIndex</a></div><div class="ttdeci">int CurCharacterSpriteIndex</div><div class="ttdef"><b>Definition:</b> <a href="_character_view_u_i_8cs_source.html#l00027">CharacterViewUI.cs:27</a></div></div>
+<div class="ttc" id="aclass_u_i_1_1_chinese_sports_1_1_main_1_1_character_view_u_i_html_abbfb4c99f5427e82d6ce6953037f2572"><div class="ttname"><a href="class_u_i_1_1_chinese_sports_1_1_main_1_1_character_view_u_i.html#abbfb4c99f5427e82d6ce6953037f2572">UI.ChineseSports.Main.CharacterViewUI.characterDescriptions</a></div><div class="ttdeci">List&lt; String &gt; characterDescriptions</div><div class="ttdef"><b>Definition:</b> <a href="_character_view_u_i_8cs_source.html#l00014">CharacterViewUI.cs:14</a></div></div>
+<div class="ttc" id="aclass_u_i_1_1_chinese_sports_1_1_main_1_1_character_view_u_i_html_ac555e58571b959166130244c164a6a4c"><div class="ttname"><a href="class_u_i_1_1_chinese_sports_1_1_main_1_1_character_view_u_i.html#ac555e58571b959166130244c164a6a4c">UI.ChineseSports.Main.CharacterViewUI.militaryUnits</a></div><div class="ttdeci">List&lt; Unit &gt; militaryUnits</div><div class="ttdef"><b>Definition:</b> <a href="_character_view_u_i_8cs_source.html#l00017">CharacterViewUI.cs:17</a></div></div>
+<div class="ttc" id="aclass_u_i_1_1_chinese_sports_1_1_main_1_1_character_view_u_i_html_ad545d2969e9e83af37fd8adb0ee2713a"><div class="ttname"><a href="class_u_i_1_1_chinese_sports_1_1_main_1_1_character_view_u_i.html#ad545d2969e9e83af37fd8adb0ee2713a">UI.ChineseSports.Main.CharacterViewUI.characterSprites</a></div><div class="ttdeci">List&lt; Sprite &gt; characterSprites</div><div class="ttdef"><b>Definition:</b> <a href="_character_view_u_i_8cs_source.html#l00012">CharacterViewUI.cs:12</a></div></div>
+<div class="ttc" id="ainterface_units_1_1_i_military_unit_html"><div class="ttname"><a href="interface_units_1_1_i_military_unit.html">Units.IMilitaryUnit</a></div><div class="ttdoc">攻击性单位接口</div><div class="ttdef"><b>Definition:</b> <a href="_unit_8cs_source.html#l00059">Unit.cs:60</a></div></div>
+<div class="ttc" id="anamespace_u_i_1_1_chinese_sports_1_1_main_html"><div class="ttname"><a href="namespace_u_i_1_1_chinese_sports_1_1_main.html">UI.ChineseSports.Main</a></div><div class="ttdef"><b>Definition:</b> <a href="_character_view_u_i_8cs_source.html#l00008">CharacterViewUI.cs:9</a></div></div>
+<div class="ttc" id="anamespace_units_html"><div class="ttname"><a href="namespace_units.html">Units</a></div><div class="ttdef"><b>Definition:</b> <a href="_buff_8cs_source.html#l00004">Buff.cs:5</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_a5079711ee210cb3f5000c30d3746d06.html">SimpleRTS</a></li><li class="navelem"><a class="el" href="dir_ec7b684f6ba09c3c3a1f78fc68be2b45.html">Simplified_RTS</a></li><li class="navelem"><a class="el" href="dir_fc9fc45e4060f68dac2ba8008ad7420a.html">Assets</a></li><li class="navelem"><a class="el" href="dir_9c83f749c47014e6bfe3d69c7ba163ff.html">Scripts</a></li><li class="navelem"><a class="el" href="dir_b2e1844b6c2b1bf40f1cbb7462c24dc2.html">UI</a></li><li class="navelem"><a class="el" href="dir_8928665a4f67f4f7310a9dc8123989eb.html">ChineseSports</a></li><li class="navelem"><a class="el" href="dir_c1ed65db1be67000e585f119def3a594.html">Main</a></li><li class="navelem"><a class="el" href="_character_view_u_i_8cs.html">CharacterViewUI.cs</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

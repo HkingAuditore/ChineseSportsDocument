@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>古代运动图鉴: SimpleRTS/Simplified_RTS/Assets/Scripts/Player/ResourceDroper.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Icon_Small.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">古代运动图鉴
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('_resource_droper_8cs_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">ResourceDroper.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_resource_droper_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> System.Collections;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> System.Linq;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> UnityEngine;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> UnityEngine.Serialization;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_player.html">Player</a></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_player_1_1_resource_droper.html">   11</a></span>&#160;   <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_player_1_1_resource_droper.html">ResourceDroper</a> : MonoBehaviour</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    {</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_player_1_1_resource_droper.html#af811c357ea6af2878e41449d7791d3cb">   16</a></span>&#160;       <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_player_1_1_resource_droper.html#af811c357ea6af2878e41449d7791d3cb">dropColdTime</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_player_1_1_resource_droper.html#af04e658038df02c825767a7ca2753b5a">   21</a></span>&#160;       <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="class_player_1_1_resource_droper.html#af04e658038df02c825767a7ca2753b5a">dropValue</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_player_1_1_resource_droper.html#a9bf5fbfaaf3b77fb7d0b09b4860f96bd">   26</a></span>&#160;       <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="class_player_1_1_resource_droper.html#a9bf5fbfaaf3b77fb7d0b09b4860f96bd">dropCountMax</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_player_1_1_resource_droper.html#adb711377eba6fd6e88f876d415e6c7b7">   31</a></span>&#160;       <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="class_player_1_1_resource_droper.html#adb711377eba6fd6e88f876d415e6c7b7">dropCountMin</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_player_1_1_resource_droper.html#a76b235b2cdfab9d9ace7d675b146f1ef">   36</a></span>&#160;       [FormerlySerializedAs(<span class="stringliteral">&quot;resourceType&quot;</span>)] <span class="keyword">public</span> <a class="code" href="namespace_player.html#a61f3646142986499ed36c80a34f38427">GameResourceType</a> <a class="code" href="class_player_1_1_resource_droper.html#a76b235b2cdfab9d9ace7d675b146f1ef">gameResourceTypeType</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_player_1_1_resource_droper.html#a881f39f540cc135e7acd9c909b317775">   41</a></span>&#160;       <span class="keyword">public</span> GameObject <a class="code" href="class_player_1_1_resource_droper.html#a881f39f540cc135e7acd9c909b317775">dropPrefab</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_player_1_1_resource_droper.html#a35a271ab692493070a05a9ae54bcf57f">   46</a></span>&#160;       <span class="keyword">public</span> GameObject <a class="code" href="class_player_1_1_resource_droper.html#a35a271ab692493070a05a9ae54bcf57f">dropArea</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keyword">private</span> Vector3[] _dropArea;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">float</span>     _xMax;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">float</span>     _xMin;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">float</span>     _zMax;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">float</span>     _zMin;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> Start()</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            var mesh = <a class="code" href="class_player_1_1_resource_droper.html#a35a271ab692493070a05a9ae54bcf57f">dropArea</a>.GetComponent&lt;MeshFilter&gt;().mesh;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            _dropArea = mesh.vertices;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            _xMin     = _dropArea.Min(p =&gt; p.x);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            _xMax     = _dropArea.Max(p =&gt; p.x);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            _zMin     = _dropArea.Min(p =&gt; p.z);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            _zMax     = _dropArea.Max(p =&gt; p.z);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            Debug.Log(<span class="stringliteral">&quot;points drop area:&quot;</span> + _dropArea[0]);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            StartCoroutine(Wait2Drop(<a class="code" href="class_player_1_1_resource_droper.html#af811c357ea6af2878e41449d7791d3cb">dropColdTime</a>));</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keyword">private</span> IEnumerator Wait2Drop(<span class="keywordtype">float</span> waitTime)</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            yield <span class="keywordflow">return</span> <span class="keyword">new</span> WaitForSeconds(waitTime);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <a class="code" href="class_player_1_1_resource_droper.html#ac346ed6187e075dd40ca29a756257168">DropResource</a>();</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            StartCoroutine(Wait2Drop(<a class="code" href="class_player_1_1_resource_droper.html#af811c357ea6af2878e41449d7791d3cb">dropColdTime</a>));</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keyword">private</span> Vector3[] RandomPointInArea(<span class="keywordtype">int</span> count = 1)</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            var points = <span class="keyword">new</span> Vector3[count];</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            <span class="keywordflow">for</span> (var i = 0; i &lt; count; i++)</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                <span class="comment">// Debug.Log(&quot;random point x Sum:&quot; + xSum);</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                <span class="comment">// Debug.Log(&quot;random point y Sum:&quot; + ySum);</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                <span class="comment">// Debug.Log(&quot;random point z Sum:&quot; + zSum);</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                points[i] = <span class="keyword">new</span> Vector3(<a class="code" href="_player_8cs.html#a832e8f52fca5a678819ec96269dcb532">Random</a>.Range(_xMin, _xMax),</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                                        <a class="code" href="class_player_1_1_resource_droper.html#a35a271ab692493070a05a9ae54bcf57f">dropArea</a>.transform.position.y,</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                                        <a class="code" href="_player_8cs.html#a832e8f52fca5a678819ec96269dcb532">Random</a>.Range(_zMin, _zMax)</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                                       );</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                Debug.Log(<span class="stringliteral">&quot;random point x Sum:&quot;</span> + points[i]);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            <span class="keywordflow">return</span> points;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="class_player_1_1_resource_droper.html#ac346ed6187e075dd40ca29a756257168">   97</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_player_1_1_resource_droper.html#ac346ed6187e075dd40ca29a756257168">DropResource</a>()</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        {</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            var dropPoints = RandomPointInArea(<a class="code" href="_player_8cs.html#a832e8f52fca5a678819ec96269dcb532">Random</a>.Range(<a class="code" href="class_player_1_1_resource_droper.html#adb711377eba6fd6e88f876d415e6c7b7">dropCountMin</a>, <a class="code" href="class_player_1_1_resource_droper.html#a9bf5fbfaaf3b77fb7d0b09b4860f96bd">dropCountMax</a> + 1));</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            <span class="keywordflow">for</span> (var i = 0; i &lt; dropPoints.Length; i++)</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            {</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                var obj = Instantiate(<a class="code" href="class_player_1_1_resource_droper.html#a881f39f540cc135e7acd9c909b317775">dropPrefab</a>, dropPoints[i], Quaternion.Euler(0, 0, 0), transform);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                obj.GetComponent&lt;<a class="code" href="class_resource_droper_u_i.html">ResourceDroperUI</a>&gt;().resourceDroper = <span class="keyword">this</span>;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            }</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        }</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="class_player_1_1_resource_droper.html#a11c3ed1118cd13818487df23eaaf2f94">  110</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_player_1_1_resource_droper.html#a11c3ed1118cd13818487df23eaaf2f94">CollectResource</a>()</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        {</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            <a class="code" href="namespace_game_manager.html">GameManager</a>.<a class="code" href="class_game_manager_1_1_game_manager.html">GameManager</a>.<a class="code" href="class_game_manager_1_1_game_manager.html#acafc4a2ac0e6171a1f8436b529b58306">GetManager</a>.<a class="code" href="class_game_manager_1_1_game_manager.html#aada7567448f07270090ffcfd300c0209">aSide</a>.ChangeResource(<a class="code" href="class_player_1_1_resource_droper.html#a76b235b2cdfab9d9ace7d675b146f1ef">gameResourceTypeType</a>, <a class="code" href="class_player_1_1_resource_droper.html#af04e658038df02c825767a7ca2753b5a">dropValue</a>);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        }</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    }</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;}</div>
+<div class="ttc" id="a_player_8cs_html_a832e8f52fca5a678819ec96269dcb532"><div class="ttname"><a href="_player_8cs.html#a832e8f52fca5a678819ec96269dcb532">Random</a></div><div class="ttdeci">UnityEngine.Random Random</div><div class="ttdef"><b>Definition:</b> <a href="_player_8cs_source.html#l00008">Player.cs:8</a></div></div>
+<div class="ttc" id="aclass_game_manager_1_1_game_manager_html"><div class="ttname"><a href="class_game_manager_1_1_game_manager.html">GameManager.GameManager</a></div><div class="ttdoc">关卡全局管理控制器</div><div class="ttdef"><b>Definition:</b> <a href="_game_manager_8cs_source.html#l00014">GameManager.cs:15</a></div></div>
+<div class="ttc" id="aclass_game_manager_1_1_game_manager_html_aada7567448f07270090ffcfd300c0209"><div class="ttname"><a href="class_game_manager_1_1_game_manager.html#aada7567448f07270090ffcfd300c0209">GameManager.GameManager.aSide</a></div><div class="ttdeci">Player.Player aSide</div><div class="ttdoc">我方</div><div class="ttdef"><b>Definition:</b> <a href="_game_manager_8cs_source.html#l00019">GameManager.cs:19</a></div></div>
+<div class="ttc" id="aclass_game_manager_1_1_game_manager_html_acafc4a2ac0e6171a1f8436b529b58306"><div class="ttname"><a href="class_game_manager_1_1_game_manager.html#acafc4a2ac0e6171a1f8436b529b58306">GameManager.GameManager.GetManager</a></div><div class="ttdeci">static GameManager GetManager</div><div class="ttdef"><b>Definition:</b> <a href="_game_manager_8cs_source.html#l00077">GameManager.cs:77</a></div></div>
+<div class="ttc" id="aclass_player_1_1_resource_droper_html"><div class="ttname"><a href="class_player_1_1_resource_droper.html">Player.ResourceDroper</a></div><div class="ttdoc">资源掉落</div><div class="ttdef"><b>Definition:</b> <a href="_resource_droper_8cs_source.html#l00011">ResourceDroper.cs:12</a></div></div>
+<div class="ttc" id="aclass_player_1_1_resource_droper_html_a11c3ed1118cd13818487df23eaaf2f94"><div class="ttname"><a href="class_player_1_1_resource_droper.html#a11c3ed1118cd13818487df23eaaf2f94">Player.ResourceDroper.CollectResource</a></div><div class="ttdeci">void CollectResource()</div><div class="ttdoc">收集资源</div><div class="ttdef"><b>Definition:</b> <a href="_resource_droper_8cs_source.html#l00110">ResourceDroper.cs:110</a></div></div>
+<div class="ttc" id="aclass_player_1_1_resource_droper_html_a35a271ab692493070a05a9ae54bcf57f"><div class="ttname"><a href="class_player_1_1_resource_droper.html#a35a271ab692493070a05a9ae54bcf57f">Player.ResourceDroper.dropArea</a></div><div class="ttdeci">GameObject dropArea</div><div class="ttdoc">掉落区域</div><div class="ttdef"><b>Definition:</b> <a href="_resource_droper_8cs_source.html#l00046">ResourceDroper.cs:46</a></div></div>
+<div class="ttc" id="aclass_player_1_1_resource_droper_html_a76b235b2cdfab9d9ace7d675b146f1ef"><div class="ttname"><a href="class_player_1_1_resource_droper.html#a76b235b2cdfab9d9ace7d675b146f1ef">Player.ResourceDroper.gameResourceTypeType</a></div><div class="ttdeci">GameResourceType gameResourceTypeType</div><div class="ttdoc">掉落类型</div><div class="ttdef"><b>Definition:</b> <a href="_resource_droper_8cs_source.html#l00036">ResourceDroper.cs:36</a></div></div>
+<div class="ttc" id="aclass_player_1_1_resource_droper_html_a881f39f540cc135e7acd9c909b317775"><div class="ttname"><a href="class_player_1_1_resource_droper.html#a881f39f540cc135e7acd9c909b317775">Player.ResourceDroper.dropPrefab</a></div><div class="ttdeci">GameObject dropPrefab</div><div class="ttdoc">掉落预制体</div><div class="ttdef"><b>Definition:</b> <a href="_resource_droper_8cs_source.html#l00041">ResourceDroper.cs:41</a></div></div>
+<div class="ttc" id="aclass_player_1_1_resource_droper_html_a9bf5fbfaaf3b77fb7d0b09b4860f96bd"><div class="ttname"><a href="class_player_1_1_resource_droper.html#a9bf5fbfaaf3b77fb7d0b09b4860f96bd">Player.ResourceDroper.dropCountMax</a></div><div class="ttdeci">int dropCountMax</div><div class="ttdoc">掉落最大量</div><div class="ttdef"><b>Definition:</b> <a href="_resource_droper_8cs_source.html#l00026">ResourceDroper.cs:26</a></div></div>
+<div class="ttc" id="aclass_player_1_1_resource_droper_html_ac346ed6187e075dd40ca29a756257168"><div class="ttname"><a href="class_player_1_1_resource_droper.html#ac346ed6187e075dd40ca29a756257168">Player.ResourceDroper.DropResource</a></div><div class="ttdeci">void DropResource()</div><div class="ttdoc">抛出资源</div><div class="ttdef"><b>Definition:</b> <a href="_resource_droper_8cs_source.html#l00097">ResourceDroper.cs:97</a></div></div>
+<div class="ttc" id="aclass_player_1_1_resource_droper_html_adb711377eba6fd6e88f876d415e6c7b7"><div class="ttname"><a href="class_player_1_1_resource_droper.html#adb711377eba6fd6e88f876d415e6c7b7">Player.ResourceDroper.dropCountMin</a></div><div class="ttdeci">int dropCountMin</div><div class="ttdoc">掉落最少量</div><div class="ttdef"><b>Definition:</b> <a href="_resource_droper_8cs_source.html#l00031">ResourceDroper.cs:31</a></div></div>
+<div class="ttc" id="aclass_player_1_1_resource_droper_html_af04e658038df02c825767a7ca2753b5a"><div class="ttname"><a href="class_player_1_1_resource_droper.html#af04e658038df02c825767a7ca2753b5a">Player.ResourceDroper.dropValue</a></div><div class="ttdeci">int dropValue</div><div class="ttdoc">掉落资源值</div><div class="ttdef"><b>Definition:</b> <a href="_resource_droper_8cs_source.html#l00021">ResourceDroper.cs:21</a></div></div>
+<div class="ttc" id="aclass_player_1_1_resource_droper_html_af811c357ea6af2878e41449d7791d3cb"><div class="ttname"><a href="class_player_1_1_resource_droper.html#af811c357ea6af2878e41449d7791d3cb">Player.ResourceDroper.dropColdTime</a></div><div class="ttdeci">float dropColdTime</div><div class="ttdoc">掉落冷却时间</div><div class="ttdef"><b>Definition:</b> <a href="_resource_droper_8cs_source.html#l00016">ResourceDroper.cs:16</a></div></div>
+<div class="ttc" id="aclass_resource_droper_u_i_html"><div class="ttname"><a href="class_resource_droper_u_i.html">ResourceDroperUI</a></div><div class="ttdef"><b>Definition:</b> <a href="_resource_droper_u_i_8cs_source.html#l00004">ResourceDroperUI.cs:5</a></div></div>
+<div class="ttc" id="anamespace_game_manager_html"><div class="ttname"><a href="namespace_game_manager.html">GameManager</a></div><div class="ttdef"><b>Definition:</b> <a href="_game_manager_8cs_source.html#l00009">GameManager.cs:10</a></div></div>
+<div class="ttc" id="anamespace_player_html"><div class="ttname"><a href="namespace_player.html">Player</a></div><div class="ttdef"><b>Definition:</b> <a href="_player_8cs_source.html#l00010">Player.cs:11</a></div></div>
+<div class="ttc" id="anamespace_player_html_a61f3646142986499ed36c80a34f38427"><div class="ttname"><a href="namespace_player.html#a61f3646142986499ed36c80a34f38427">Player.GameResourceType</a></div><div class="ttdeci">GameResourceType</div><div class="ttdoc">资源类型</div><div class="ttdef"><b>Definition:</b> <a href="_player_8cs_source.html#l00015">Player.cs:16</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_a5079711ee210cb3f5000c30d3746d06.html">SimpleRTS</a></li><li class="navelem"><a class="el" href="dir_ec7b684f6ba09c3c3a1f78fc68be2b45.html">Simplified_RTS</a></li><li class="navelem"><a class="el" href="dir_fc9fc45e4060f68dac2ba8008ad7420a.html">Assets</a></li><li class="navelem"><a class="el" href="dir_9c83f749c47014e6bfe3d69c7ba163ff.html">Scripts</a></li><li class="navelem"><a class="el" href="dir_57278868c90159c1d8d270ccaf0ca9db.html">Player</a></li><li class="navelem"><a class="el" href="_resource_droper_8cs.html">ResourceDroper.cs</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>古代运动图鉴: SimpleRTS/Simplified_RTS/Assets/Scripts/Units/Farmer.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Icon_Small.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">古代运动图鉴
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('_farmer_8cs_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Farmer.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_farmer_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> System;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_player.html">Player</a>;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> UnityEngine;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> UnityEngine.Events;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_units.html">Units</a></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_units_1_1_farmer.html">   11</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_units_1_1_farmer.html">Farmer</a> : <a class="code" href="class_units_1_1_unit.html">Unit</a></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    {</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_units_1_1_farmer.html#a9339267ffb1945610221f934ff360010">   16</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_units_1_1_farmer.html#a9339267ffb1945610221f934ff360010">workTime</a> = 5f;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_units_1_1_farmer.html#af789fcede3d5ffafe3b5a1dedfeebf79">   21</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">int</span>[] <a class="code" href="class_units_1_1_farmer.html#af789fcede3d5ffafe3b5a1dedfeebf79">maxLoad</a> = {10, 5, 10};</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_units_1_1_farmer.html#a0a2fd5c4fd484626ae069db272167766">   23</a></span>&#160;        <span class="keyword">protected</span> Transform <a class="code" href="class_units_1_1_farmer.html#a0a2fd5c4fd484626ae069db272167766">_home</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keyword">private</span> <a class="code" href="namespace_player.html#a61f3646142986499ed36c80a34f38427">GameResourceType</a> _resouceType;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_units_1_1_farmer.html#a47b3291f6305c8b73d1dff3c43ebb176">   27</a></span>&#160;        <span class="keyword">protected</span> Transform <a class="code" href="class_units_1_1_farmer.html#a47b3291f6305c8b73d1dff3c43ebb176">_targerResource</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_units_1_1_farmer.html#a8195dee0cef9250649d6dc564b3934b2">   33</a></span>&#160;        <span class="keyword">public</span> UnityAction&lt;Farmer, Transform&gt; <a class="code" href="class_units_1_1_farmer.html#a8195dee0cef9250649d6dc564b3934b2">farmerBackEventHandler</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="class_units_1_1_farmer.html#ad4b47446455d84e523e7dd39551c3217">   38</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="class_units_1_1_farmer.html#ad4b47446455d84e523e7dd39551c3217">ResouceCarried</a> { <span class="keyword">get</span>; <span class="keyword">protected</span> <span class="keyword">internal</span> <span class="keyword">set</span>; }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_units_1_1_farmer.html#afd481c40717c93060b64c5c4afdfd562">   41</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_units_1_1_farmer.html#afd481c40717c93060b64c5c4afdfd562">Start</a>()</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <a class="code" href="class_units_1_1_farmer.html#a610bc2a9982b2e1716bf9968401e7b4c">GenerateWorkPath</a>();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <a class="code" href="class_units_1_1_unit.html#a085d524e8a2422ca683a0d858abd31dc">navStopEventHandler</a>.AddListener(<a class="code" href="class_units_1_1_farmer.html#a6c1947bd6da83b17f906b9b16bd8aa40">OnNavStop</a>);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            ;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <a class="code" href="class_units_1_1_farmer.html#a8195dee0cef9250649d6dc564b3934b2">farmerBackEventHandler</a> += <a class="code" href="class_units_1_1_farmer.html#a5c14f845ce8068b1c3c3d290ea460064">Drop</a>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <a class="code" href="class_units_1_1_farmer.html#a8195dee0cef9250649d6dc564b3934b2">farmerBackEventHandler</a> += <a class="code" href="class_units_1_1_unit.html#a8430d0dc73a42b2ed47ab576c137fbc7">sidePlayer</a>.<a class="code" href="class_player_1_1_player.html#abf7bb2d28c021a677c9795cad8b00e6a">FarmerBack</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <span class="comment">//死亡处理</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <a class="code" href="class_units_1_1_unit.html#ab90a1d9dc6ba10ded8a08c959cf70e7d">UnitDeathEventHandler</a>.AddListener((p, m) =&gt;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                                              {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                                                  <a class="code" href="class_units_1_1_unit.html#a8430d0dc73a42b2ed47ab576c137fbc7">sidePlayer</a>.<a class="code" href="class_player_1_1_player.html#aeb39ba340da9a4d1ed79940ea7eded76">FarmerCount</a>--;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                                                  <a class="code" href="class_units_1_1_unit.html#a8430d0dc73a42b2ed47ab576c137fbc7">sidePlayer</a>.<a class="code" href="class_player_1_1_player.html#a79a80bfa08f07996fe18e149bc97e809">RoadFarmers</a>[(int) <a class="code" href="class_units_1_1_unit.html#a93f7e4e027ddee5cb07f9db457bf6e4f">road</a>]--;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                                                  <a class="code" href="class_units_1_1_unit.html#a8430d0dc73a42b2ed47ab576c137fbc7">sidePlayer</a>.<a class="code" href="class_player_1_1_player.html#af2008c4c13acc1ec08489c42b376073b">RoadWorkingFarmers</a>[(int) <a class="code" href="class_units_1_1_unit.html#a93f7e4e027ddee5cb07f9db457bf6e4f">road</a>]--;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                                              });</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="class_units_1_1_farmer.html#ad4b47446455d84e523e7dd39551c3217">ResouceCarried</a> &gt; 0)</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                <a class="code" href="class_units_1_1_unit.html#a8c5db521bb8a505b1d6a16a7f925f6fa">InitTarget</a> = <a class="code" href="class_units_1_1_farmer.html#a0a2fd5c4fd484626ae069db272167766">_home</a>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                <a class="code" href="class_units_1_1_farmer.html#ad4b47446455d84e523e7dd39551c3217">ResouceCarried</a> = 0;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                <a class="code" href="class_units_1_1_unit.html#a8c5db521bb8a505b1d6a16a7f925f6fa">InitTarget</a>     = <a class="code" href="class_units_1_1_farmer.html#a47b3291f6305c8b73d1dff3c43ebb176">_targerResource</a>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            base.Start();</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="class_units_1_1_farmer.html#a6c1947bd6da83b17f906b9b16bd8aa40">   78</a></span>&#160;        <span class="keyword">protected</span> <span class="keywordtype">void</span> <a class="code" href="class_units_1_1_farmer.html#a6c1947bd6da83b17f906b9b16bd8aa40">OnNavStop</a>(GameObject gm, Transform tr)</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <span class="comment">// Debug.Log(&quot;To Resource:&quot; + Vector3.Distance(tr.position,_targerResource.position));</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            <span class="comment">// Debug.Log(&quot;To Home:&quot; + Vector3.Distance(tr.position,_home.position));</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            <span class="keywordflow">if</span> (Vector3.Distance(tr.position, <a class="code" href="class_units_1_1_farmer.html#a47b3291f6305c8b73d1dff3c43ebb176">_targerResource</a>.position) &lt; 0.6f)</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                Invoke(<span class="stringliteral">&quot;Work&quot;</span>,                                                                  <a class="code" href="class_units_1_1_farmer.html#a9339267ffb1945610221f934ff360010">workTime</a>);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (Vector3.Distance(tr.position, <a class="code" href="class_units_1_1_farmer.html#a0a2fd5c4fd484626ae069db272167766">_home</a>.position) &lt; 0.6f) Invoke(<span class="stringliteral">&quot;FarmerBack&quot;</span>, <a class="code" href="class_units_1_1_farmer.html#a9339267ffb1945610221f934ff360010">workTime</a>);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="class_units_1_1_farmer.html#a610bc2a9982b2e1716bf9968401e7b4c">   91</a></span>&#160;        <span class="keyword">protected</span> <span class="keywordtype">void</span> <a class="code" href="class_units_1_1_farmer.html#a610bc2a9982b2e1716bf9968401e7b4c">GenerateWorkPath</a>()</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        {</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <a class="code" href="class_units_1_1_farmer.html#a0a2fd5c4fd484626ae069db272167766">_home</a> = <a class="code" href="class_units_1_1_unit.html#a8430d0dc73a42b2ed47ab576c137fbc7">sidePlayer</a>.gameObject.transform.Find(<span class="stringliteral">&quot;Positions&quot;</span>).Find(<a class="code" href="class_units_1_1_unit.html#a93f7e4e027ddee5cb07f9db457bf6e4f">road</a> + <span class="stringliteral">&quot;Ori&quot;</span>).transform;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            <span class="comment">// 注意资源排布要按照上中下路的顺序</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            LayerMask resourceLayerMask =</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                (1 &lt;&lt; LayerMask.NameToLayer(LayerMask.LayerToName(gameObject.layer)[0] + <span class="stringliteral">&quot;Side&quot;</span>)) |</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                (1 &lt;&lt; LayerMask.NameToLayer(<span class="stringliteral">&quot;Neutrality&quot;</span>));</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            <span class="comment">// GameObject[] sideResource = GameObject.FindGameObjectsWithTag(&quot;Resouce&quot;).Where(gb =&gt; (resourceLayerMask.value &amp; 1 &lt;&lt; gb.layer) &gt; 0).ToArray();</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            var sideResource = <a class="code" href="class_units_1_1_unit.html#a8430d0dc73a42b2ed47ab576c137fbc7">sidePlayer</a>.<a class="code" href="class_player_1_1_player.html#aefbc6b6891de2a55afdac6eb38872449">resourceTransform</a>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            <span class="comment">// Debug.Log(sideResource[0]);</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            <span class="comment">// Debug.Log(sideResource[1]);</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            <span class="comment">// Debug.Log(sideResource[2]);</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            <a class="code" href="class_units_1_1_farmer.html#a47b3291f6305c8b73d1dff3c43ebb176">_targerResource</a> = sideResource[(int) <a class="code" href="class_units_1_1_unit.html#a93f7e4e027ddee5cb07f9db457bf6e4f">road</a>];</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            <span class="keywordflow">switch</span> (<a class="code" href="class_units_1_1_unit.html#a93f7e4e027ddee5cb07f9db457bf6e4f">road</a>)</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            {</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                <span class="keywordflow">case</span> <a class="code" href="namespace_units.html#a916a18c8572b926f5bacb64a5af82715">Road</a>.Top:</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                    <span class="comment">//this._targerResource = sideResource[0].transform;</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                    _resouceType = <a class="code" href="namespace_player.html#a61f3646142986499ed36c80a34f38427">GameResourceType</a>.Food;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                <span class="keywordflow">case</span> <a class="code" href="namespace_units.html#a916a18c8572b926f5bacb64a5af82715">Road</a>.Mid:</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                    <span class="comment">//this._targerResource = sideResource[1].transform;</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                    _resouceType = <a class="code" href="namespace_player.html#a61f3646142986499ed36c80a34f38427">GameResourceType</a>.Gold;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                <span class="keywordflow">case</span> <a class="code" href="namespace_units.html#a916a18c8572b926f5bacb64a5af82715">Road</a>.Bot:</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                    <span class="comment">//this._targerResource = sideResource[2].transform;</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                    _resouceType = <a class="code" href="namespace_player.html#a61f3646142986499ed36c80a34f38427">GameResourceType</a>.Wood;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                    <span class="keywordflow">throw</span> <span class="keyword">new</span> ArgumentOutOfRangeException();</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            }</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        }</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno"><a class="line" href="class_units_1_1_farmer.html#ae754a0ed4b2b8405feab43870b472da6">  126</a></span>&#160;        <span class="keyword">protected</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_units_1_1_farmer.html#ae754a0ed4b2b8405feab43870b472da6">Work</a>()</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        {</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            <a class="code" href="class_units_1_1_farmer.html#ad4b47446455d84e523e7dd39551c3217">ResouceCarried</a> += <a class="code" href="class_units_1_1_farmer.html#af789fcede3d5ffafe3b5a1dedfeebf79">maxLoad</a>[(int) <a class="code" href="class_units_1_1_unit.html#a93f7e4e027ddee5cb07f9db457bf6e4f">road</a>];</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            <a class="code" href="class_units_1_1_unit.html#a95ec056c0363f891ce233fa6e4125cd8">Goto</a>(<a class="code" href="class_units_1_1_farmer.html#a0a2fd5c4fd484626ae069db272167766">_home</a>);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            Debug.Log(<span class="stringliteral">&quot;GO HOME&quot;</span>);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        }</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> FarmerBack()</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        {</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;            <a class="code" href="class_units_1_1_farmer.html#a8195dee0cef9250649d6dc564b3934b2">farmerBackEventHandler</a>(<span class="keyword">this</span>, transform);</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        }</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
+<div class="line"><a name="l00146"></a><span class="lineno"><a class="line" href="class_units_1_1_farmer.html#a5c14f845ce8068b1c3c3d290ea460064">  146</a></span>&#160;        <span class="keyword">protected</span> <span class="keywordtype">void</span> <a class="code" href="class_units_1_1_farmer.html#a5c14f845ce8068b1c3c3d290ea460064">Drop</a>(<a class="code" href="class_units_1_1_farmer.html">Farmer</a> farmer, Transform tr)</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        {</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;            <a class="code" href="class_units_1_1_unit.html#a8430d0dc73a42b2ed47ab576c137fbc7">sidePlayer</a>.<a class="code" href="class_player_1_1_player.html#a5dc06c6cb394474907fbcde1ed4c5e93">ChangeResource</a>(_resouceType, <a class="code" href="class_units_1_1_farmer.html#ad4b47446455d84e523e7dd39551c3217">ResouceCarried</a>);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;            <a class="code" href="class_units_1_1_farmer.html#ad4b47446455d84e523e7dd39551c3217">ResouceCarried</a> = 0;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;            <a class="code" href="class_units_1_1_unit.html#a95ec056c0363f891ce233fa6e4125cd8">Goto</a>(<a class="code" href="class_units_1_1_farmer.html#a47b3291f6305c8b73d1dff3c43ebb176">_targerResource</a>);</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;            Debug.Log(<span class="stringliteral">&quot;GO Resource&quot;</span>);</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            <span class="comment">//查看是否人数已满</span></div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        }</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    }</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;}</div>
+<div class="ttc" id="aclass_player_1_1_player_html_a5dc06c6cb394474907fbcde1ed4c5e93"><div class="ttname"><a href="class_player_1_1_player.html#a5dc06c6cb394474907fbcde1ed4c5e93">Player.Player.ChangeResource</a></div><div class="ttdeci">virtual void ChangeResource(GameResourceType gameResourceType, int count)</div><div class="ttdoc">增减资源</div><div class="ttdef"><b>Definition:</b> <a href="_player_8cs_source.html#l00223">Player.cs:223</a></div></div>
+<div class="ttc" id="aclass_player_1_1_player_html_a79a80bfa08f07996fe18e149bc97e809"><div class="ttname"><a href="class_player_1_1_player.html#a79a80bfa08f07996fe18e149bc97e809">Player.Player.RoadFarmers</a></div><div class="ttdeci">int[] RoadFarmers</div><div class="ttdoc">每条路农民数量</div><div class="ttdef"><b>Definition:</b> <a href="_player_8cs_source.html#l00374">Player.cs:375</a></div></div>
+<div class="ttc" id="aclass_player_1_1_player_html_abf7bb2d28c021a677c9795cad8b00e6a"><div class="ttname"><a href="class_player_1_1_player.html#abf7bb2d28c021a677c9795cad8b00e6a">Player.Player.FarmerBack</a></div><div class="ttdeci">void FarmerBack(Farmer farmer, Transform tr)</div><div class="ttdoc">当农民返回</div><div class="ttdef"><b>Definition:</b> <a href="_player_8cs_source.html#l00543">Player.cs:543</a></div></div>
+<div class="ttc" id="aclass_player_1_1_player_html_aeb39ba340da9a4d1ed79940ea7eded76"><div class="ttname"><a href="class_player_1_1_player.html#aeb39ba340da9a4d1ed79940ea7eded76">Player.Player.FarmerCount</a></div><div class="ttdeci">int FarmerCount</div><div class="ttdoc">当前农民数量</div><div class="ttdef"><b>Definition:</b> <a href="_player_8cs_source.html#l00343">Player.cs:344</a></div></div>
+<div class="ttc" id="aclass_player_1_1_player_html_aefbc6b6891de2a55afdac6eb38872449"><div class="ttname"><a href="class_player_1_1_player.html#aefbc6b6891de2a55afdac6eb38872449">Player.Player.resourceTransform</a></div><div class="ttdeci">Transform[] resourceTransform</div><div class="ttdoc">资源坐标</div><div class="ttdef"><b>Definition:</b> <a href="_player_8cs_source.html#l00292">Player.cs:292</a></div></div>
+<div class="ttc" id="aclass_player_1_1_player_html_af2008c4c13acc1ec08489c42b376073b"><div class="ttname"><a href="class_player_1_1_player.html#af2008c4c13acc1ec08489c42b376073b">Player.Player.RoadWorkingFarmers</a></div><div class="ttdeci">int[] RoadWorkingFarmers</div><div class="ttdoc">每条路正在工作农民数量</div><div class="ttdef"><b>Definition:</b> <a href="_player_8cs_source.html#l00389">Player.cs:390</a></div></div>
+<div class="ttc" id="aclass_units_1_1_farmer_html"><div class="ttname"><a href="class_units_1_1_farmer.html">Units.Farmer</a></div><div class="ttdoc">农民</div><div class="ttdef"><b>Definition:</b> <a href="_farmer_8cs_source.html#l00011">Farmer.cs:12</a></div></div>
+<div class="ttc" id="aclass_units_1_1_farmer_html_a0a2fd5c4fd484626ae069db272167766"><div class="ttname"><a href="class_units_1_1_farmer.html#a0a2fd5c4fd484626ae069db272167766">Units.Farmer._home</a></div><div class="ttdeci">Transform _home</div><div class="ttdef"><b>Definition:</b> <a href="_farmer_8cs_source.html#l00023">Farmer.cs:23</a></div></div>
+<div class="ttc" id="aclass_units_1_1_farmer_html_a47b3291f6305c8b73d1dff3c43ebb176"><div class="ttname"><a href="class_units_1_1_farmer.html#a47b3291f6305c8b73d1dff3c43ebb176">Units.Farmer._targerResource</a></div><div class="ttdeci">Transform _targerResource</div><div class="ttdef"><b>Definition:</b> <a href="_farmer_8cs_source.html#l00027">Farmer.cs:27</a></div></div>
+<div class="ttc" id="aclass_units_1_1_farmer_html_a5c14f845ce8068b1c3c3d290ea460064"><div class="ttname"><a href="class_units_1_1_farmer.html#a5c14f845ce8068b1c3c3d290ea460064">Units.Farmer.Drop</a></div><div class="ttdeci">void Drop(Farmer farmer, Transform tr)</div><div class="ttdoc">放下资源</div><div class="ttdef"><b>Definition:</b> <a href="_farmer_8cs_source.html#l00146">Farmer.cs:146</a></div></div>
+<div class="ttc" id="aclass_units_1_1_farmer_html_a610bc2a9982b2e1716bf9968401e7b4c"><div class="ttname"><a href="class_units_1_1_farmer.html#a610bc2a9982b2e1716bf9968401e7b4c">Units.Farmer.GenerateWorkPath</a></div><div class="ttdeci">void GenerateWorkPath()</div><div class="ttdoc">生成工作路径</div><div class="ttdef"><b>Definition:</b> <a href="_farmer_8cs_source.html#l00091">Farmer.cs:91</a></div></div>
+<div class="ttc" id="aclass_units_1_1_farmer_html_a6c1947bd6da83b17f906b9b16bd8aa40"><div class="ttname"><a href="class_units_1_1_farmer.html#a6c1947bd6da83b17f906b9b16bd8aa40">Units.Farmer.OnNavStop</a></div><div class="ttdeci">void OnNavStop(GameObject gm, Transform tr)</div><div class="ttdoc">到达目的地</div><div class="ttdef"><b>Definition:</b> <a href="_farmer_8cs_source.html#l00078">Farmer.cs:78</a></div></div>
+<div class="ttc" id="aclass_units_1_1_farmer_html_a8195dee0cef9250649d6dc564b3934b2"><div class="ttname"><a href="class_units_1_1_farmer.html#a8195dee0cef9250649d6dc564b3934b2">Units.Farmer.farmerBackEventHandler</a></div><div class="ttdeci">UnityAction&lt; Farmer, Transform &gt; farmerBackEventHandler</div><div class="ttdoc">返回事件</div><div class="ttdef"><b>Definition:</b> <a href="_farmer_8cs_source.html#l00033">Farmer.cs:33</a></div></div>
+<div class="ttc" id="aclass_units_1_1_farmer_html_a9339267ffb1945610221f934ff360010"><div class="ttname"><a href="class_units_1_1_farmer.html#a9339267ffb1945610221f934ff360010">Units.Farmer.workTime</a></div><div class="ttdeci">float workTime</div><div class="ttdoc">工作时长</div><div class="ttdef"><b>Definition:</b> <a href="_farmer_8cs_source.html#l00016">Farmer.cs:16</a></div></div>
+<div class="ttc" id="aclass_units_1_1_farmer_html_ad4b47446455d84e523e7dd39551c3217"><div class="ttname"><a href="class_units_1_1_farmer.html#ad4b47446455d84e523e7dd39551c3217">Units.Farmer.ResouceCarried</a></div><div class="ttdeci">int ResouceCarried</div><div class="ttdoc">携带的资源数量</div><div class="ttdef"><b>Definition:</b> <a href="_farmer_8cs_source.html#l00038">Farmer.cs:38</a></div></div>
+<div class="ttc" id="aclass_units_1_1_farmer_html_ae754a0ed4b2b8405feab43870b472da6"><div class="ttname"><a href="class_units_1_1_farmer.html#ae754a0ed4b2b8405feab43870b472da6">Units.Farmer.Work</a></div><div class="ttdeci">virtual void Work()</div><div class="ttdoc">/工作</div><div class="ttdef"><b>Definition:</b> <a href="_farmer_8cs_source.html#l00126">Farmer.cs:126</a></div></div>
+<div class="ttc" id="aclass_units_1_1_farmer_html_af789fcede3d5ffafe3b5a1dedfeebf79"><div class="ttname"><a href="class_units_1_1_farmer.html#af789fcede3d5ffafe3b5a1dedfeebf79">Units.Farmer.maxLoad</a></div><div class="ttdeci">int[] maxLoad</div><div class="ttdoc">资源携带量</div><div class="ttdef"><b>Definition:</b> <a href="_farmer_8cs_source.html#l00021">Farmer.cs:21</a></div></div>
+<div class="ttc" id="aclass_units_1_1_farmer_html_afd481c40717c93060b64c5c4afdfd562"><div class="ttname"><a href="class_units_1_1_farmer.html#afd481c40717c93060b64c5c4afdfd562">Units.Farmer.Start</a></div><div class="ttdeci">override void Start()</div><div class="ttdef"><b>Definition:</b> <a href="_farmer_8cs_source.html#l00041">Farmer.cs:41</a></div></div>
+<div class="ttc" id="aclass_units_1_1_unit_html"><div class="ttname"><a href="class_units_1_1_unit.html">Units.Unit</a></div><div class="ttdoc">单位</div><div class="ttdef"><b>Definition:</b> <a href="_unit_8cs_source.html#l00122">Unit.cs:123</a></div></div>
+<div class="ttc" id="aclass_units_1_1_unit_html_a085d524e8a2422ca683a0d858abd31dc"><div class="ttname"><a href="class_units_1_1_unit.html#a085d524e8a2422ca683a0d858abd31dc">Units.Unit.navStopEventHandler</a></div><div class="ttdeci">UnityEvent&lt; GameObject, Transform &gt; navStopEventHandler</div><div class="ttdoc">目的地到达事件</div><div class="ttdef"><b>Definition:</b> <a href="_unit_8cs_source.html#l00313">Unit.cs:313</a></div></div>
+<div class="ttc" id="aclass_units_1_1_unit_html_a8430d0dc73a42b2ed47ab576c137fbc7"><div class="ttname"><a href="class_units_1_1_unit.html#a8430d0dc73a42b2ed47ab576c137fbc7">Units.Unit.sidePlayer</a></div><div class="ttdeci">Player.Player sidePlayer</div><div class="ttdoc">所属玩家</div><div class="ttdef"><b>Definition:</b> <a href="_unit_8cs_source.html#l00160">Unit.cs:160</a></div></div>
+<div class="ttc" id="aclass_units_1_1_unit_html_a8c5db521bb8a505b1d6a16a7f925f6fa"><div class="ttname"><a href="class_units_1_1_unit.html#a8c5db521bb8a505b1d6a16a7f925f6fa">Units.Unit.InitTarget</a></div><div class="ttdeci">Transform InitTarget</div><div class="ttdoc">初始目标</div><div class="ttdef"><b>Definition:</b> <a href="_unit_8cs_source.html#l00338">Unit.cs:338</a></div></div>
+<div class="ttc" id="aclass_units_1_1_unit_html_a93f7e4e027ddee5cb07f9db457bf6e4f"><div class="ttname"><a href="class_units_1_1_unit.html#a93f7e4e027ddee5cb07f9db457bf6e4f">Units.Unit.road</a></div><div class="ttdeci">Road road</div><div class="ttdoc">路</div><div class="ttdef"><b>Definition:</b> <a href="_unit_8cs_source.html#l00155">Unit.cs:155</a></div></div>
+<div class="ttc" id="aclass_units_1_1_unit_html_a95ec056c0363f891ce233fa6e4125cd8"><div class="ttname"><a href="class_units_1_1_unit.html#a95ec056c0363f891ce233fa6e4125cd8">Units.Unit.Goto</a></div><div class="ttdeci">void Goto(Transform tr)</div><div class="ttdoc">前往目的地</div><div class="ttdef"><b>Definition:</b> <a href="_unit_8cs_source.html#l00364">Unit.cs:364</a></div></div>
+<div class="ttc" id="aclass_units_1_1_unit_html_ab90a1d9dc6ba10ded8a08c959cf70e7d"><div class="ttname"><a href="class_units_1_1_unit.html#ab90a1d9dc6ba10ded8a08c959cf70e7d">Units.Unit.UnitDeathEventHandler</a></div><div class="ttdeci">UnityEvent&lt; Player.Player, IMilitaryUnit &gt; UnitDeathEventHandler</div><div class="ttdoc">死亡事件</div><div class="ttdef"><b>Definition:</b> <a href="_unit_8cs_source.html#l00328">Unit.cs:328</a></div></div>
+<div class="ttc" id="anamespace_player_html"><div class="ttname"><a href="namespace_player.html">Player</a></div><div class="ttdef"><b>Definition:</b> <a href="_player_8cs_source.html#l00010">Player.cs:11</a></div></div>
+<div class="ttc" id="anamespace_player_html_a61f3646142986499ed36c80a34f38427"><div class="ttname"><a href="namespace_player.html#a61f3646142986499ed36c80a34f38427">Player.GameResourceType</a></div><div class="ttdeci">GameResourceType</div><div class="ttdoc">资源类型</div><div class="ttdef"><b>Definition:</b> <a href="_player_8cs_source.html#l00015">Player.cs:16</a></div></div>
+<div class="ttc" id="anamespace_units_html"><div class="ttname"><a href="namespace_units.html">Units</a></div><div class="ttdef"><b>Definition:</b> <a href="_buff_8cs_source.html#l00004">Buff.cs:5</a></div></div>
+<div class="ttc" id="anamespace_units_html_a916a18c8572b926f5bacb64a5af82715"><div class="ttname"><a href="namespace_units.html#a916a18c8572b926f5bacb64a5af82715">Units.Road</a></div><div class="ttdeci">Road</div><div class="ttdoc">路</div><div class="ttdef"><b>Definition:</b> <a href="_unit_8cs_source.html#l00012">Unit.cs:13</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_a5079711ee210cb3f5000c30d3746d06.html">SimpleRTS</a></li><li class="navelem"><a class="el" href="dir_ec7b684f6ba09c3c3a1f78fc68be2b45.html">Simplified_RTS</a></li><li class="navelem"><a class="el" href="dir_fc9fc45e4060f68dac2ba8008ad7420a.html">Assets</a></li><li class="navelem"><a class="el" href="dir_9c83f749c47014e6bfe3d69c7ba163ff.html">Scripts</a></li><li class="navelem"><a class="el" href="dir_c00f259fa01133e5b2dbe561e69e292e.html">Units</a></li><li class="navelem"><a class="el" href="_farmer_8cs.html">Farmer.cs</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

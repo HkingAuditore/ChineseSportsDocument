@@ -1,0 +1,10 @@
+<map id="Player.Player.SubtractFarmer" name="Player.Player.SubtractFarmer">
+<area shape="rect" id="node1" title="减少一条路的农民分配" alt="" coords="264,209,459,235"/>
+<area shape="rect" id="node2" href="$class_u_i_1_1_local_1_1_farmer_dispatch_u_i.html#ab46372945945767f1d1d527d27792eb0" title=" " alt="" coords="20,5,201,47"/>
+<area shape="rect" id="node3" href="$class_u_i_1_1_online_1_1_farmer_dispatch_u_i_online.html#a321a336f4b26dd44045e32576fe14b35" title=" " alt="" coords="25,71,196,112"/>
+<area shape="rect" id="node4" href="$class_u_i_1_1_local_1_1_farmer_dispatch_u_i.html#a2dafec05b54f79babf5d42be188b88b8" title=" " alt="" coords="20,136,201,177"/>
+<area shape="rect" id="node5" href="$class_u_i_1_1_online_1_1_farmer_dispatch_u_i_online.html#a19fba7d5fbbe04e76acaa4296890a9a0" title=" " alt="" coords="25,201,196,243"/>
+<area shape="rect" id="node6" href="$class_u_i_1_1_local_1_1_farmer_dispatch_u_i.html#ab0549fff8328d9bd60943a206cb36212" title=" " alt="" coords="20,267,201,308"/>
+<area shape="rect" id="node7" href="$class_u_i_1_1_online_1_1_farmer_dispatch_u_i_online.html#a380db9abc967e9ef5f02e94ad6435372" title=" " alt="" coords="25,332,196,373"/>
+<area shape="rect" id="node8" href="$class_network_1_1_network_player_manager.html#a548e313293fad4a85758adac63fb10ce" title=" " alt="" coords="5,397,216,439"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="Units.Unit" name="Units.Unit">
+<area shape="rect" id="node1" title="单位" alt="" coords="37,1079,259,1611"/>
+<area shape="rect" id="node2" title=" " alt="" coords="481,5,591,83"/>
+<area shape="rect" id="node3" href="$class_player_1_1_player.html" title="玩家" alt="" coords="403,132,669,1016"/>
+<area shape="rect" id="node5" href="$class_units_1_1_unit.html" title="单位" alt="" coords="467,1079,688,1611"/>
+<area shape="rect" id="node4" href="$class_units_1_1_farmer.html" title="农民" alt="" coords="301,1660,502,1928"/>
+<area shape="rect" id="node7" href="$class_units_1_1_door.html" title="基地门" alt="" coords="613,1748,771,1840"/>
+<area shape="rect" id="node6" href="$interface_units_1_1_i_military_unit.html" title="攻击性单位接口" alt="" coords="172,455,359,693"/>
+</map>

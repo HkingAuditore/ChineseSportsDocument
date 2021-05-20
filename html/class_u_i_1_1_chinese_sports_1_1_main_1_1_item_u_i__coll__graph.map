@@ -1,0 +1,6 @@
+<map id="UI.ChineseSports.Main.ItemUI" name="UI.ChineseSports.Main.ItemUI">
+<area shape="rect" id="node1" title=" " alt="" coords="35,403,241,641"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,116,83"/>
+<area shape="rect" id="node4" href="$class_u_i_1_1_chinese_sports_1_1_main_1_1_item_content_u_i.html" title=" " alt="" coords="37,160,239,340"/>
+<area shape="rect" id="node3" title=" " alt="" coords="168,5,215,83"/>
+</map>

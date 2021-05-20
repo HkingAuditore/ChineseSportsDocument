@@ -1,0 +1,5 @@
+<map id="UI.Local.FarmerDispatchUI.DispatchWood" name="UI.Local.FarmerDispatchUI.DispatchWood">
+<area shape="rect" id="node1" title=" " alt="" coords="5,23,187,65"/>
+<area shape="rect" id="node2" href="$class_player_1_1_player.html#ae903d2ee26dd2ecdaed6e580eb89348d" title="增加一条路的农民分配" alt="" coords="248,5,416,32"/>
+<area shape="rect" id="node3" href="$class_player_1_1_player.html#a5afc99ce48af004fdcbd060eb57509a5" title="减少一条路的农民分配" alt="" coords="235,56,429,83"/>
+</map>

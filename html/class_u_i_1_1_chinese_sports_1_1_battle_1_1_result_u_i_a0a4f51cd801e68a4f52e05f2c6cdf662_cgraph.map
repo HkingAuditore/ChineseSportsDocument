@@ -1,0 +1,5 @@
+<map id="UI.ChineseSports.Battle.ResultUI.BackToMap" name="UI.ChineseSports.Battle.ResultUI.BackToMap">
+<area shape="rect" id="node1" title=" " alt="" coords="5,35,171,76"/>
+<area shape="rect" id="node2" href="$class_saver_1_1_data_transfer.html#a7dfee1eea2bfe71edbb142428e87029b" title="使用进度条加载" alt="" coords="219,5,419,47"/>
+<area shape="rect" id="node3" href="$class_saver_1_1_x_m_l_saver.html#a293075c8032703755a711c16005c517d" title="存档" alt="" coords="231,71,406,98"/>
+</map>
